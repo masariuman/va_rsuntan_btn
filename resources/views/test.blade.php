@@ -7,7 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="sidebar"></div>
+    <div id="sidebar">
+        mari kita test indentnya
+        <p>
+            yeah
+        </p>
+    </div>
     <script src="/js/app.js"></script>
 </body>
 </html>
