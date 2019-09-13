@@ -66186,7 +66186,7 @@ if (token) {
 /*!***************************************!*\
   !*** ./resources/js/components/VA.js ***!
   \***************************************/
-/*! exports provided: default */
+/*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -66195,30 +66195,242 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _sjabloon_Sidebar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./sjabloon/Sidebar */ "./resources/js/components/sjabloon/Sidebar.js");
 
 
 
-function Example() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "container"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "row justify-content-center"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-md-8"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "card"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "card-header"
-  }, "Example Component"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "card-body"
-  }, "I'm an example component!")))));
+
+if (document.getElementById('sidebar')) {
+  react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_sjabloon_Sidebar__WEBPACK_IMPORTED_MODULE_2__["default"], null), document.getElementById('sidebar'));
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (Example);
+/***/ }),
 
-if (document.getElementById('example')) {
-  react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Example, null), document.getElementById('example'));
-}
+/***/ "./resources/js/components/sjabloon/Sidebar.js":
+/*!*****************************************************!*\
+  !*** ./resources/js/components/sjabloon/Sidebar.js ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+var Sidebar =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(Sidebar, _Component);
+
+  function Sidebar() {
+    _classCallCheck(this, Sidebar);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(Sidebar).apply(this, arguments));
+  }
+
+  _createClass(Sidebar, [{
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "app-header__logo"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "logo-src"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "header__pane ml-auto"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        type: "button",
+        className: "hamburger close-sidebar-btn hamburger--elastic",
+        "data-className": "closed-sidebar"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "hamburger-box"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "hamburger-inner"
+      })))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "app-header__mobile-menu"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        type: "button",
+        className: "hamburger hamburger--elastic mobile-toggle-nav"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "hamburger-box"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "hamburger-inner"
+      }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "app-header__menu"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        type: "button",
+        className: "btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "btn-icon-wrapper"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fa fa-ellipsis-v fa-w-6"
+      }))))), "    ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "scrollbar-sidebar"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "app-sidebar__inner"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+        className: "vertical-nav-menu"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        className: "app-sidebar__heading"
+      }, "Dashboards"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "index.html",
+        className: "mm-active"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "metismenu-icon pe-7s-rocket"
+      }), "Dashboard Example 1")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        className: "app-sidebar__heading"
+      }, "UI Components"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "metismenu-icon pe-7s-diamond"
+      }), "Elements", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "metismenu-state-icon pe-7s-angle-down caret-left"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "elements-buttons-standard.html"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "metismenu-icon"
+      }), "Buttons")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "elements-dropdowns.html"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "metismenu-icon"
+      }), "Dropdowns")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "elements-icons.html"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "metismenu-icon"
+      }), "Icons")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "elements-badges-labels.html"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "metismenu-icon"
+      }), "Badges")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "elements-cards.html"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "metismenu-icon"
+      }), "Cards")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "elements-list-group.html"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "metismenu-icon"
+      }), "List Groups")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "elements-navigation.html"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "metismenu-icon"
+      }), "Navigation Menus")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "elements-utilities.html"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "metismenu-icon"
+      }), "Utilities")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "metismenu-icon pe-7s-car"
+      }), "Components", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "metismenu-state-icon pe-7s-angle-down caret-left"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "components-tabs.html"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "metismenu-icon"
+      }), "Tabs")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "components-accordions.html"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "metismenu-icon"
+      }), "Accordions")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "components-notifications.html"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "metismenu-icon"
+      }), "Notifications")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "components-modals.html"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "metismenu-icon"
+      }), "Modals")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "components-progress-bar.html"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "metismenu-icon"
+      }), "Progress Bar")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "components-tooltips-popovers.html"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "metismenu-icon"
+      }), "Tooltips & Popovers")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "components-carousel.html"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "metismenu-icon"
+      }), "Carousel")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "components-calendar.html"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "metismenu-icon"
+      }), "Calendar")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "components-pagination.html"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "metismenu-icon"
+      }), "Pagination")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "components-scrollable-elements.html"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "metismenu-icon"
+      }), "Scrollable")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "components-maps.html"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "metismenu-icon"
+      }), "Maps")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "tables-regular.html"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "metismenu-icon pe-7s-display2"
+      }), "Tables")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        className: "app-sidebar__heading"
+      }, "Widgets"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "dashboard-boxes.html"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "metismenu-icon pe-7s-display2"
+      }), "Dashboard Boxes")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        className: "app-sidebar__heading"
+      }, "Forms"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "forms-controls.html"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "metismenu-icon pe-7s-mouse"
+      }), "Forms Controls")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "forms-layouts.html"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "metismenu-icon pe-7s-eyedropper"
+      }), "Forms Layouts")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "forms-validation.html"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "metismenu-icon pe-7s-pendrive"
+      }), "Forms Validation")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        className: "app-sidebar__heading"
+      }, "Charts"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "charts-chartjs.html"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "metismenu-icon pe-7s-graph2"
+      }), "ChartJS")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        className: "app-sidebar__heading"
+      }, "PRO Version"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "https://dashboardpack.com/theme-details/architectui-dashboard-html-pro/",
+        target: "_blank"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "metismenu-icon pe-7s-graph2"
+      }), "Upgrade to PRO"))))));
+    }
+  }]);
+
+  return Sidebar;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (Sidebar);
 
 /***/ }),
 
