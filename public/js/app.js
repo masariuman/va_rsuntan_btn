@@ -49637,7 +49637,7 @@ var currentlyProcessingQueue = void 0;
 {
   didWarnUpdateInsideUpdate = false;
   currentlyProcessingQueue = null;
-
+  
 }
 
 function createUpdateQueue(baseState) {
@@ -53489,7 +53489,7 @@ function insertNonHydratedInstance(returnFiber, fiber) {
               didNotFindHydratableContainerTextInstance(parentContainer, text);
               break;
             case SuspenseComponent:
-
+              
               break;
           }
           break;
@@ -66354,7 +66354,7 @@ function (_Component) {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "app-header header-shadow"
+        className: "app-header header-shadow bg-sunny-morning header-text-dark"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "app-header__logo"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -66439,7 +66439,7 @@ function (_Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "btn-group"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        "data-toggle": "dropdown",
+        "data-togel": "dropdown",
         "aria-haspopup": "true",
         "aria-expanded": "false",
         className: "p-0 btn"
