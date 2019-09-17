@@ -16,6 +16,10 @@ Route::get('/', function () {
 });
 
 
-Route::get('varsuntan', function () {
-    return view('varsuntan');
+Route::get('addvarsuntan', function () {
+    return view('addvarsuntan');
+});
+
+Route::get('infovarsuntan', function () {
+    return view('infovarsuntan');
 });

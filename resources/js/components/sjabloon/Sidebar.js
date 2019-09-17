@@ -41,7 +41,25 @@ class Sidebar extends Component {
                             <li>
                                 <a href="index.html" className="mm-active">
                                     <i className="metismenu-icon pe-7s-rocket"></i>
-                                    Dashboard Example 1
+                                    Info Virtual Account
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index.html" className="mm-active">
+                                    <i className="metismenu-icon pe-7s-rocket"></i>
+                                    Tambah Virtual Account
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index.html" className="mm-active">
+                                    <i className="metismenu-icon pe-7s-rocket"></i>
+                                    Lupa Password
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index.html" className="mm-active">
+                                    <i className="metismenu-icon pe-7s-rocket"></i>
+                                    Logout
                                 </a>
                             </li>
                             <li className="app-sidebar__heading">UI Components</li>

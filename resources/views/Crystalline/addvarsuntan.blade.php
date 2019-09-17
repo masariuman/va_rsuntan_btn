@@ -63,7 +63,8 @@
                                         </div>
                                     </div>
                                 </div>    </div>
-                        </div>            <ul class="body-tabs body-tabs-layout tabs-animated body-tabs-animated nav">
+                        </div>            
+                        <!-- <ul class="body-tabs body-tabs-layout tabs-animated body-tabs-animated nav">
                             <li class="nav-item">
                                 <a role="tab" class="nav-link active" id="tab-0" data-toggle="tab" href="#tab-content-0">
                                     <span>Layout</span>
@@ -74,9 +75,9 @@
                                     <span>Grid</span>
                                 </a>
                             </li>
-                        </ul>
-                        <div class="tab-content">
-                            <div class="tab-pane tabs-animation fade show active" id="tab-content-0" role="tabpanel">
+                        </ul> -->
+                        <!-- <div class="tab-content"> -->
+                            <!-- <div class="tab-pane tabs-animation fade show active" id="tab-content-0" role="tabpanel">
                                 <div class="main-card mb-3 card">
                                     <div class="card-body"><h5 class="card-title">Grid Rows</h5>
                                         <form class="">
@@ -133,46 +134,50 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="tab-pane tabs-animation fade" id="tab-content-1" role="tabpanel">
+                            </div> -->
+                            <div class="tab-pane tabs-animation fade show active" id="tab-content-1" role="tabpanel">
                                 <div class="main-card mb-3 card">
-                                    <div class="card-body"><h5 class="card-title">Grid</h5>
+                                    <div class="card-body"><h5 class="card-title">Tambah Virtual Account</h5>
                                         <form class="">
-                                            <div class="position-relative row form-group"><label for="exampleEmail" class="col-sm-2 col-form-label">Email</label>
-                                                <div class="col-sm-10"><input name="email" id="exampleEmail" placeholder="with a placeholder" type="email" class="form-control"></div>
+                                            <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Virtual Account</label>
+                                                <div class="col-sm-10"><input name="va" id="exampleText" placeholder="Virtual Account" type="text" class="form-control"></div>
                                             </div>
-                                            <div class="position-relative row form-group"><label for="examplePassword" class="col-sm-2 col-form-label">Password</label>
-                                                <div class="col-sm-10"><input name="password" id="examplePassword" placeholder="password placeholder" type="password" class="form-control"></div>
+                                            <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Nama</label>
+                                                <div class="col-sm-10"><input name="nama" id="exampleText" placeholder="Nama" type="text" class="form-control"></div>
                                             </div>
-                                            <div class="position-relative row form-group"><label for="exampleSelect" class="col-sm-2 col-form-label">Select</label>
-                                                <div class="col-sm-10"><select name="select" id="exampleSelect" class="form-control"></select></div>
+                                            <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Layanan</label>
+                                                <div class="col-sm-10"><input name="layanan" id="exampleText" placeholder="Layanan" type="text" class="form-control"></div>
                                             </div>
-                                            <div class="position-relative row form-group"><label for="exampleSelectMulti" class="col-sm-2 col-form-label">Select Multiple</label>
-                                                <div class="col-sm-10"><select multiple="" name="selectMulti" id="exampleSelectMulti" class="form-control"></select></div>
+                                            <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Kode Layanan</label>
+                                                <div class="col-sm-10"><input name="kode_layanan" id="exampleText" placeholder="Kode Layanan" type="text" class="form-control"></div>
                                             </div>
-                                            <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Text Area</label>
-                                                <div class="col-sm-10"><textarea name="text" id="exampleText" class="form-control"></textarea></div>
+                                            <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Jenis Bayar</label>
+                                                <div class="col-sm-10"><input name="layanan" id="exampleText" placeholder="Jenis Bayar" type="text" class="form-control"></div>
                                             </div>
-                                            <div class="position-relative row form-group"><label for="exampleFile" class="col-sm-2 col-form-label">File</label>
-                                                <div class="col-sm-10"><input name="file" id="exampleFile" type="file" class="form-control-file">
-                                                    <small class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
-                                                </div>
+                                            <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Kode Jenis Bayar</label>
+                                                <div class="col-sm-10"><input name="kodejenisbayar" id="exampleText" placeholder="Kode Jenis Bayar" type="text" class="form-control"></div>
                                             </div>
-                                            <fieldset class="position-relative row form-group">
-                                                <legend class="col-form-label col-sm-2">Radio Buttons</legend>
-                                                <div class="col-sm-10">
-                                                    <div class="position-relative form-check"><label class="form-check-label"><input name="radio2" type="radio" class="form-check-input"> Option one is this and that—be sure to include why it's great</label></div>
-                                                    <div class="position-relative form-check"><label class="form-check-label"><input name="radio2" type="radio" class="form-check-input"> Option two can be something else and selecting it will deselect option
-                                                        one</label></div>
-                                                    <div class="position-relative form-check disabled"><label class="form-check-label"><input name="radio2" disabled="" type="radio" class="form-check-input"> Option three is disabled</label></div>
-                                                </div>
-                                            </fieldset>
-                                            <div class="position-relative row form-group"><label for="checkbox2" class="col-sm-2 col-form-label">Checkbox</label>
-                                                <div class="col-sm-10">
-                                                    <div class="position-relative form-check"><label class="form-check-label"><input id="checkbox2" type="checkbox" class="form-check-input"> Check me out</label></div>
-                                                </div>
+                                            <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Nomor ID Pemesanan</label>
+                                                <div class="col-sm-10"><input name="noid" id="exampleText" placeholder="Nomor ID Pemesanan" type="text" class="form-control"></div>
                                             </div>
-                                            <div class="position-relative row form-check">
+                                            <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Tagihan</label>
+                                                <div class="col-sm-10"><input name="tagihan" id="exampleText" placeholder="Tagihan" type="number" class="form-control"></div>
+                                            </div>
+                                            <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Flag Full / Partial</label>
+                                                <div class="col-sm-10"><input name="flag" id="exampleText" placeholder="Flag Full / Partial" type="text" class="form-control"></div>
+                                            </div>
+                                            <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Expired Date (yymmddHHMM)</label>
+                                                <div class="col-sm-10"><input name="expired" id="exampleText" placeholder="Expired Date (yymmddHHMM)" type="number" class="form-control"></div>
+                                            </div>
+                                            <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Reserve Field</label>
+                                                <div class="col-sm-10"><input name="reserve" id="exampleText" placeholder="Reserve Field" type="number" class="form-control"></div>
+                                            </div>
+                                            <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Description</label>
+                                                <div class="col-sm-10"><textarea name="description" id="exampleText" placeholder="Description"  class="form-control"></textarea></div>
+                                            </div>
+
+                  
+                                            <div class="position-relative row form-group">
                                                 <div class="col-sm-10 offset-sm-2">
                                                     <button class="btn btn-secondary">Submit</button>
                                                 </div>
@@ -182,5 +187,5 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    <!-- </div> -->
 

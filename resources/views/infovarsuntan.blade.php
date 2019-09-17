@@ -9,7 +9,7 @@
         <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
             @include('Crystalline.Header')
             @include('Crystalline.Ui')
-            @include('Crystalline.main-varsuntan')
+            @include('Crystalline.main-infovarsuntan')
         </div>
         @include('Crystalline/Js')
     </body>
