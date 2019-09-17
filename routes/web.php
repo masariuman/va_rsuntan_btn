@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('sjabloon');
 });
+
+
+Route::get('varsuntan', function () {
+    return view('varsuntan');
+});
