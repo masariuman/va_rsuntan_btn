@@ -4,15 +4,15 @@
                             <div class="page-title-wrapper">
                                 <div class="page-title-heading">
                                     <div class="page-title-icon">
-                                        <i class="pe-7s-graph text-success">
+                                        <i class="pe-7s-add-user icon-gradient bg-sunny-morning">
                                         </i>
                                     </div>
-                                    <div>Form Layouts
-                                        <div class="page-title-subheading">Build whatever layout you need with our Architect framework.
+                                    <div>Halaman Tambah Virtual Account
+                                        <div class="page-title-subheading">Halaman ini berfungsi untuk membuat virtual account.
                                         </div>
                                     </div>
                                 </div>
-                                <div class="page-title-actions">
+                                <!-- <div class="page-title-actions">
                                     <button type="button" data-toggle="tooltip" title="Example Tooltip" data-placement="bottom" class="btn-shadow mr-3 btn btn-dark">
                                         <i class="fa fa-star"></i>
                                     </button>
@@ -62,7 +62,8 @@
                                             </ul>
                                         </div>
                                     </div>
-                                </div>    </div>
+                                </div>     -->
+                                </div>
                         </div>            
                         <!-- <ul class="body-tabs body-tabs-layout tabs-animated body-tabs-animated nav">
                             <li class="nav-item">
@@ -139,47 +140,47 @@
                                 <div class="main-card mb-3 card">
                                     <div class="card-body"><h5 class="card-title">Tambah Virtual Account</h5>
                                         <form class="">
-                                            <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Virtual Account</label>
+                                            <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Virtual Account :</label>
                                                 <div class="col-sm-10"><input name="va" id="exampleText" placeholder="Virtual Account" type="text" class="form-control"></div>
                                             </div>
-                                            <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Nama</label>
+                                            <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Nama :</label>
                                                 <div class="col-sm-10"><input name="nama" id="exampleText" placeholder="Nama" type="text" class="form-control"></div>
                                             </div>
-                                            <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Layanan</label>
+                                            <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Layanan :</label>
                                                 <div class="col-sm-10"><input name="layanan" id="exampleText" placeholder="Layanan" type="text" class="form-control"></div>
                                             </div>
-                                            <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Kode Layanan</label>
+                                            <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Kode Layanan :</label>
                                                 <div class="col-sm-10"><input name="kode_layanan" id="exampleText" placeholder="Kode Layanan" type="text" class="form-control"></div>
                                             </div>
-                                            <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Jenis Bayar</label>
+                                            <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Jenis Bayar :</label>
                                                 <div class="col-sm-10"><input name="layanan" id="exampleText" placeholder="Jenis Bayar" type="text" class="form-control"></div>
                                             </div>
-                                            <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Kode Jenis Bayar</label>
+                                            <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Kode Jenis Bayar :</label>
                                                 <div class="col-sm-10"><input name="kodejenisbayar" id="exampleText" placeholder="Kode Jenis Bayar" type="text" class="form-control"></div>
                                             </div>
-                                            <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Nomor ID Pemesanan</label>
+                                            <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Nomor ID Pemesanan :</label>
                                                 <div class="col-sm-10"><input name="noid" id="exampleText" placeholder="Nomor ID Pemesanan" type="text" class="form-control"></div>
                                             </div>
-                                            <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Tagihan</label>
+                                            <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Tagihan :</label>
                                                 <div class="col-sm-10"><input name="tagihan" id="exampleText" placeholder="Tagihan" type="number" class="form-control"></div>
                                             </div>
-                                            <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Flag Full / Partial</label>
+                                            <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Flag Full / Partial :</label>
                                                 <div class="col-sm-10"><input name="flag" id="exampleText" placeholder="Flag Full / Partial" type="text" class="form-control"></div>
                                             </div>
-                                            <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Expired Date (yymmddHHMM)</label>
-                                                <div class="col-sm-10"><input name="expired" id="exampleText" placeholder="Expired Date (yymmddHHMM)" type="number" class="form-control"></div>
+                                            <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Expired Date :</label>
+                                                <div class="col-sm-10"><input name="expired" id="datepicker" placeholder="Expired Date (yymmddHHMM)" type="text" class="form-control"></div>
                                             </div>
-                                            <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Reserve Field</label>
+                                            <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Reserve Field :</label>
                                                 <div class="col-sm-10"><input name="reserve" id="exampleText" placeholder="Reserve Field" type="number" class="form-control"></div>
                                             </div>
-                                            <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Description</label>
+                                            <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Description :</label>
                                                 <div class="col-sm-10"><textarea name="description" id="exampleText" placeholder="Description"  class="form-control"></textarea></div>
                                             </div>
 
                   
                                             <div class="position-relative row form-group">
                                                 <div class="col-sm-10 offset-sm-2">
-                                                    <button class="btn btn-secondary">Submit</button>
+                                                    <button class="btn btn-warning"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use user-plus"></i> Submit</button>
                                                 </div>
                                             </div>
                                         </form>

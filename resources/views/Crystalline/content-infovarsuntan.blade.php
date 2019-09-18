@@ -4,15 +4,15 @@
                             <div class="page-title-wrapper">
                                 <div class="page-title-heading">
                                     <div class="page-title-icon">
-                                        <i class="pe-7s-drawer icon-gradient bg-happy-itmeo">
+                                        <i class="pe-7s-info icon-gradient bg-sunny-morning">
                                         </i>
                                     </div>
-                                    <div>Regular Tables
-                                        <div class="page-title-subheading">Tables are the backbone of almost all web applications.
+                                    <div>Halaman Info Virtual Account
+                                        <div class="page-title-subheading">Halaman ini berisikan informasi virtual account yang telah terdaftar.
                                         </div>
                                     </div>
                                 </div>
-                                <div class="page-title-actions">
+                                <!-- <div class="page-title-actions">
                                     <button type="button" data-toggle="tooltip" title="Example Tooltip" data-placement="bottom" class="btn-shadow mr-3 btn btn-dark">
                                         <i class="fa fa-star"></i>
                                     </button>
@@ -40,7 +40,7 @@
                                                         <span>
                                                             Book
                                                         </span>
-                                                        <div class="ml-auto badge badge-pill badge-danger">5</div>
+                                                        <div class="ml-auto badge badge-danger">5</div>
                                                     </a>
                                                 </li>
                                                 <li class="nav-item">
@@ -62,7 +62,8 @@
                                             </ul>
                                         </div>
                                     </div>
-                                </div>    </div>
+                                </div>     -->
+                                </div>
                         </div>            <div class="row">
                             <div class="col-lg-12">
                                 <div class="main-card mb-3 card">
@@ -70,30 +71,69 @@
                                         <table class="mb-0 table">
                                             <thead>
                                             <tr>
-                                                <th>#</th>
-                                                <th>First Name</th>
-                                                <th>Last Name</th>
-                                                <th>Username</th>
+                                                <th>No</th>
+                                                <th>Virutal Account</th>
+                                                <th>Nama</th>
+                                                <th>Status</th>
+                                                <th>Option</th>
                                             </tr>
                                             </thead>
                                             <tbody>
                                             <tr>
                                                 <th scope="row">1</th>
-                                                <td>Mark</td>
-                                                <td>Otto</td>
-                                                <td>@mdo</td>
+                                                <td>9333300100000000001</td>
+                                                <td>Ainun</td>
+                                                <td><div class="mb-2 mr-2 badge badge-pill badge-info">Pending</div></td>
+                                                <td> || &nbsp; <button class="mb-2 mr-2 btn btn-success"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use plus-square"></i> Iquiry
+                                                    </button> || &nbsp;
+                                                    <button class="mb-2 mr-2 btn btn-info"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use info-circle"></i> Show
+                                                    </button> || &nbsp;
+                                                    <button class="mb-2 mr-2 btn btn-secondary"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use edit"></i> Edit
+                                                    </button> || &nbsp;
+                                                    <button class="mb-2 mr-2 btn btn-danger"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use trash"></i> Delete
+                                                    </button> || &nbsp;</td>
                                             </tr>
                                             <tr>
                                                 <th scope="row">2</th>
-                                                <td>Jacob</td>
-                                                <td>Thornton</td>
-                                                <td>@fat</td>
+                                                <td>9333300100000000002</td>
+                                                <td>Habibie</td>
+                                                <td><div class="mb-2 mr-2 badge badge-pill badge-success">Success</div></</td>
+                                                <td> || &nbsp; <button class="mb-2 mr-2 btn btn-success"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use plus-square"></i> Iquiry
+                                                    </button> || &nbsp;
+                                                    <button class="mb-2 mr-2 btn btn-info"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use info-circle"></i> Show
+                                                    </button> || &nbsp;
+                                                    <button class="mb-2 mr-2 btn btn-secondary"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use edit"></i> Edit
+                                                    </button> || &nbsp;
+                                                    <button class="mb-2 mr-2 btn btn-danger"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use trash"></i> Delete
+                                                    </button> || &nbsp;</td>
                                             </tr>
                                             <tr>
                                                 <th scope="row">3</th>
-                                                <td>Larry</td>
-                                                <td>the Bird</td>
-                                                <td>@twitter</td>
+                                                <td>9333300100000000003</td>
+                                                <td>Megawati</td>
+                                                <td><div class="mb-2 mr-2 badge badge-pill badge-danger">Cancel</div></</td>
+                                                <td> || &nbsp; <button class="mb-2 mr-2 btn btn-success"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use plus-square"></i> Iquiry
+                                                    </button> || &nbsp;
+                                                    <button class="mb-2 mr-2 btn btn-info"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use info-circle"></i> Show
+                                                    </button> || &nbsp;
+                                                    <button class="mb-2 mr-2 btn btn-secondary"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use edit"></i> Edit
+                                                    </button> || &nbsp;
+                                                    <button class="mb-2 mr-2 btn btn-danger"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use trash"></i> Delete
+                                                    </button> || &nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">4</th>
+                                                <td>9333300100000000004</td>
+                                                <td>Jokowi</td>
+                                                <td><div class="mb-2 mr-2 badge badge-pill badge-secondary">Off</div></</td>
+                                                <td> || &nbsp; <button class="mb-2 mr-2 btn btn-success"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use plus-square"></i> Iquiry
+                                                    </button> || &nbsp;
+                                                    <button class="mb-2 mr-2 btn btn-info"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use info-circle"></i> Show
+                                                    </button> || &nbsp;
+                                                    <button class="mb-2 mr-2 btn btn-secondary"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use edit"></i> Edit
+                                                    </button> || &nbsp;
+                                                    <button class="mb-2 mr-2 btn btn-danger"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use trash"></i> Delete
+                                                    </button> || &nbsp;</td>
                                             </tr>
                                             </tbody>
                                         </table>

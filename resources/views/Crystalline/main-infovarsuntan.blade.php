@@ -1,8 +1,8 @@
 <div class="app-main">
-    @include('Crystalline.Sidebar')
+    @include('crystalline.sidebar')
     <div class="app-main__outer">
-        @include('Crystalline.infovarsuntan')
-        @include('Crystalline.Footer')
+        @include('crystalline.content-infovarsuntan')
+        @include('crystalline.footer')
     </div>
     <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
 </div>
