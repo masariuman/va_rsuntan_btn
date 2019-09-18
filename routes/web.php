@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('sjabloon');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
