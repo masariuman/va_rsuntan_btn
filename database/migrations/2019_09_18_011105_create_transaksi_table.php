@@ -19,21 +19,21 @@ class CreateTransaksiTable extends Migration
             $table->foreign('user_id')->references('id')->on('users');
             $table->unsignedBigInteger('va_id');
             $table->foreign('va_id')->references('id')->on('va');
-            $table->bigInteger('ref',12);
+            $table->string('ref',12);
             $table->string('va',40);
             $table->string('nama',40);
             $table->string('layanan',40);
-            $table->integer('kodelayanan',10);
+            $table->string('kodelayanan',10);
             $table->string('jenisbayar',40);
-            $table->bigInteger('kodejenisbyr',12);
+            $table->string('kodejenisbyr',12);
             $table->string('noid',20);
-            $table->bigInteger('tagihan');
+            $table->string('tagihan');
             $table->enum('flag',['F','P']);
             $table->dateTime('expired');
             $table->string('reserve',10);
             $table->string('description',60);
-            $table->bigInteger('terbayar');
-            $table->enum('status_transaksi',['pending','success','cancel'])
+            $table->string('terbayar');
+            $table->enum('status_transaksi',['pending','success','cancel','off']);
             $table->timestamps();
         });
     }
@@ -45,6 +45,12 @@ class CreateTransaksiTable extends Migration
      */
     public function down()
     {
+        Schema::table('transaksi', function (Blueprint $table) {
+            $table->dropForeign('transaksi_user_id_foreign');
+        });
+        Schema::table('transaksi', function (Blueprint $table) {
+            $table->dropForeign('transaksi_va_id_foreign');
+        });
         Schema::dropIfExists('transaksi');
     }
 }
