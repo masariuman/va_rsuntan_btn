@@ -25,7 +25,7 @@ class CreateVaTable extends Migration
             $table->string('jenisbayar',40);
             $table->bigInteger('kodejenisbyr',12);
             $table->string('noid',20);
-            $table->string('tagihan',19);
+            $table->bigInteger('tagihan',19);
             $table->enum('flag',['F','P']);
             $table->dateTime('expired');
             $table->string('reserve',10);
