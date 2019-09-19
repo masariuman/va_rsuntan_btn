@@ -72,16 +72,7 @@ class Header extends Component {
                                         <div className="btn-group">
                                             <a data-togel="dropdown" aria-haspopup="true" aria-expanded="false" className="p-0 btn">
                                                 <img width="42" className="rounded-circle" src="/sjabloon/assets/images/avatars/1.jpg" alt="" />
-                                                <i className="fa fa-angle-down ml-2 opacity-8"></i>
                                             </a>
-                                            <div tabindex="-1" role="menu" aria-hidden="true" className="dropdown-menu dropdown-menu-right">
-                                                <button type="button" tabindex="0" className="dropdown-item">User Account</button>
-                                                <button type="button" tabindex="0" className="dropdown-item">Settings</button>
-                                                <h6 tabindex="-1" className="dropdown-header">Header</h6>
-                                                <button type="button" tabindex="0" className="dropdown-item">Actions</button>
-                                                <div tabindex="-1" className="dropdown-divider"></div>
-                                                <button type="button" tabindex="0" className="dropdown-item">Dividers</button>
-                                            </div>
                                         </div>
                                     </div>
                                     <div className="widget-content-left  ml-3 header-user-info">
@@ -91,11 +82,6 @@ class Header extends Component {
                                         <div className="widget-subheading">
                                             Teller
                             </div>
-                                    </div>
-                                    <div className="widget-content-right header-user-info ml-3">
-                                        <button type="button" className="btn-shadow p-1 btn btn-primary btn-sm show-toastr-example">
-                                            <i className="fa text-white fa-calendar pr-1 pl-1"></i>
-                                        </button>
                                     </div>
                                 </div>
                             </div>

@@ -66411,49 +66411,13 @@ function (_Component) {
         className: "rounded-circle",
         src: "/sjabloon/assets/images/avatars/1.jpg",
         alt: ""
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "fa fa-angle-down ml-2 opacity-8"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        tabindex: "-1",
-        role: "menu",
-        "aria-hidden": "true",
-        className: "dropdown-menu dropdown-menu-right"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        type: "button",
-        tabindex: "0",
-        className: "dropdown-item"
-      }, "User Account"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        type: "button",
-        tabindex: "0",
-        className: "dropdown-item"
-      }, "Settings"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", {
-        tabindex: "-1",
-        className: "dropdown-header"
-      }, "Header"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        type: "button",
-        tabindex: "0",
-        className: "dropdown-item"
-      }, "Actions"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        tabindex: "-1",
-        className: "dropdown-divider"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        type: "button",
-        tabindex: "0",
-        className: "dropdown-item"
-      }, "Dividers")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "widget-content-left  ml-3 header-user-info"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "widget-heading"
       }, "Iwan Susanto"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "widget-subheading"
-      }, "Teller")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "widget-content-right header-user-info ml-3"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        type: "button",
-        className: "btn-shadow p-1 btn btn-primary btn-sm show-toastr-example"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "fa text-white fa-calendar pr-1 pl-1"
-      })))))))));
+      }, "Teller"))))))));
     }
   }]);
 
@@ -66581,7 +66545,7 @@ function (_Component) {
         onClick: this.toggleClass.bind(this, 2)
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "metismenu-icon pe-7s-refresh"
-      }), "Ganti Password")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      }), "Pengaturan Akun")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "index.html",
         className: "{this.state.activeIndex==0 ? 'mm-active': null}",
         onClick: this.toggleClass.bind(this, 3)

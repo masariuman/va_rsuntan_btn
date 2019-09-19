@@ -68,7 +68,7 @@ class Sidebar extends Component {
                             <li>
                                 <a href="/gantipassword" className="gantipass {this.state.activeIndex==0 ? 'mm-active': null}"  onClick={this.toggleClass.bind(this, 2)}>
                                     <i className="metismenu-icon pe-7s-refresh"></i>
-                                    Ganti Password
+                                    Pengaturan Akun
                                 </a>
                             </li>
                             <li>
