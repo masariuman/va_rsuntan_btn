@@ -16,16 +16,16 @@
 // });
 
 
-Route::get('addvarsuntan', function () {
-    return view('addvarsuntan');
-});
-
-Route::get('/', function () {
-    return view('infovarsuntan');
-});
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::get('/', 'InfovarsuntanController@dataInfovarsuntan')->name('/');
+Route::get('addvarsuntan', 'AddvarsuntanController@formAddvarsuntan')->name('formAddvarsuntan');
+Route::post('tambah_addvarsuntan', 'AddvarsuntanController@tambahAddvarsuntan')->name('tambahAddvarsuntan');
+
+
+
 
 

@@ -139,37 +139,35 @@
                             <div class="tab-pane tabs-animation fade show active" id="tab-content-1" role="tabpanel">
                                 <div class="main-card mb-3 card">
                                     <div class="card-body"><h5 class="card-title">Tambah Virtual Account</h5>
-                                        <form class="">
+                                        <form class="" action="tambah_addvarsuntan" method="post">
+                                        @csrf
                                             <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Virtual Account :</label>
-                                                <div class="col-sm-10"><input name="va" id="exampleText" placeholder="Virtual Account" type="text" class="form-control"></div>
+                                                <div class="col-sm-10"><input name="va" id="exampleText" placeholder="Virtual Account" type="text" class="form-control" required></div>
                                             </div>
                                             <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Nama :</label>
-                                                <div class="col-sm-10"><input name="nama" id="exampleText" placeholder="Nama" type="text" class="form-control"></div>
+                                                <div class="col-sm-10"><input name="nama" id="exampleText" placeholder="Nama" type="text" class="form-control" required></div>
                                             </div>
                                             <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Layanan :</label>
-                                                <div class="col-sm-10"><input name="layanan" id="exampleText" placeholder="Layanan" type="text" class="form-control"></div>
+                                                <div class="col-sm-10"><input name="layanan" id="exampleText" placeholder="Layanan" type="text" class="form-control" required></div>
                                             </div>
                                             <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Kode Layanan :</label>
-                                                <div class="col-sm-10"><input name="kode_layanan" id="exampleText" placeholder="Kode Layanan" type="text" class="form-control"></div>
+                                                <div class="col-sm-10"><input name="kodelayanan" id="exampleText" placeholder="Kode Layanan" type="text" class="form-control" required></div>
                                             </div>
                                             <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Jenis Bayar :</label>
-                                                <div class="col-sm-10"><input name="layanan" id="exampleText" placeholder="Jenis Bayar" type="text" class="form-control"></div>
+                                                <div class="col-sm-10"><input name="jenisbayar" id="exampleText" placeholder="Jenis Bayar" type="text" class="form-control" required></div>
                                             </div>
                                             <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Kode Jenis Bayar :</label>
-                                                <div class="col-sm-10"><input name="kodejenisbayar" id="exampleText" placeholder="Kode Jenis Bayar" type="text" class="form-control"></div>
+                                                <div class="col-sm-10"><input name="kodejenisbyr" id="exampleText" placeholder="Kode Jenis Bayar" type="text" class="form-control" required></div>
                                             </div>
                                             <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Nomor ID Pemesanan :</label>
-                                                <div class="col-sm-10"><input name="noid" id="exampleText" placeholder="Nomor ID Pemesanan" type="text" class="form-control"></div>
+                                                <div class="col-sm-10"><input name="noid" id="exampleText" placeholder="Nomor ID Pemesanan" type="text" class="form-control" required></div>
                                             </div>
                                             <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Tagihan :</label>
-                                                <div class="col-sm-10"><input name="tagihan" id="exampleText" placeholder="Tagihan" type="number" class="form-control"></div>
+                                                <div class="col-sm-10"><input name="tagihan" id="exampleText" placeholder="Tagihan" type="number" class="form-control" required></div>
                                             </div>
-                                            <!-- <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Flag Full / Partial :</label>
-                                                <div class="col-sm-10"><input name="flag" id="exampleText" placeholder="Flag Full / Partial" type="text" class="form-control"></div>
-                                            </div> -->
                                             <div class="position-relative row form-group"><label for="exampleSelect" class="col-sm-2 col-form-label">Flag Full / Partial :</label>
                                                 <div class="col-sm-10">
-                                                <select name="flag" id="exampleSelect" class="form-control">
+                                                <select name="flag" id="exampleSelect" class="form-control" required>
                                                     <option value="" disabled selected>-Pilih Flag-</option>  
                                                     <option value="F">Flag Full</option>
                                                     <option value="P">Flag Partial</option>
@@ -177,21 +175,18 @@
                                                 </div>
                                             </div>
                                             <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Expired Date :</label>
-                                                <div class="col-sm-10"><input name="expired" id="datepicker" placeholder="Expired Date (yymmddHHMM)" type="text" class="form-control"></div>
+                                                <div class="col-sm-10"><input name="expired" id="datepicker" placeholder="Expired Date (yymmddHHMM)" type="text" class="form-control" required></div>
                                             </div>
                                             <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Reserve Field :</label>
-                                                <div class="col-sm-10"><input name="reserve" id="exampleText" placeholder="Reserve Field" type="number" class="form-control"></div>
+                                                <div class="col-sm-10"><input name="reserve" id="exampleText" placeholder="Reserve Field" type="number" class="form-control" required></div>
                                             </div>
                                             <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Description :</label>
-                                                <div class="col-sm-10"><textarea name="description" id="exampleText" placeholder="Description"  class="form-control"></textarea></div>
+                                                <div class="col-sm-10"><textarea name="description" id="exampleText" placeholder="Description"  class="form-control" required></textarea></div>
                                             </div>
 
-
-
-                  
                                             <div class="position-relative row form-group">
                                                 <div class="col-sm-10 offset-sm-2">
-                                                    <button class="btn btn-warning"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use user-plus"></i> Submit</button>
+                                                    <button type="submit" class="btn btn-warning"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use user-plus"></i> Submit</button>
                                                 </div>
                                             </div>
                                         </form>
