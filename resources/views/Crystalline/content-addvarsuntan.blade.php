@@ -164,8 +164,17 @@
                                             <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Tagihan :</label>
                                                 <div class="col-sm-10"><input name="tagihan" id="exampleText" placeholder="Tagihan" type="number" class="form-control"></div>
                                             </div>
-                                            <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Flag Full / Partial :</label>
+                                            <!-- <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Flag Full / Partial :</label>
                                                 <div class="col-sm-10"><input name="flag" id="exampleText" placeholder="Flag Full / Partial" type="text" class="form-control"></div>
+                                            </div> -->
+                                            <div class="position-relative row form-group"><label for="exampleSelect" class="col-sm-2 col-form-label">Flag Full / Partial :</label>
+                                                <div class="col-sm-10">
+                                                <select name="flag" id="exampleSelect" class="form-control">
+                                                    <option value="" disabled selected>-Pilih Flag-</option>  
+                                                    <option value="F">Flag Full</option>
+                                                    <option value="P">Flag Partial</option>
+                                                </select>
+                                                </div>
                                             </div>
                                             <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Expired Date :</label>
                                                 <div class="col-sm-10"><input name="expired" id="datepicker" placeholder="Expired Date (yymmddHHMM)" type="text" class="form-control"></div>
@@ -176,6 +185,8 @@
                                             <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Description :</label>
                                                 <div class="col-sm-10"><textarea name="description" id="exampleText" placeholder="Description"  class="form-control"></textarea></div>
                                             </div>
+
+
 
                   
                                             <div class="position-relative row form-group">

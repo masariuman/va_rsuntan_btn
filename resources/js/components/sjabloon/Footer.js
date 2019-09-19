@@ -23,12 +23,12 @@ class Footer extends Component {
                             <ul className="nav">
                                 <li className="nav-item">
                                     <a href="javascript:void(0);" className="nav-link">
-                                        Copyright-2020
+                                        Copyright &copy; 2020
                                     </a>
                                 </li>
                                 <li className="nav-item">
                                     <a href="javascript:void(0);" className="nav-link">
-                                        <div className="badge badge-success mr-1 ml-0">
+                                        <div className="badge badge-warning mr-1 ml-0">
                                             <small>IT</small>
                                         </div>
                                         RSUNTAN

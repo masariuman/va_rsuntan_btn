@@ -91,6 +91,8 @@
                                                     <button class="mb-2 mr-2 btn btn-alternate" data-toggle="modal" data-target="#exampleModalLongEdit"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use edit"></i> Edit
                                                     </button> || &nbsp;
                                                     <button class="mb-2 mr-2 btn btn-danger" data-toggle="modal" data-target=".bd-example-modal-sm-delete"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use trash"></i> Delete
+                                                    </button> || &nbsp;
+                                                    <button class="mb-2 mr-2 btn btn-focus" data-toggle="modal" data-target="#exampleModalLongHistory"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use history"></i> History
                                                     </button> || &nbsp;</td>
                                             </tr>
                                             <tr>
@@ -98,13 +100,15 @@
                                                 <td>9333300100000000002</td>
                                                 <td>Habibie</td>
                                                 <td><div class="mb-2 mr-2 badge badge-pill badge-success">Success</div></</td>
-                                                <td> || &nbsp; <button class="mb-2 mr-2 btn btn-success"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use plus-square"></i> Iquiry
+                                                <td> || &nbsp; <button class="mb-2 mr-2 btn btn-success" data-toggle="modal" data-target=".bd-example-modal-sm-iquiry"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use plus-square"></i> Iquiry
                                                     </button> || &nbsp;
-                                                    <button class="mb-2 mr-2 btn btn-info"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use address-card"></i> Detail
+                                                    <button class="mb-2 mr-2 btn btn-info" data-toggle="modal" data-target="#exampleModalLongDetail"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use address-card"></i> Detail
                                                     </button> || &nbsp;
-                                                    <button class="mb-2 mr-2 btn btn-alternate"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use edit"></i> Edit
+                                                    <button class="mb-2 mr-2 btn btn-alternate" data-toggle="modal" data-target="#exampleModalLongEdit"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use edit"></i> Edit
                                                     </button> || &nbsp;
-                                                    <button class="mb-2 mr-2 btn btn-danger"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use trash"></i> Delete
+                                                    <button class="mb-2 mr-2 btn btn-danger" data-toggle="modal" data-target=".bd-example-modal-sm-delete"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use trash"></i> Delete
+                                                    </button> || &nbsp;
+                                                    <button class="mb-2 mr-2 btn btn-focus" data-toggle="modal" data-target="#exampleModalLongHistory"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use history"></i> History
                                                     </button> || &nbsp;</td>
                                             </tr>
                                             <tr>
@@ -112,13 +116,15 @@
                                                 <td>9333300100000000003</td>
                                                 <td>Megawati</td>
                                                 <td><div class="mb-2 mr-2 badge badge-pill badge-danger">Cancel</div></</td>
-                                                <td> || &nbsp; <button class="mb-2 mr-2 btn btn-success"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use plus-square"></i> Iquiry
+                                                <td> || &nbsp; <button class="mb-2 mr-2 btn btn-success" data-toggle="modal" data-target=".bd-example-modal-sm-iquiry"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use plus-square"></i> Iquiry
                                                     </button> || &nbsp;
-                                                    <button class="mb-2 mr-2 btn btn-info"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use address-card"></i> Detail
+                                                    <button class="mb-2 mr-2 btn btn-info" data-toggle="modal" data-target="#exampleModalLongDetail"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use address-card"></i> Detail
                                                     </button> || &nbsp;
-                                                    <button class="mb-2 mr-2 btn btn-alternate"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use edit"></i> Edit
+                                                    <button class="mb-2 mr-2 btn btn-alternate" data-toggle="modal" data-target="#exampleModalLongEdit"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use edit"></i> Edit
                                                     </button> || &nbsp;
-                                                    <button class="mb-2 mr-2 btn btn-danger"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use trash"></i> Delete
+                                                    <button class="mb-2 mr-2 btn btn-danger" data-toggle="modal" data-target=".bd-example-modal-sm-delete"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use trash"></i> Delete
+                                                    </button> || &nbsp;
+                                                    <button class="mb-2 mr-2 btn btn-focus" data-toggle="modal" data-target="#exampleModalLongHistory"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use history"></i> History
                                                     </button> || &nbsp;</td>
                                             </tr>
                                             <tr>
@@ -126,13 +132,15 @@
                                                 <td>9333300100000000004</td>
                                                 <td>Jokowi</td>
                                                 <td><div class="mb-2 mr-2 badge badge-pill badge-secondary">Off</div></</td>
-                                                <td> || &nbsp; <button class="mb-2 mr-2 btn btn-success"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use plus-square"></i> Iquiry
+                                                <td> || &nbsp; <button class="mb-2 mr-2 btn btn-success" data-toggle="modal" data-target=".bd-example-modal-sm-iquiry"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use plus-square"></i> Iquiry
                                                     </button> || &nbsp;
-                                                    <button class="mb-2 mr-2 btn btn-info"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use address-card"></i> Detail
+                                                    <button class="mb-2 mr-2 btn btn-info" data-toggle="modal" data-target="#exampleModalLongDetail"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use address-card"></i> Detail
                                                     </button> || &nbsp;
-                                                    <button class="mb-2 mr-2 btn btn-alternate"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use edit"></i> Edit
+                                                    <button class="mb-2 mr-2 btn btn-alternate" data-toggle="modal" data-target="#exampleModalLongEdit"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use edit"></i> Edit
                                                     </button> || &nbsp;
-                                                    <button class="mb-2 mr-2 btn btn-danger"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use trash"></i> Delete
+                                                    <button class="mb-2 mr-2 btn btn-danger" data-toggle="modal" data-target=".bd-example-modal-sm-delete"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use trash"></i> Delete
+                                                    </button> || &nbsp;
+                                                    <button class="mb-2 mr-2 btn btn-focus" data-toggle="modal" data-target="#exampleModalLongHistory"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use history"></i> History
                                                     </button> || &nbsp;</td>
                                             </tr>
                                             </tbody>
