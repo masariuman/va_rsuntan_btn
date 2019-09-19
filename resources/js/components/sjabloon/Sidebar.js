@@ -1,6 +1,21 @@
 import React, { Component } from 'react';
 
 class Sidebar extends Component {
+
+    constructor(props) {
+        super(props)
+
+        this.toggleClass= this.toggleClass.bind(this);
+        this.state = {
+          activeIndex: 0
+        }
+    }
+
+    toggleClass(index, e) {
+
+        this.setState({ activeIndex: index });
+    };
+
     render() {
         return (
             <div>
@@ -39,25 +54,25 @@ class Sidebar extends Component {
                         <ul className="vertical-nav-menu">
                             <li className="app-sidebar__heading">Dashboards</li>
                             <li>
-                                <a href="index.html" className="mm-active">
+                                <a href="/" className="info {this.state.activeIndex==0 ? 'mm-active': null}" onClick={this.toggleClass.bind(this, 0)}>
                                     <i className="metismenu-icon pe-7s-add-user"></i>
                                     Info Virtual Account
                                 </a>
                             </li>
                             <li>
-                                <a href="index.html" className="mm-active">
+                                <a href="/addvarsuntan" className="addva {this.state.activeIndex==0 ? 'mm-active': null}"  onClick={this.toggleClass.bind(this, 1)}>
                                     <i className="metismenu-icon pe-7s-add-user"></i>
                                     Tambah Virtual Account
                                 </a>
                             </li>
                             <li>
-                                <a href="index.html" className="mm-active">
+                                <a href="/gantipassword" className="gantipass {this.state.activeIndex==0 ? 'mm-active': null}"  onClick={this.toggleClass.bind(this, 2)}>
                                     <i className="metismenu-icon pe-7s-refresh"></i>
-                                    Lupa Password
+                                    Pengaturan Akun
                                 </a>
                             </li>
                             <li>
-                                <a href="index.html" className="mm-active">
+                                <a href="index.html" className="{this.state.activeIndex==0 ? 'mm-active': null}"  onClick={this.toggleClass.bind(this, 3)}>
                                     <i className="metismenu-icon pe-7s-power"></i>
                                     Logout
                                 </a>

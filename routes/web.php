@@ -11,15 +11,19 @@
 |
 */
 
-Route::get('/', function () {
-    return view('dashboardvarsuntan');
-});
+// Route::get('/', function () {
+//     return view('dashboardvarsuntan');
+// });
 
 
 Route::get('addvarsuntan', function () {
     return view('addvarsuntan');
 });
 
-Route::get('infovarsuntan', function () {
+Route::get('/', function () {
     return view('infovarsuntan');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
