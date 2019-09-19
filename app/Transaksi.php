@@ -12,7 +12,6 @@ class Transaksi extends Model
         'user_id',
         'va_id',
     	'ref',
-    	'va',
     	'nama',
     	'layanan',
         'kodelayanan',
@@ -24,12 +23,13 @@ class Transaksi extends Model
         'expired',
         'reserve',
         'description',
-        'status_inquiry',
+        'terbayar',
+        'status_transaksi',
     ];
     public function user() {
 		return $this->belongsTo('App\User', 'user_id');
 	}
-	public function transaksi() {
-		return $this->hasMany('App\Transaksi', 'va_id');
+	public function va() {
+		return $this->belongsTo('App\Va', 'va_id');
 	}
 }

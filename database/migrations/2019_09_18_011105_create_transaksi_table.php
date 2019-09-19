@@ -20,7 +20,6 @@ class CreateTransaksiTable extends Migration
             $table->unsignedBigInteger('va_id');
             $table->foreign('va_id')->references('id')->on('va');
             $table->string('ref',12);
-            $table->string('va',40);
             $table->string('nama',40);
             $table->string('layanan',40);
             $table->string('kodelayanan',10);

@@ -30,5 +30,8 @@ class Va extends Model
 	}
 	public function transaksi() {
 		return $this->hasMany('App\Transaksi', 'va_id');
+    }
+    public function report() {
+		return $this->hasMany('App\Report', 'va_id');
 	}
 }
