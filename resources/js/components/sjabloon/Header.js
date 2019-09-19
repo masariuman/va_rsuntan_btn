@@ -5,7 +5,7 @@ class Header extends Component {
         return (
             <div className="app-header header-shadow bg-sunny-morning header-text-dark">
                 <div className="app-header__logo">
-                    <div className="logo-src"></div>
+                    <div className="loogoo">RSUntan</div>
                     <div className="header__pane ml-auto">
                         <div>
                             <button type="button" className="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">
