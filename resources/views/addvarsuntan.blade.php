@@ -24,5 +24,6 @@
             });
         });
         </script>
+        <!-- Datepicker -->
     </body>
 </html>
