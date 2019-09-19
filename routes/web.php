@@ -12,7 +12,16 @@
 */
 
 Route::get('/', function () {
-    return view('sjabloon');
+    return view('dashboardvarsuntan');
+});
+
+
+Route::get('addvarsuntan', function () {
+    return view('addvarsuntan');
+});
+
+Route::get('infovarsuntan', function () {
+    return view('infovarsuntan');
 });
 
 Auth::routes();

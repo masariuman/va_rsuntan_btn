@@ -40,11 +40,29 @@ class Sidebar extends Component {
                             <li className="app-sidebar__heading">Dashboards</li>
                             <li>
                                 <a href="index.html" className="mm-active">
-                                    <i className="metismenu-icon pe-7s-rocket"></i>
-                                    Dashboard Example 1
+                                    <i className="metismenu-icon pe-7s-add-user"></i>
+                                    Info Virtual Account
                                 </a>
                             </li>
-                            <li className="app-sidebar__heading">UI Components</li>
+                            <li>
+                                <a href="index.html" className="mm-active">
+                                    <i className="metismenu-icon pe-7s-add-user"></i>
+                                    Tambah Virtual Account
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index.html" className="mm-active">
+                                    <i className="metismenu-icon pe-7s-refresh"></i>
+                                    Lupa Password
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index.html" className="mm-active">
+                                    <i className="metismenu-icon pe-7s-power"></i>
+                                    Logout
+                                </a>
+                            </li>
+                            {/* <li className="app-sidebar__heading">UI Components</li>
                             <li>
                                 <a href="#">
                                     <i className="metismenu-icon pe-7s-diamond"></i>
@@ -223,7 +241,7 @@ class Sidebar extends Component {
                                     </i>
                                     Upgrade to PRO
                                 </a>
-                            </li>
+                            </li> */}
                         </ul>
                     </div>
                 </div>

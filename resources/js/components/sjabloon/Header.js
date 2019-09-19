@@ -35,7 +35,7 @@ class Header extends Component {
                     </span>
                 </div>
                 <div className="app-header__content">
-                    <div className="app-header-left">
+                    {/* <div className="app-header-left">
                         <div className="search-wrapper">
                             <div className="input-holder">
                                 <input type="text" className="search-input" placeholder="Type to search" />
@@ -63,7 +63,7 @@ class Header extends Component {
                     </a>
                             </li>
                         </ul>
-                    </div>
+                    </div> */}
                     <div className="app-header-right">
                         <div className="header-btn-lg pr-0">
                             <div className="widget-content p-0">
@@ -86,10 +86,10 @@ class Header extends Component {
                                     </div>
                                     <div className="widget-content-left  ml-3 header-user-info">
                                         <div className="widget-heading">
-                                            Alina Mclourd
+                                            Iwan Susanto
                             </div>
                                         <div className="widget-subheading">
-                                            VP People Manager
+                                            Teller
                             </div>
                                     </div>
                                     <div className="widget-content-right header-user-info ml-3">
