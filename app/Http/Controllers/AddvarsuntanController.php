@@ -16,10 +16,9 @@ class AddvarsuntanController extends Controller
     public function tambahAddvarsuntan(Request $request)
     {
       
+        $nextId = Va::max('id') + 1;
 
-        $nextId = \DB::table('va')->max('id') + 1;
-
-        $addvarsuntan = \DB::table('va')->insert([
+        $addvarsuntan = Va::create([
             'user_id' => Auth::user()->id,
             'ref' => $request->input('id', $nextId),
             'va' => $request->va,
@@ -35,10 +34,11 @@ class AddvarsuntanController extends Controller
             'reserve' => $request->reserve,
             'description' => $request->reserve,
             'status_inquiry' => '0',
+            'created_at' => \Carbon\Carbon::now(),
+            'updated_at' => \Carbon\Carbon::now(),
         ]);
 
-        // return response()->json($addvarsuntan);
-
+    
         return back();
     }
 }
