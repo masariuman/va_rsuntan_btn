@@ -18,7 +18,15 @@ class RedirectIfAuthenticated
     public function handle($request, Closure $next, $guard = null)
     {
         if (Auth::guard($guard)->check()) {
-            return redirect('/home');
+            if(auth()->user()->active==1){
+                return redirect('/');
+            }
+            if(auth()->user()->active==0){
+                Auth::logout();
+                Session::flush();
+                return redirect('/login')->withInput()->with('not_active','Akun anda belum aktif, Hubungi admin untuk aktivasi');
+            }
+            // return redirect('/home');
         }
 
         return $next($request);
