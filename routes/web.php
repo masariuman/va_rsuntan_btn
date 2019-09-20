@@ -22,6 +22,11 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 Route::get('/', 'InfovarsuntanController@dataInfovarsuntan')->name('/');
+Route::patch('ubah_infovarsuntan/{id}', 'InfovarsuntanController@ubahInfovarsuntan')->name('ubahInfovarsuntan');
+Route::delete('hapus_infovarsuntan/{id}', 'InfovarsuntanController@hapusInfovarsuntan')->name('hapusInfovarsuntan');
+
+
+
 Route::get('addvarsuntan', 'AddvarsuntanController@formAddvarsuntan')->name('formAddvarsuntan');
 Route::post('tambah_addvarsuntan', 'AddvarsuntanController@tambahAddvarsuntan')->name('tambahAddvarsuntan');
 

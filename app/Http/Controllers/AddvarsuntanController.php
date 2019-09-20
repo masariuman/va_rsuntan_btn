@@ -38,7 +38,9 @@ class AddvarsuntanController extends Controller
             'updated_at' => \Carbon\Carbon::now(),
         ]);
 
-    
+        \Session::flash('Berhasil', 'Data Virtual Account berhasil ditambahkan');
+
         return back();
     }
+
 }

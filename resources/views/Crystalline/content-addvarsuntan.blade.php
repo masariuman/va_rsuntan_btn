@@ -137,6 +137,7 @@
                                 </div>
                             </div> -->
                             <div class="tab-pane tabs-animation fade show active" id="tab-content-1" role="tabpanel">
+                                @include('pesan')
                                 <div class="main-card mb-3 card">
                                     <div class="card-body"><h5 class="card-title">Tambah Virtual Account</h5>
                                         <form class="" action="tambah_addvarsuntan" method="post">
