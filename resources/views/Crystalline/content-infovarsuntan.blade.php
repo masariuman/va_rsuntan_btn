@@ -69,99 +69,39 @@
                             @include('pesan')
                                 <div class="main-card mb-3 card">
                                     <div class="card-body"><h5 class="card-title">Info Virtual Account</h5>
-                                        <table class="mb-0 table">
+                                        <table class="mb-0 table" id="table">
                                             <thead>
                                             <tr>
                                                 <th>No</th>
                                                 <th>Virutal Account</th>
                                                 <th>Nama</th>
                                                 <th>Status</th>
+                                                <th>Teller</th>
                                                 <th>Option</th>
                                             </tr>
                                             </thead>
                                             <tbody>
+<!-- 
                                             @foreach($va as $key => $vas)
                                             <tr>
                                                 <th scope="row">{{ ++$key }}</th>
                                                 <td>{{$vas->va}}</td>
                                                 <td>{{$vas->nama}}</td>
                                                 <td><div class="mb-2 mr-2 badge badge-pill badge-info">Pending</div></td>
-                                                <td> || &nbsp; <button class="mb-2 mr-2 btn btn-success" data-toggle="modal" data-target=".bd-example-modal-sm-iquiry-{{ $vas->id }}"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use plus-square"></i> Iquiry
-                                                    </button> || &nbsp;
+                                                <td>{{$vas->user->name}}</td>
+                                                <td><button class="mb-2 mr-2 btn btn-success" data-toggle="modal" data-target=".bd-example-modal-sm-iquiry-{{ $vas->id }}"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use plus-square"></i> Iquiry
+                                                    </button>||&nbsp;
                                                     <button class="mb-2 mr-2 btn btn-info" data-toggle="modal" data-target="#exampleModalLongDetail-{{ $vas->id }}"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use address-card"></i> Detail
-                                                    </button> || &nbsp;
+                                                    </button>||&nbsp;
                                                     <button class="mb-2 mr-2 btn btn-alternate" data-toggle="modal" data-target="#exampleModalLongEdit-{{ $vas->id }}"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use edit"></i> Edit
-                                                    </button> || &nbsp;
+                                                    </button>||&nbsp;
                                                     <button class="mb-2 mr-2 btn btn-danger" data-toggle="modal" data-target=".bd-example-modal-sm-delete-{{ $vas->id }}"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use trash"></i> Delete
-                                                    </button> || &nbsp;
+                                                    </button>||&nbsp;
                                                     <button class="mb-2 mr-2 btn btn-focus" data-toggle="modal" data-target="#exampleModalLongHistory-{{ $vas->id }}"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use history"></i> History
-                                                    </button> || &nbsp;</td>
+                                                    </button></td>
                                             </tr>
-                                            @endforeach
-                                            <tr>
-                                                <th scope="row">1</th>
-                                                <td>9333300100000000001</td>
-                                                <td>Ainun</td>
-                                                <td><div class="mb-2 mr-2 badge badge-pill badge-info">Pending</div></td>
-                                                <td> || &nbsp; <button class="mb-2 mr-2 btn btn-success" data-toggle="modal" data-target=".bd-example-modal-sm-iquiry"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use plus-square"></i> Iquiry
-                                                    </button> || &nbsp;
-                                                    <button class="mb-2 mr-2 btn btn-info" data-toggle="modal" data-target="#exampleModalLongDetail"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use address-card"></i> Detail
-                                                    </button> || &nbsp;
-                                                    <button class="mb-2 mr-2 btn btn-alternate" data-toggle="modal" data-target="#exampleModalLongEdit"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use edit"></i> Edit
-                                                    </button> || &nbsp;
-                                                    <button class="mb-2 mr-2 btn btn-danger" data-toggle="modal" data-target=".bd-example-modal-sm-delete"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use trash"></i> Delete
-                                                    </button> || &nbsp;
-                                                    <button class="mb-2 mr-2 btn btn-focus" data-toggle="modal" data-target="#exampleModalLongHistory"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use history"></i> History
-                                                    </button> || &nbsp;</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">2</th>
-                                                <td>9333300100000000002</td>
-                                                <td>Habibie</td>
-                                                <td><div class="mb-2 mr-2 badge badge-pill badge-success">Success</div></</td>
-                                                <td> || &nbsp; <button class="mb-2 mr-2 btn btn-success" data-toggle="modal" data-target=".bd-example-modal-sm-iquiry"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use plus-square"></i> Iquiry
-                                                    </button> || &nbsp;
-                                                    <button class="mb-2 mr-2 btn btn-info" data-toggle="modal" data-target="#exampleModalLongDetail"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use address-card"></i> Detail
-                                                    </button> || &nbsp;
-                                                    <button class="mb-2 mr-2 btn btn-alternate" data-toggle="modal" data-target="#exampleModalLongEdit"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use edit"></i> Edit
-                                                    </button> || &nbsp;
-                                                    <button class="mb-2 mr-2 btn btn-danger" data-toggle="modal" data-target=".bd-example-modal-sm-delete"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use trash"></i> Delete
-                                                    </button> || &nbsp;
-                                                    <button class="mb-2 mr-2 btn btn-focus" data-toggle="modal" data-target="#exampleModalLongHistory"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use history"></i> History
-                                                    </button> || &nbsp;</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">3</th>
-                                                <td>9333300100000000003</td>
-                                                <td>Megawati</td>
-                                                <td><div class="mb-2 mr-2 badge badge-pill badge-danger">Cancel</div></</td>
-                                                <td> || &nbsp; <button class="mb-2 mr-2 btn btn-success" data-toggle="modal" data-target=".bd-example-modal-sm-iquiry"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use plus-square"></i> Iquiry
-                                                    </button> || &nbsp;
-                                                    <button class="mb-2 mr-2 btn btn-info" data-toggle="modal" data-target="#exampleModalLongDetail"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use address-card"></i> Detail
-                                                    </button> || &nbsp;
-                                                    <button class="mb-2 mr-2 btn btn-alternate" data-toggle="modal" data-target="#exampleModalLongEdit"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use edit"></i> Edit
-                                                    </button> || &nbsp;
-                                                    <button class="mb-2 mr-2 btn btn-danger" data-toggle="modal" data-target=".bd-example-modal-sm-delete"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use trash"></i> Delete
-                                                    </button> || &nbsp;
-                                                    <button class="mb-2 mr-2 btn btn-focus" data-toggle="modal" data-target="#exampleModalLongHistory"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use history"></i> History
-                                                    </button> || &nbsp;</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">4</th>
-                                                <td>9333300100000000004</td>
-                                                <td>Jokowi</td>
-                                                <td><div class="mb-2 mr-2 badge badge-pill badge-secondary">Off</div></</td>
-                                                <td> || &nbsp; <button class="mb-2 mr-2 btn btn-success" data-toggle="modal" data-target=".bd-example-modal-sm-iquiry"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use plus-square"></i> Iquiry
-                                                    </button> || &nbsp;
-                                                    <button class="mb-2 mr-2 btn btn-info" data-toggle="modal" data-target="#exampleModalLongDetail"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use address-card"></i> Detail
-                                                    </button> || &nbsp;
-                                                    <button class="mb-2 mr-2 btn btn-alternate" data-toggle="modal" data-target="#exampleModalLongEdit"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use edit"></i> Edit
-                                                    </button> || &nbsp;
-                                                    <button class="mb-2 mr-2 btn btn-danger" data-toggle="modal" data-target=".bd-example-modal-sm-delete"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use trash"></i> Delete
-                                                    </button> || &nbsp;
-                                                    <button class="mb-2 mr-2 btn btn-focus" data-toggle="modal" data-target="#exampleModalLongHistory"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use history"></i> History
-                                                    </button> || &nbsp;</td>
-                                            </tr>
+                                            @endforeach -->
+                                     
                                             </tbody>
                                         </table>
                                     </div>

@@ -8,6 +8,13 @@ use Auth;
 
 class AddvarsuntanController extends Controller
 {
+    
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    
     public function formAddvarsuntan()
     {
         return view('addvarsuntan');

@@ -82,6 +82,9 @@ class Header extends Component {
                                         <div className="widget-subheading">
                                             Teller
                             </div>
+                            <a href="logout"> <div className="widget-heading">
+                                        Logout <i class="fa fa-fw" aria-hidden="true" title="Copy to use power-off"></i>
+                            </div></a>
                                     </div>
                                 </div>
                             </div>

@@ -66290,13 +66290,13 @@ function (_Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "javascript:void(0);",
         className: "nav-link"
-      }, "Copyright-2020")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+      }, "Copyright \xA9 2020")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         className: "nav-item"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "javascript:void(0);",
         className: "nav-link"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "badge badge-success mr-1 ml-0"
+        className: "badge badge-warning mr-1 ml-0"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", null, "IT")), "RSUNTAN"))))));
     }
   }]);
@@ -66417,7 +66417,15 @@ function (_Component) {
         className: "widget-heading"
       }, "Iwan Susanto"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "widget-subheading"
-      }, "Teller"))))))));
+      }, "Teller"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "logout"
+      }, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "widget-heading"
+      }, "Logout ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        "class": "fa fa-fw",
+        "aria-hidden": "true",
+        title: "Copy to use power-off"
+      }, "\uF011"))))))))));
     }
   }]);
 
@@ -66532,7 +66540,7 @@ function (_Component) {
         className: "info {this.state.activeIndex==0 ? 'mm-active': null}",
         onClick: this.toggleClass.bind(this, 0)
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "metismenu-icon pe-7s-add-user"
+        className: "metismenu-icon pe-7s-info"
       }), "Info Virtual Account")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "/addvarsuntan",
         className: "addva {this.state.activeIndex==0 ? 'mm-active': null}",
@@ -66544,7 +66552,7 @@ function (_Component) {
         className: "gantipass {this.state.activeIndex==0 ? 'mm-active': null}",
         onClick: this.toggleClass.bind(this, 2)
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "metismenu-icon pe-7s-refresh"
+        className: "metismenu-icon pe-7s-config"
       }), "Pengaturan Akun")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "index.html",
         className: "{this.state.activeIndex==0 ? 'mm-active': null}",
@@ -66580,8 +66588,8 @@ function (_Component) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\user\3D Objects\New folder\va_rsuntan_btn\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\user\3D Objects\New folder\va_rsuntan_btn\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\xampp\htdocs\va_rsuntan_btn\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\va_rsuntan_btn\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
