@@ -55,7 +55,7 @@ class Sidebar extends Component {
                             <li className="app-sidebar__heading">Dashboards</li>
                             <li>
                                 <a href="/" className="info {this.state.activeIndex==0 ? 'mm-active': null}" onClick={this.toggleClass.bind(this, 0)}>
-                                    <i className="metismenu-icon pe-7s-add-user"></i>
+                                    <i className="metismenu-icon pe-7s-info"></i>
                                     Info Virtual Account
                                 </a>
                             </li>
@@ -67,7 +67,7 @@ class Sidebar extends Component {
                             </li>
                             <li>
                                 <a href="/gantipassword" className="gantipass {this.state.activeIndex==0 ? 'mm-active': null}"  onClick={this.toggleClass.bind(this, 2)}>
-                                    <i className="metismenu-icon pe-7s-refresh"></i>
+                                    <i className="metismenu-icon pe-7s-config"></i>
                                     Pengaturan Akun
                                 </a>
                             </li>

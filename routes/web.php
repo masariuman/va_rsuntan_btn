@@ -16,14 +16,24 @@
 // });
 
 
-Route::get('addvarsuntan', function () {
-    return view('addvarsuntan');
-});
-
-Route::get('/', function () {
-    return view('infovarsuntan');
-});
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::get('/', 'InfovarsuntanController@dataInfovarsuntan')->name('/');
+Route::patch('ubah_infovarsuntan/{id}', 'InfovarsuntanController@ubahInfovarsuntan')->name('ubahInfovarsuntan');
+Route::delete('hapus_infovarsuntan/{id}', 'InfovarsuntanController@hapusInfovarsuntan')->name('hapusInfovarsuntan');
+
+
+
+Route::get('addvarsuntan', 'AddvarsuntanController@formAddvarsuntan')->name('formAddvarsuntan');
+Route::post('tambah_addvarsuntan', 'AddvarsuntanController@tambahAddvarsuntan')->name('tambahAddvarsuntan');
+
+Route::get('table', 'InfovarsuntanController@getTable')->name('getTable');
+
+Route::get('logout', 'Auth\LoginController@logout')->name('logout');
+
+
+
+
