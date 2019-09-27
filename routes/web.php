@@ -35,5 +35,7 @@ Route::get('table', 'InfovarsuntanController@getTable')->name('getTable');
 Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 
 
+Route::get('test-inquiry', 'HomeController@test_inquiry');
+
 
 

@@ -5,16 +5,17 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Va;
 use Auth;
+use GuzzleHttp\Client;
 
 class AddvarsuntanController extends Controller
 {
-    
+
     public function __construct()
     {
         $this->middleware('auth');
     }
 
-    
+
     public function formAddvarsuntan()
     {
         return view('addvarsuntan');
@@ -22,7 +23,7 @@ class AddvarsuntanController extends Controller
 
     public function tambahAddvarsuntan(Request $request)
     {
-      
+
         $nextId = Va::max('id') + 1;
 
         $addvarsuntan = Va::create([
@@ -44,6 +45,12 @@ class AddvarsuntanController extends Controller
             'created_at' => \Carbon\Carbon::now(),
             'updated_at' => \Carbon\Carbon::now(),
         ]);
+
+        // $client = new Client();
+        // $response = $client->post('url', [
+        //     GuzzleHttp\RequestOptions::JSON => ['foo' => 'bar']
+        // ]);
+
 
         \Session::flash('Berhasil', 'Data Virtual Account berhasil ditambahkan');
 
