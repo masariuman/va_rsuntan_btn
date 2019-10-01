@@ -32,7 +32,7 @@ class HomeController extends Controller
     {
 
         // return view('home');
-        $va = 9457800010100110011;
+        $va = "9457800010100110011";
         $kode_institusi = 4578;
         $length_vs = 19;
         $kode_product = 000;
@@ -40,7 +40,7 @@ class HomeController extends Controller
         $key = "plqQlf6fSoKKBWx4Lxmb0OOMwRKQ3TcN";
         $secret = "C4UMXATbTT";
         $signature = "0bf145958638ea90cb1a0162b11b294e02247062f61521818ca166fdc09896ca";
-        $ref = "1";
+        $ref = "123456789012";
         $url_inq = "https://vabtn-dev.btn.co.id:9021/v1/untan/inqVA";
         $url_create = "https://vabtn-dev.btn.co.id:9021/v1/untan/createVA";
         $url_update = "https://vabtn-dev.btn.co.id:9021/v1/untan/updVA";
@@ -58,11 +58,14 @@ class HomeController extends Controller
         $request = $client->post($url_inq,
             ['body' => json_encode($body)]
         );
+
+
         // return $response
         // $response = GuzzleHttp\get($url_inq);
         // dd($response);
         $response = $request->getBody()->getContents();
         dd($response);
+        // dd($body);
         // $response = $client->post('', [
         //     GuzzleHttp\RequestOptions::JSON => [
         //         'header' => [
