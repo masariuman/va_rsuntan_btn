@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use GuzzleHttp\Client;
+// use GuzzleHttp\Message\Request;
 
 class HomeController extends Controller
 {
@@ -54,10 +55,14 @@ class HomeController extends Controller
             'verify' => false,'headers' => ['Content-Type' => 'application/json','id' => $id, 'key' => $key, 'signature' => $signature]
         ]);
 
-        $response = $client->post($url_inq,
+        $request = $client->post($url_inq,
             ['body' => json_encode($body)]
         );
-
+        // return $response
+        // $response = GuzzleHttp\get($url_inq);
+        // dd($response);
+        $response = $request->getBody()->getContents();
+        dd($response);
         // $response = $client->post('', [
         //     GuzzleHttp\RequestOptions::JSON => [
         //         'header' => [
