@@ -59,32 +59,7 @@ class HomeController extends Controller
             ['body' => json_encode($body)]
         );
 
-
-        // return $response
-        // $response = GuzzleHttp\get($url_inq);
-        // dd($response);
         $response = $request->getBody()->getContents();
         dd($response);
-        // dd($body);
-        // $response = $client->post('', [
-        //     GuzzleHttp\RequestOptions::JSON => [
-        //         'header' => [
-        //             'Content-Type' => 'application/json',
-        //             'id' => $id,
-        //             'key' => $key,
-        //             'signature' => $signature
-        //         ],
-        //         'body' => [
-        //             'ref' => $ref,
-        //             'va' => $va
-        //         ]
-        //     ]
-        // ])->send();
-        // dd($response);
-
-
-
-
-
     }
 }
