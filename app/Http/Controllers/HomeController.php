@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use GuzzleHttp\Client;
+
+use function GuzzleHttp\json_decode;
+
 // use GuzzleHttp\Message\Request;
 
 class HomeController extends Controller
@@ -60,6 +63,12 @@ class HomeController extends Controller
         );
 
         $response = $request->getBody()->getContents();
-        dd($response);
+        $response_decode = json_decode($response);
+        dd($response_decode);
+
+
+
+
+
     }
 }
