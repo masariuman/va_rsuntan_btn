@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Http\Adapter\Guzzle6\Client as GuzzleAdapter;
+use GuzzleHttp\Client;
 
 class HomeController extends Controller
 {
@@ -50,19 +50,9 @@ class HomeController extends Controller
         $body = ['ref' => $ref, 'va' => $va];
 
 
-        $config = [
-            'verify' => false
-        ];
-        $adapter = GuzzleAdapter::createWithConfig($config);
-
-        $client = new $adapter([
-            'headers' => ['Content-Type' => 'application/json','id' => $id, 'key' => $key, 'signature' => $signature]
+        $client = new Client([
+            'verify' => false,'headers' => ['Content-Type' => 'application/json','id' => $id, 'key' => $key, 'signature' => $signature]
         ]);
-
-
-        // $client = new Client([
-        //     'headers' => ['Content-Type' => 'application/json','id' => $id, 'key' => $key, 'signature' => $signature]
-        // ]);
 
         $response = $client->post($url_inq,
             ['body' => json_encode($body)]
