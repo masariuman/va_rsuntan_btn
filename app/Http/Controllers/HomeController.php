@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use GuzzleHttp\Client;
+use Http\Adapter\Guzzle6\Client as GuzzleAdapter;
 
 class HomeController extends Controller
 {
@@ -31,30 +31,62 @@ class HomeController extends Controller
     {
 
         // return view('home');
-        $va = 9333300100000000001;
-        $kode_institusi = 3333;
+        $va = 9457800010100110011;
+        $kode_institusi = 4578;
         $length_vs = 19;
-        $kode_product = 001;
-        $id = "BTNTEST";
-        $key = "BtNT3sting";
-        $secret = "SeCr3tKey";
-        $signature = "fffd0bc1b10a4acd5286d1dc0acc59fa04c7a8bc";
-        $ref = "123456789012";
+        $kode_product = 000;
+        $id = "UNTANWS";
+        $key = "plqQlf6fSoKKBWx4Lxmb0OOMwRKQ3TcN";
+        $secret = "C4UMXATbTT";
+        $signature = "0bf145958638ea90cb1a0162b11b294e02247062f61521818ca166fdc09896ca";
+        $ref = "1";
+        $url_inq = "https://vabtn-dev.btn.co.id:9021/v1/untan/inqVA";
+        $url_create = "https://vabtn-dev.btn.co.id:9021/v1/untan/createVA";
+        $url_update = "https://vabtn-dev.btn.co.id:9021/v1/untan/updVA";
+        $url_delete = "https://vabtn-dev.btn.co.id:9021/v1/untan/deleteVA";
+        $url_report = "https://vabtn-dev.btn.co.id:9021/v1/untan/report";
 
-        $client = new \GuzzleHttp\Client();
-        $response = $client->post('https://vabtn-dev.btn.co.id:9021/test/inqVA', [
-            GuzzleHttp\RequestOptions::JSON => [
-                'header' => [
-                    'Content-Type' => 'application/json',
-                    'id' => $id,
-                    'key' => $key,
-                    'signature' => $signature
-                ],
-                'body' => [
-                    'ref' => $ref,
-                    'va' => $va
-                ]
-            ]
+
+        $body = ['ref' => $ref, 'va' => $va];
+
+
+        $config = [
+            'verify' => false
+        ];
+        $adapter = GuzzleAdapter::createWithConfig($config);
+
+        $client = new $adapter([
+            'headers' => ['Content-Type' => 'application/json','id' => $id, 'key' => $key, 'signature' => $signature]
         ]);
+
+
+        // $client = new Client([
+        //     'headers' => ['Content-Type' => 'application/json','id' => $id, 'key' => $key, 'signature' => $signature]
+        // ]);
+
+        $response = $client->post($url_inq,
+            ['body' => json_encode($body)]
+        );
+
+        // $response = $client->post('', [
+        //     GuzzleHttp\RequestOptions::JSON => [
+        //         'header' => [
+        //             'Content-Type' => 'application/json',
+        //             'id' => $id,
+        //             'key' => $key,
+        //             'signature' => $signature
+        //         ],
+        //         'body' => [
+        //             'ref' => $ref,
+        //             'va' => $va
+        //         ]
+        //     ]
+        // ])->send();
+        // dd($response);
+
+
+
+
+
     }
 }
