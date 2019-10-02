@@ -36,6 +36,7 @@ Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 
 
 Route::get('test-inquiry', 'HomeController@test_inquiry');
+Route::get('test-create', 'HomeController@test_create');
 
 
 
