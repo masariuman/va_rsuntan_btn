@@ -78,15 +78,15 @@ class HomeController extends Controller
         $id = "UNTANWS";
         $key = "plqQlf6fSoKKBWx4Lxmb0OOMwRKQ3TcN";
         $secret = "C4UMXATbTT";
-        $signature = "0bf145958638ea90cb1a0162b11b294e02247062f61521818ca166fdc09896ca";
+        $signature = "2f7c6d0d63c7868be05d8fe8c625593f8495bca10397cd32705e0a83b6c003ba";
         $ref = "123456789012";
         $nama = "UNTAN";
         $layanan = "layanan";
-        $kodelayanan = "1";
+        $kodelayanan = "100001";
         $jenisbayar = "transfer";
         $kodejenisbyr = "1";
         $noid = "000001";
-        $tagihan = 1000000;
+        $tagihan = 200;
         $flag = "F";
         $expired = "";
         $reserve = "";
@@ -126,5 +126,6 @@ class HomeController extends Controller
         $response = $request->getBody()->getContents();
         $response_decode = json_decode($response);
         dd($response_decode);
+        // dd(json_encode($body));
     }
 }
