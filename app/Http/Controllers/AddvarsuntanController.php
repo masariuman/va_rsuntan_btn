@@ -7,6 +7,8 @@ use App\Va;
 use Auth;
 use GuzzleHttp\Client;
 
+use function GuzzleHttp\json_decode;
+
 class AddvarsuntanController extends Controller
 {
 
@@ -43,29 +45,41 @@ class AddvarsuntanController extends Controller
             'reserve' => $reserve,
             'description' => $description
         ];
-        $sign = $id.':'.json_encode($body).':'.$key;
+        $sign = $idva.':'.json_encode($body).':'.$keyva;
         $signature = hash_hmac('sha256', $sign, $secretva);
+        $url_create = "https://vabtn-dev.btn.co.id:9021/v1/untan/createVA";
 
-
-        $addvarsuntan = Va::create([
-            'user_id' => Auth::user()->id,
-            'ref' => $request->input('id', $nextId),
-            'va' => $request->va,
-            'nama' => $request->nama,
-            'layanan' => $request->layanan,
-            'kodelayanan' => $request->kodelayanan,
-            'jenisbayar' => $request->jenisbayar,
-            'kodejenisbyr' => $request->kodejenisbyr,
-            'noid' => $request->noid,
-            'tagihan' => $request->tagihan,
-            'flag' => $request->flag,
-            'expired' => $request->expired,
-            'reserve' => $request->reserve,
-            'description' => $request->reserve,
-            'status_inquiry' => '0',
-            'created_at' => \Carbon\Carbon::now(),
-            'updated_at' => \Carbon\Carbon::now(),
+        $client = new Client([
+            'verify' => false,'headers' => ['Content-Type' => 'application/json','id' => $id, 'key' => $key, 'signature' => $signature]
         ]);
+
+        $request = $client->post($url_create,
+            ['body' => json_encode($body)]
+        );
+
+        $response = $request->getBody()->getContents();
+        $response_decode = json_decode($response);
+        dd($response_decode);
+
+        // $addvarsuntan = Va::create([
+        //     'user_id' => Auth::user()->id,
+        //     'ref' => $request->input('id', $nextId),
+        //     'va' => $request->va,
+        //     'nama' => $request->nama,
+        //     'layanan' => $request->layanan,
+        //     'kodelayanan' => $request->kodelayanan,
+        //     'jenisbayar' => $request->jenisbayar,
+        //     'kodejenisbyr' => $request->kodejenisbyr,
+        //     'noid' => $request->noid,
+        //     'tagihan' => $request->tagihan,
+        //     'flag' => $request->flag,
+        //     'expired' => $request->expired,
+        //     'reserve' => $request->reserve,
+        //     'description' => $request->reserve,
+        //     'status_inquiry' => '0',
+        //     'created_at' => \Carbon\Carbon::now(),
+        //     'updated_at' => \Carbon\Carbon::now(),
+        // ]);
 
         // $client = new Client();
         // $response = $client->post('url', [
@@ -73,9 +87,9 @@ class AddvarsuntanController extends Controller
         // ]);
 
 
-        \Session::flash('Berhasil', 'Data Virtual Account berhasil ditambahkan');
+        // \Session::flash('Berhasil', 'Data Virtual Account berhasil ditambahkan');
 
-        return back();
+        // return back();
     }
 
 }

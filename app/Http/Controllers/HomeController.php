@@ -127,6 +127,8 @@ class HomeController extends Controller
         $response_decode = json_decode($response);
         dd($response_decode);
         // dd(json_encode($body));
+        // $sign = $id.':'.json_encode($body).':'.$key;
+        // echo $sign;
     }
 
     public function test_update()
