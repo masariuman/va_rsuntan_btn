@@ -40,26 +40,27 @@ class AddvarsuntanController extends Controller
             'kodejenisbyr' => $request->kodejenisbyr,
             'noid' => $request->noid,
             'tagihan' => (int)$request->tagihan,
-            'flag' => $flag,
-            'expired' => $expired,
-            'reserve' => $reserve,
-            'description' => $description
+            'flag' => $request->flag,
+            'expired' => $request->expired,
+            'reserve' => $request->reserve,
+            'description' => $request->description
         ];
         $sign = $idva.':'.json_encode($body).':'.$keyva;
         $signature = hash_hmac('sha256', $sign, $secretva);
         $url_create = "https://vabtn-dev.btn.co.id:9021/v1/untan/createVA";
+        echo $sign;
 
-        $client = new Client([
-            'verify' => false,'headers' => ['Content-Type' => 'application/json','id' => $id, 'key' => $key, 'signature' => $signature]
-        ]);
+        // $client = new Client([
+        //     'verify' => false,'headers' => ['Content-Type' => 'application/json','id' => $idva, 'key' => $keyva, 'signature' => $signature]
+        // ]);
 
-        $request = $client->post($url_create,
-            ['body' => json_encode($body)]
-        );
+        // $request = $client->post($url_create,
+        //     ['body' => json_encode($body)]
+        // );
 
-        $response = $request->getBody()->getContents();
-        $response_decode = json_decode($response);
-        dd($response_decode);
+        // $response = $request->getBody()->getContents();
+        // $response_decode = json_decode($response);
+        // dd($response_decode);
 
         // $addvarsuntan = Va::create([
         //     'user_id' => Auth::user()->id,
