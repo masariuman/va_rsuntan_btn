@@ -49,7 +49,7 @@ class AddvarsuntanController extends Controller
         $sign = $idva.':'.json_encode($body).':'.$keyva;
         $signature = hash_hmac('sha256', $sign, $secretva);
         $url_create = "https://vabtn-dev.btn.co.id:9021/v1/untan/createVA";
-        echo $sign;
+        echo $request->expired;
 
         // $client = new Client([
         //     'verify' => false,'headers' => ['Content-Type' => 'application/json','id' => $idva, 'key' => $keyva, 'signature' => $signature]
