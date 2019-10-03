@@ -25,7 +25,9 @@ class AddvarsuntanController extends Controller
     {
 
         $nextId = Va::max('id') + 1;
-        $secret = "C4UMXATbTT";
+        $idva = "UNTANWS";
+        $keyva = "plqQlf6fSoKKBWx4Lxmb0OOMwRKQ3TcN";
+        $secretva = "C4UMXATbTT";
         $body = [
             'ref' => $request->input('id', $nextId),
             'va' => $request->va,
@@ -41,7 +43,9 @@ class AddvarsuntanController extends Controller
             'reserve' => $reserve,
             'description' => $description
         ];
-        $signature = hash_hmac('sha256', 'The quick brown fox jumped over the lazy dog.', $secret);
+        $sign = $id.':'.json_encode($body).':'.$key;
+        $signature = hash_hmac('sha256', $sign, $secretva);
+
 
         $addvarsuntan = Va::create([
             'user_id' => Auth::user()->id,
