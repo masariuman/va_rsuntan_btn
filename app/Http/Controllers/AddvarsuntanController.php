@@ -26,6 +26,7 @@ class AddvarsuntanController extends Controller
     public function tambahAddvarsuntan(Request $request)
     {
 
+        $carbon = \Carbon\Carbon::now();
         $nextId = Va::max('id') + 1;
         $idva = "UNTANWS";
         $keyva = "plqQlf6fSoKKBWx4Lxmb0OOMwRKQ3TcN";
@@ -41,7 +42,7 @@ class AddvarsuntanController extends Controller
             'noid' => $request->noid,
             'tagihan' => (int)$request->tagihan,
             'flag' => $request->flag,
-            'expired' => $request->expired,
+            'expired' => \Carbon\Carbon::parse($carbon)->addHour(24),
             'reserve' => $request->reserve,
             'description' => $request->description
         ];
