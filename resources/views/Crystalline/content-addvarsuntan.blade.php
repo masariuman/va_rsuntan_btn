@@ -175,9 +175,9 @@
                                                 </select>
                                                 </div>
                                             </div>
-                                            <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Expired Date :</label>
+                                            <!-- <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Expired Date :</label>
                                                 <div class="col-sm-10"><input name="expired" id="datepicker" placeholder="Expired Date (yymmddHHMM)" type="text" class="form-control" required></div>
-                                            </div>
+                                            </div> -->
                                             <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Reserve Field :</label>
                                                 <div class="col-sm-10"><input name="reserve" id="exampleText" placeholder="Reserve Field" type="number" class="form-control" required></div>
                                             </div>
