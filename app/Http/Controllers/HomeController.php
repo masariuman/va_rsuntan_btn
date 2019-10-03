@@ -228,4 +228,22 @@ class HomeController extends Controller
         $response_decode = json_decode($response);
         dd($response_decode);
     }
+
+    public function test_something() {
+        $date = \Carbon\Carbon::now();
+        $parse = \Carbon\Carbon::parse($date);
+        $besok = $parse->addHour(24);
+        echo $date;
+        echo "  |  ";
+        echo $besok;
+        echo "  |  ";
+        $duar = explode("-",$besok);
+        $duarr = explode(" ",$duar[2]);
+        $duarrr = explode(":",$duarr[1]);
+        $y = substr( $duar[0], -2);
+
+        $expired = $y.$duar[1].$duarr[0].$duarrr[0].$duarrr[1];
+        // dd($duar);
+        echo $expired;
+    }
 }
