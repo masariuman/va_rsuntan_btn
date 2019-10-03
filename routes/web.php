@@ -37,6 +37,9 @@ Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 
 Route::get('test-inquiry', 'HomeController@test_inquiry');
 Route::get('test-create', 'HomeController@test_create');
+Route::get('test-update', 'HomeController@test_update');
+Route::get('test-delete', 'HomeController@test_delete');
+Route::get('test-report', 'HomeController@test_report');
 
 
 

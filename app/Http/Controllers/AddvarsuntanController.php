@@ -25,6 +25,23 @@ class AddvarsuntanController extends Controller
     {
 
         $nextId = Va::max('id') + 1;
+        $secret = "C4UMXATbTT";
+        $body = [
+            'ref' => $request->input('id', $nextId),
+            'va' => $request->va,
+            'nama' => $request->nama,
+            'layanan' => $request->layanan,
+            'kodelayanan' => $request->kodelayanan,
+            'jenisbayar' => $request->jenisbayar,
+            'kodejenisbyr' => $request->kodejenisbyr,
+            'noid' => $request->noid,
+            'tagihan' => (int)$request->tagihan,
+            'flag' => $flag,
+            'expired' => $expired,
+            'reserve' => $reserve,
+            'description' => $description
+        ];
+        $signature = hash_hmac('sha256', 'The quick brown fox jumped over the lazy dog.', $secret);
 
         $addvarsuntan = Va::create([
             'user_id' => Auth::user()->id,
@@ -35,7 +52,7 @@ class AddvarsuntanController extends Controller
             'kodelayanan' => $request->kodelayanan,
             'jenisbayar' => $request->jenisbayar,
             'kodejenisbyr' => $request->kodejenisbyr,
-            'noid' => $request->kodejenisbyr,
+            'noid' => $request->noid,
             'tagihan' => $request->tagihan,
             'flag' => $request->flag,
             'expired' => $request->expired,
