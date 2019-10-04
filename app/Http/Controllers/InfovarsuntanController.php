@@ -28,39 +28,138 @@ class InfovarsuntanController extends Controller
 
     public function ubahInfovarsuntan(Request $request, $id)
     {
-        $vaedit = VA::where('id', $id)->update([
-            'user_id' => Auth::user()->id,
+        $date = \Carbon\Carbon::now();
+        $parse = \Carbon\Carbon::parse($date);
+        $besok = $parse->addHour(24);
+        // echo $date;
+        // echo "  |  ";
+        // echo $besok;
+        // echo "  |  ";
+        $duar = explode("-",$besok);
+        $duarr = explode(" ",$duar[2]);
+        $duarrr = explode(":",$duarr[1]);
+        $y = substr( $duar[0], -2);
+
+        $expired = $y.$duar[1].$duarr[0].$duarrr[0].$duarrr[1];
+        // dd($duar);
+        // echo $expired;
+
+
+     
+        $nextId = Va::max('id') + 1;
+        $idva = "UNTANWS";
+        $keyva = "plqQlf6fSoKKBWx4Lxmb0OOMwRKQ3TcN";
+        $secretva = "C4UMXATbTT";
+        $body = [
+            'ref' => $request->input('id', $nextId),
             'va' => $request->va,
             'nama' => $request->nama,
             'layanan' => $request->layanan,
             'kodelayanan' => $request->kodelayanan,
             'jenisbayar' => $request->jenisbayar,
             'kodejenisbyr' => $request->kodejenisbyr,
-            'noid' => $request->kodejenisbyr,
-            'tagihan' => $request->tagihan,
+            'noid' => $request->noid,
+            'tagihan' => (int)$request->tagihan,
             'flag' => $request->flag,
-            'expired' => $request->expired,
+            'expired' => $expired,
             'reserve' => $request->reserve,
-            'description' => $request->reserve,
-            'status_inquiry' => '0',
-            'created_at' => \Carbon\Carbon::now(),
-            'updated_at' => \Carbon\Carbon::now(),
+            'description' => $request->description
+        ];
+        $sign = $idva.':'.json_encode($body).':'.$keyva;
+        $signature = hash_hmac('sha256', $sign, $secretva);
+        $url_create = "https://vabtn-dev.btn.co.id:9021/v1/untan/updVA";
+        // echo $sign;
+
+        $client = new Client([
+            'verify' => false,'headers' => ['Content-Type' => 'application/json','id' => $idva, 'key' => $keyva, 'signature' => $signature]
         ]);
 
-        \Session::flash('Berhasil', 'Data Virtual Account berhasil diubah');
+        $request = $client->post($url_create,
+            ['body' => json_encode($body)]
+        );
 
-        return back();
+        $response = $request->getBody()->getContents();
+        $response_decode = json_decode($response);
+        dd($response_decode);
+
+
+        // $vaedit = VA::where('id', $id)->update([
+        //     'user_id' => Auth::user()->id,
+        //     'va' => $request->va,
+        //     'nama' => $request->nama,
+        //     'layanan' => $request->layanan,
+        //     'kodelayanan' => $request->kodelayanan,
+        //     'jenisbayar' => $request->jenisbayar,
+        //     'kodejenisbyr' => $request->kodejenisbyr,
+        //     'noid' => $request->kodejenisbyr,
+        //     'tagihan' => $request->tagihan,
+        //     'flag' => $request->flag,
+        //     'expired' => $request->expired,
+        //     'reserve' => $request->reserve,
+        //     'description' => $request->reserve,
+        //     'status_inquiry' => '0',
+        //     'created_at' => \Carbon\Carbon::now(),
+        //     'updated_at' => \Carbon\Carbon::now(),
+        // ]);
+
+        // \Session::flash('Berhasil', 'Data Virtual Account berhasil diubah');
+
+        // return back();
     }
 
 
 
     public function hapusInfovarsuntan($id)
     {
-        $vadelete = Va::where('id', $id)->delete();
+        $date = \Carbon\Carbon::now();
+        $parse = \Carbon\Carbon::parse($date);
+        $besok = $parse->addHour(24);
+        // echo $date;
+        // echo "  |  ";
+        // echo $besok;
+        // echo "  |  ";
+        $duar = explode("-",$besok);
+        $duarr = explode(" ",$duar[2]);
+        $duarrr = explode(":",$duarr[1]);
+        $y = substr( $duar[0], -2);
 
-        \Session::flash('Berhasil', 'Data Virtual Account berhasil dihapus');
+        $expired = $y.$duar[1].$duarr[0].$duarrr[0].$duarrr[1];
+        // dd($duar);
+        // echo $expired;
 
-        return back();
+
+     
+        $nextId = Va::max('id') + 1;
+        $idva = "UNTANWS";
+        $keyva = "plqQlf6fSoKKBWx4Lxmb0OOMwRKQ3TcN";
+        $secretva = "C4UMXATbTT";
+        $body = [
+            'ref' => $request->input('id', $nextId),
+            'va' => $request->va,
+        ];
+        $sign = $idva.':'.json_encode($body).':'.$keyva;
+        $signature = hash_hmac('sha256', $sign, $secretva);
+        $url_create = "https://vabtn-dev.btn.co.id:9021/v1/untan/deleteVA";
+        // echo $sign;
+
+        $client = new Client([
+            'verify' => false,'headers' => ['Content-Type' => 'application/json','id' => $idva, 'key' => $keyva, 'signature' => $signature]
+        ]);
+
+        $request = $client->post($url_create,
+            ['body' => json_encode($body)]
+        );
+
+        $response = $request->getBody()->getContents();
+        $response_decode = json_decode($response);
+        dd($response_decode);
+
+
+        // $vadelete = Va::where('id', $id)->delete();
+
+        // \Session::flash('Berhasil', 'Data Virtual Account berhasil dihapus');
+
+        // return back();
     }
 
 
