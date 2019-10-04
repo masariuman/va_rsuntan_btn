@@ -42,7 +42,7 @@ class AddvarsuntanController extends Controller
         // echo $expired;
 
 
-     
+
         $nextId = Va::max('id') + 1;
         $idva = "UNTANWS";
         $keyva = "plqQlf6fSoKKBWx4Lxmb0OOMwRKQ3TcN";
@@ -78,6 +78,7 @@ class AddvarsuntanController extends Controller
         $response = $request->getBody()->getContents();
         $response_decode = json_decode($response);
         dd($response_decode);
+
 
         // $addvarsuntan = Va::create([
         //     'user_id' => Auth::user()->id,
