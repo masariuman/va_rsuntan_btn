@@ -179,7 +179,7 @@
                                                 <div class="col-sm-10"><input name="expired" id="datepicker" placeholder="Expired Date (yymmddHHMM)" type="text" class="form-control" required></div>
                                             </div> -->
                                             <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Reserve Field :</label>
-                                                <div class="col-sm-10"><input name="reserve" id="exampleText" placeholder="Reserve Field" type="number" class="form-control" required></div>
+                                                <div class="col-sm-10"><input name="reserve" id="exampleText" placeholder="Reserve Field" type="text" class="form-control"></div>
                                             </div>
                                             <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Description :</label>
                                                 <div class="col-sm-10"><textarea name="description" id="exampleText" placeholder="Description"  class="form-control" required></textarea></div>

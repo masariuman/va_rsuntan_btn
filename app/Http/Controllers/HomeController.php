@@ -126,10 +126,11 @@ class HomeController extends Controller
 
         $response = $request->getBody()->getContents();
         $response_decode = json_decode($response);
-        dd($response_decode);
+        // dd($response_decode);
         // dd(json_encode($body));
         // $sign = $id.':'.json_encode($body).':'.$key;
         // echo $sign;
+        echo json_encode($body);
     }
 
     public function test_update()
