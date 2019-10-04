@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Va;
+use App\Setting;
 use Auth;
 use GuzzleHttp\Client;
 
@@ -25,9 +26,10 @@ class AddvarsuntanController extends Controller
 
     public function tambahAddvarsuntan(Request $request)
     {
+        $setting = Setting::findOrFail(1);
         $date = \Carbon\Carbon::now();
         $parse = \Carbon\Carbon::parse($date);
-        $besok = $parse->addHour(24);
+        $besok = $parse->addHour($setting->expired);
         // echo $date;
         // echo "  |  ";
         // echo $besok;
@@ -42,14 +44,14 @@ class AddvarsuntanController extends Controller
         // echo $expired;
 
 
-
+        $fixva = $setting->prefix_va.$setting->kode_instituse.$setting->kode_payment.$request->va;
         $nextId = Va::max('id') + 1;
         $idva = "UNTANWS";
         $keyva = "plqQlf6fSoKKBWx4Lxmb0OOMwRKQ3TcN";
         $secretva = "C4UMXATbTT";
         $body = [
             'ref' => $request->input('id', $nextId),
-            'va' => $request->va,
+            'va' => $fixva,
             'nama' => $request->nama,
             'layanan' => $request->layanan,
             'kodelayanan' => $request->kodelayanan,
@@ -83,7 +85,7 @@ class AddvarsuntanController extends Controller
             $addvarsuntan = Va::create([
                 'user_id' => Auth::user()->id,
                 'ref' => $request->input('id', $nextId),
-                'va' => $request->va,
+                'va' => $fixva,
                 'nama' => $request->nama,
                 'layanan' => $request->layanan,
                 'kodelayanan' => $request->kodelayanan,
