@@ -21,7 +21,8 @@ class AddvarsuntanController extends Controller
 
     public function formAddvarsuntan()
     {
-        return view('addvarsuntan');
+        $data['setting'] = Setting::findOrFail(1);
+        return view('addvarsuntan'.$data);
     }
 
     public function tambahAddvarsuntan(Request $request)
