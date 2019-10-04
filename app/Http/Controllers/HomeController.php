@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use GuzzleHttp\Client;
+use App\Setting;
 
 use function GuzzleHttp\json_decode;
 
@@ -231,9 +232,11 @@ class HomeController extends Controller
     }
 
     public function test_something() {
+        $expired_hour = Setting::findOrFail(1);
+        $setting = Setting::findOrFail(1);
         $date = \Carbon\Carbon::now();
         $parse = \Carbon\Carbon::parse($date);
-        $besok = $parse->addHour(24);
+        $besok = $parse->addHour($expired_hour->expired);
         echo $date;
         echo "  |  ";
         echo $besok;
@@ -246,5 +249,10 @@ class HomeController extends Controller
         $expired = $y.$duar[1].$duarr[0].$duarrr[0].$duarrr[1];
         // dd($duar);
         echo $expired;
+        $va = "12345";
+
+        $fixva = $setting->prefix_va.$setting->kode_instituse.$setting->kode_payment.$va;
+        echo " | ";
+        // echo $fixva;
     }
 }
