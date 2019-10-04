@@ -106,14 +106,27 @@
                 <div class="position-relative row form-group"><label for="exampleText" class="col-sm-4 col-form-label">Tagihan :</label>
                     <div class="col-sm-8"><input name="tagihan" id="exampleText" placeholder="Tagihan" type="number" class="form-control" value="{{ $vas->tagihan }}"></div>
                 </div>
-                <div class="position-relative row form-group"><label for="exampleText" class="col-sm-4 col-form-label">Flag Full / Partial :</label>
+                <!-- <div class="position-relative row form-group"><label for="exampleText" class="col-sm-4 col-form-label">Flag Full / Partial :</label>
                     <div class="col-sm-8"><input name="flag" id="exampleText" placeholder="Flag Full / Partial" type="text" class="form-control" value="{{ $vas->flag }}"></div>
-                </div>
+                </div> -->
+                <div class="position-relative row form-group"><label for="exampleSelect" class="col-sm-2 col-form-label">Flag Full / Partial :</label>
+                    <div class="col-sm-10">
+                        <select name="flag" id="exampleSelect" class="form-control" required>
+                            <!-- <option value="" disabled selected>-Pilih Flag-</option>   -->
+                            @if($vas->flag)
+                            <option value="{{ $vas->flag }}" selected>{{$vas->flag}}</option>
+                            @else
+                            <option value="F">Flag Full</option>
+                            <option value="P">Flag Partial</option>
+                            @endif
+                        </select>
+                    </div>
+                </div>                
                 <div class="position-relative row form-group"><label for="exampleText" class="col-sm-4 col-form-label">Expired Date :</label>
-                    <div class="col-sm-8"><input name="expired" id="datepicker" placeholder="Expired Date (yymmddHHMM)" type="text" class="form-control" value="{{ $vas->expired }}"></div>
+                    <div class="col-sm-8"><input name="expired" id="datepicker" placeholder="Expired Date (yymmddHHMM)" type="text" class="form-control" value="{{ $vas->expired }}" disabled></div>
                 </div>
                 <div class="position-relative row form-group"><label for="exampleText" class="col-sm-4 col-form-label">Reserve Field :</label>
-                    <div class="col-sm-8"><input name="reserve" id="exampleText" placeholder="Reserve Field" type="number" class="form-control" value="{{ $vas->reserve }}"></div>
+                    <div class="col-sm-8"><input name="reserve" id="exampleText" placeholder="Reserve Field" type="text" class="form-control" value="{{ $vas->reserve }}"></div>
                 </div>
                 <div class="position-relative row form-group"><label for="exampleText" class="col-sm-4 col-form-label">Description :</label>
                     <div class="col-sm-8"><textarea name="description" id="exampleText" placeholder="Description"  class="form-control" value="{{ $vas->description }}"> {{ $vas->description }} </textarea></div>
