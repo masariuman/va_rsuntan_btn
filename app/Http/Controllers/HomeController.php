@@ -252,6 +252,6 @@ class HomeController extends Controller
 
         $fixva = $setting->prefix_va.$setting->kode_instituse.$setting->kode_payment.$va;
         echo " | ";
-        echo $fixva;
+        // echo $fixva;
     }
 }
