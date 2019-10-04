@@ -42,7 +42,7 @@ class AddvarsuntanController extends Controller
         // echo $expired;
 
 
-     
+
         $nextId = Va::max('id') + 1;
         $idva = "UNTANWS";
         $keyva = "plqQlf6fSoKKBWx4Lxmb0OOMwRKQ3TcN";
@@ -77,27 +77,74 @@ class AddvarsuntanController extends Controller
 
         $response = $request->getBody()->getContents();
         $response_decode = json_decode($response);
-        dd($response_decode);
+        // dd($response_decode->rsp);
 
-        // $addvarsuntan = Va::create([
-        //     'user_id' => Auth::user()->id,
-        //     'ref' => $request->input('id', $nextId),
-        //     'va' => $request->va,
-        //     'nama' => $request->nama,
-        //     'layanan' => $request->layanan,
-        //     'kodelayanan' => $request->kodelayanan,
-        //     'jenisbayar' => $request->jenisbayar,
-        //     'kodejenisbyr' => $request->kodejenisbyr,
-        //     'noid' => $request->noid,
-        //     'tagihan' => $request->tagihan,
-        //     'flag' => $request->flag,
-        //     'expired' => $request->expired,
-        //     'reserve' => $request->reserve,
-        //     'description' => $request->reserve,
-        //     'status_inquiry' => '0',
-        //     'created_at' => \Carbon\Carbon::now(),
-        //     'updated_at' => \Carbon\Carbon::now(),
-        // ]);
+        if($response_decode->rsp === "000"){
+            $addvarsuntan = Va::create([
+                'user_id' => Auth::user()->id,
+                'ref' => $request->input('id', $nextId),
+                'va' => $request->va,
+                'nama' => $request->nama,
+                'layanan' => $request->layanan,
+                'kodelayanan' => $request->kodelayanan,
+                'jenisbayar' => $request->jenisbayar,
+                'kodejenisbyr' => $request->kodejenisbyr,
+                'noid' => $request->noid,
+                'tagihan' => $request->tagihan,
+                'flag' => $request->flag,
+                'expired' => $request->expired,
+                'reserve' => $request->reserve,
+                'description' => $request->reserve,
+                'status_inquiry' => '0',
+                'created_at' => \Carbon\Carbon::now(),
+                'updated_at' => \Carbon\Carbon::now(),
+            ]);
+
+            \Session::flash('Berhasil', 'Data Virtual Account berhasil ditambahkan');
+
+            return back();
+        }
+        else if($response_decode->rsp === "001"){
+            echo "VA not found";
+        }
+        else if($response_decode->rsp === "002"){
+            echo "Kesalahan pada kode institusi";
+        }
+        else if($response_decode->rsp === "003"){
+            echo "Kesalahan tipe pembayaran";
+        }
+        else if($response_decode->rsp === "004"){
+            echo "Paramete Akun institusi tidak ditemukan";
+        }
+        else if($response_decode->rsp === "005"){
+            echo "nomor akun institusi salah";
+        }
+        else if($response_decode->rsp === "006"){
+            echo "nomor VA telah ada";
+        }
+        else if($response_decode->rsp === "007"){
+            echo "kesalahan pada nomor va";
+        }
+        else if($response_decode->rsp === "008"){
+            echo "kadaluarsa lebih rendah dari hari ini";
+        }
+        else if($response_decode->rsp === "009"){
+            echo "kesalahan tanggal kadaluarsa";
+        }
+        else if($response_decode->rsp === "098"){
+            echo "penggantian night mode atau day mode";
+        }
+        else if($response_decode->rsp === "099"){
+            echo "tidak memiliki hak akses";
+        }
+        else if($response_decode->rsp === "998"){
+            echo "signature salah, silahkan kontak IT support";
+        }
+        else {
+            echo "GENERAL ERROR, LAKUKAN REFRESH atau TEKAN TOMBOL F5. Hubungi STAFF IT BILA TERJADI ERROR YANG SAMA";
+        }
+
+
 
         // $client = new Client();
         // $response = $client->post('url', [
@@ -105,9 +152,7 @@ class AddvarsuntanController extends Controller
         // ]);
 
 
-        // \Session::flash('Berhasil', 'Data Virtual Account berhasil ditambahkan');
 
-        // return back();
     }
 
 }
