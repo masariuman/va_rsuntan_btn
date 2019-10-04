@@ -83,53 +83,51 @@
                 @method('patch')
                 @csrf
                 <div class="position-relative row form-group"><label for="exampleText" class="col-sm-4 col-form-label">Virtual Account :</label>
-                    <div class="col-sm-8"><input name="va" id="exampleText" placeholder="Virtual Account" type="text" class="form-control" value="{{ $vas->va }}"></div>
+                    <div class="col-sm-8"><input name="va" id="exampleText" placeholder="Virtual Account" type="text" class="form-control" value="{{ $vas->va }}" required></div>
                 </div>
                 <div class="position-relative row form-group"><label for="exampleText" class="col-sm-4 col-form-label">Nama :</label>
-                    <div class="col-sm-8"><input name="nama" id="exampleText" placeholder="Nama" type="text" class="form-control" value="{{ $vas->nama }}"></div>
+                    <div class="col-sm-8"><input name="nama" id="exampleText" placeholder="Nama" type="text" class="form-control" value="{{ $vas->nama }}" required></div>
                 </div>
                 <div class="position-relative row form-group"><label for="exampleText" class="col-sm-4 col-form-label">Layanan :</label>
-                    <div class="col-sm-8"><input name="layanan" id="exampleText" placeholder="Layanan" type="text" class="form-control" value="{{ $vas->layanan }}"></div>
+                    <div class="col-sm-8"><input name="layanan" id="exampleText" placeholder="Layanan" type="text" class="form-control" value="{{ $vas->layanan }}" required></div>
                 </div>
                 <div class="position-relative row form-group"><label for="exampleText" class="col-sm-4 col-form-label">Kode Layanan :</label>
-                    <div class="col-sm-8"><input name="kodelayanan" id="exampleText" placeholder="Kode Layanan" type="text" class="form-control" value="{{ $vas->kodelayanan }}"></div>
+                    <div class="col-sm-8"><input name="kodelayanan" id="exampleText" placeholder="Kode Layanan" type="text" class="form-control" value="{{ $vas->kodelayanan }}" required></div>
                 </div>
                 <div class="position-relative row form-group"><label for="exampleText" class="col-sm-4 col-form-label">Jenis Bayar :</label>
-                    <div class="col-sm-8"><input name="jenisbayar" id="exampleText" placeholder="Jenis Bayar" type="text" class="form-control" value="{{ $vas->jenisbayar }}"></div>
+                    <div class="col-sm-8"><input name="jenisbayar" id="exampleText" placeholder="Jenis Bayar" type="text" class="form-control" value="{{ $vas->jenisbayar }}" required></div>
                 </div>
                 <div class="position-relative row form-group"><label for="exampleText" class="col-sm-4 col-form-label">Kode Jenis Bayar :</label>
-                    <div class="col-sm-8"><input name="kodejenisbyr" id="exampleText" placeholder="Kode Jenis Bayar" type="text" class="form-control" value="{{ $vas->kodejenisbyr }}"></div>
+                    <div class="col-sm-8"><input name="kodejenisbyr" id="exampleText" placeholder="Kode Jenis Bayar" type="text" class="form-control" value="{{ $vas->kodejenisbyr }}" required></div>
                 </div>
                 <div class="position-relative row form-group"><label for="exampleText" class="col-sm-4 col-form-label">Nomor ID Pemesanan :</label>
-                    <div class="col-sm-8"><input name="noid" id="exampleText" placeholder="Nomor ID Pemesanan" type="text" class="form-control" value="{{ $vas->noid }}"></div>
+                    <div class="col-sm-8"><input name="noid" id="exampleText" placeholder="Nomor ID Pemesanan" type="text" class="form-control" value="{{ $vas->noid }}" required></div>
                 </div>
                 <div class="position-relative row form-group"><label for="exampleText" class="col-sm-4 col-form-label">Tagihan :</label>
-                    <div class="col-sm-8"><input name="tagihan" id="exampleText" placeholder="Tagihan" type="number" class="form-control" value="{{ $vas->tagihan }}"></div>
+                    <div class="col-sm-8"><input name="tagihan" id="exampleText" placeholder="Tagihan" type="number" class="form-control" value="{{ $vas->tagihan }}" required></div>
                 </div>
-                <!-- <div class="position-relative row form-group"><label for="exampleText" class="col-sm-4 col-form-label">Flag Full / Partial :</label>
-                    <div class="col-sm-8"><input name="flag" id="exampleText" placeholder="Flag Full / Partial" type="text" class="form-control" value="{{ $vas->flag }}"></div>
-                </div> -->
-                <div class="position-relative row form-group"><label for="exampleSelect" class="col-sm-2 col-form-label">Flag Full / Partial :</label>
-                    <div class="col-sm-10">
-                        <select name="flag" id="exampleSelect" class="form-control" required>
-                            <!-- <option value="" disabled selected>-Pilih Flag-</option>   -->
-                            @if($vas->flag)
-                            <option value="{{ $vas->flag }}" selected>{{$vas->flag}}</option>
-                            @else
+                <div class="position-relative row form-group"><label for="exampleSelect" class="col-sm-4 col-form-label">Flag Full / Partial :</label>
+                    <div class="col-sm-8">
+                        <select name="flag" id="exampleSelect" class="form-control" required>                
+                            <option value="{{ $vas->flag }}" disabled selected>
+                             @if($vas->flag == "F")
+                             Flag Full
+                             @elseif($vas->flag == "P") 
+                             Flag Partial
+                             @endif</option>
                             <option value="F">Flag Full</option>
-                            <option value="P">Flag Partial</option>
-                            @endif
+                            <option value="P">Flag Partial</option>          
                         </select>
                     </div>
                 </div>                
                 <div class="position-relative row form-group"><label for="exampleText" class="col-sm-4 col-form-label">Expired Date :</label>
-                    <div class="col-sm-8"><input name="expired" id="datepicker" placeholder="Expired Date (yymmddHHMM)" type="text" class="form-control" value="{{ $vas->expired }}" disabled></div>
+                    <div class="col-sm-8"><input name="expired" id="datepicker" placeholder="Expired Date (yymmddHHMM)" type="text" class="form-control" value="{{ $vas->expired }}" disabled required></div>
                 </div>
                 <div class="position-relative row form-group"><label for="exampleText" class="col-sm-4 col-form-label">Reserve Field :</label>
-                    <div class="col-sm-8"><input name="reserve" id="exampleText" placeholder="Reserve Field" type="text" class="form-control" value="{{ $vas->reserve }}"></div>
+                    <div class="col-sm-8"><input name="reserve" id="exampleText" placeholder="Reserve Field" type="text" class="form-control" value="{{ $vas->reserve }}" required></div>
                 </div>
                 <div class="position-relative row form-group"><label for="exampleText" class="col-sm-4 col-form-label">Description :</label>
-                    <div class="col-sm-8"><textarea name="description" id="exampleText" placeholder="Description"  class="form-control" value="{{ $vas->description }}"> {{ $vas->description }} </textarea></div>
+                    <div class="col-sm-8"><textarea name="description" id="exampleText" placeholder="Description"  class="form-control" value="{{ $vas->description }}" required> {{ $vas->description }} </textarea></div>
                 </div>
             </div>
             <div class="modal-footer">

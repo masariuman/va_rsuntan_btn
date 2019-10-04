@@ -55,7 +55,7 @@ class AddvarsuntanController extends Controller
             'kodelayanan' => $request->kodelayanan,
             'jenisbayar' => $request->jenisbayar,
             'kodejenisbyr' => $request->kodejenisbyr,
-            'noid' => $request->noid,
+            'noid' => $request->noid, 
             'tagihan' => (int)$request->tagihan,
             'flag' => $request->flag,
             'expired' => $expired,
@@ -79,22 +79,29 @@ class AddvarsuntanController extends Controller
         $response_decode = json_decode($response);
         // dd($response_decode->rsp);
 
+// dd($response_decode);
+// $ax = json_encode($body->va);
+ $x = json_encode($body);
+ $y = json_decode($x);
+//  dd($y->nama);
+
+        $nextId = Va::max('id') + 1;
         if($response_decode->rsp === "000"){
             $addvarsuntan = Va::create([
                 'user_id' => Auth::user()->id,
-                'ref' => $request->input('id', $nextId),
-                'va' => $request->va,
-                'nama' => $request->nama,
-                'layanan' => $request->layanan,
-                'kodelayanan' => $request->kodelayanan,
-                'jenisbayar' => $request->jenisbayar,
-                'kodejenisbyr' => $request->kodejenisbyr,
-                'noid' => $request->noid,
-                'tagihan' => $request->tagihan,
-                'flag' => $request->flag,
-                'expired' => $request->expired,
-                'reserve' => $request->reserve,
-                'description' => $request->reserve,
+                'ref' => $nextId,
+                'va' =>$y->va,
+                'nama' => $y->nama,
+                'layanan' => $y->layanan,
+                'kodelayanan' => $y->kodelayanan,
+                'jenisbayar' => $y->jenisbayar,
+                'kodejenisbyr' => $y->kodejenisbyr,
+                'noid' => $y->noid,
+                'tagihan' => $y->tagihan,
+                'flag' => $y->flag,
+                'expired' => $expired,
+                'reserve' => $y->reserve,
+                'description' => $y->reserve,
                 'status_inquiry' => '0',
                 'created_at' => \Carbon\Carbon::now(),
                 'updated_at' => \Carbon\Carbon::now(),
