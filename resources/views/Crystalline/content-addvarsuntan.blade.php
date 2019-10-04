@@ -64,7 +64,7 @@
                                     </div>
                                 </div>     -->
                                 </div>
-                        </div>            
+                        </div>
                         <!-- <ul class="body-tabs body-tabs-layout tabs-animated body-tabs-animated nav">
                             <li class="nav-item">
                                 <a role="tab" class="nav-link active" id="tab-0" data-toggle="tab" href="#tab-content-0">
@@ -143,7 +143,7 @@
                                         <form class="" action="tambah_addvarsuntan" method="post">
                                         @csrf
                                             <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Virtual Account :</label>
-                                                <div class="col-sm-10"><input name="va" id="exampleText" placeholder="Virtual Account" type="text" class="form-control" required></div>
+                                                <div class="col-sm-10 form-row"><input name="va1" id="exampleText" value="{{$firstva}}" type="text" class="form-control col-md-1" disabled style="margin-left:5px;"><input name="va2" id="exampleText" placeholder="Virtual Account" type="text" class="form-control col-md-10" style="float:right;margin-left:10px;" required></div>
                                             </div>
                                             <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Nama :</label>
                                                 <div class="col-sm-10"><input name="nama" id="exampleText" placeholder="Nama" type="text" class="form-control" required></div>
@@ -169,7 +169,7 @@
                                             <div class="position-relative row form-group"><label for="exampleSelect" class="col-sm-2 col-form-label">Flag Full / Partial :</label>
                                                 <div class="col-sm-10">
                                                 <select name="flag" id="exampleSelect" class="form-control" required>
-                                                    <option value="" disabled selected>-Pilih Flag-</option>  
+                                                    <option value="" disabled selected>-Pilih Flag-</option>
                                                     <option value="F">Flag Full</option>
                                                     <option value="P">Flag Partial</option>
                                                 </select>

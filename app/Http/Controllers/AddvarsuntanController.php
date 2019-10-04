@@ -22,7 +22,8 @@ class AddvarsuntanController extends Controller
     public function formAddvarsuntan()
     {
         $data['setting'] = Setting::findOrFail(1);
-        return view('addvarsuntan'.$data);
+        $data['firstva'] = $data['setting']->prefix_va.$data['setting']->kode_instituse.$data['setting']->kode_payment;
+        return view('addvarsuntan',$data);
     }
 
     public function tambahAddvarsuntan(Request $request)
@@ -45,7 +46,7 @@ class AddvarsuntanController extends Controller
         // echo $expired;
 
 
-        $fixva = $setting->prefix_va.$setting->kode_instituse.$setting->kode_payment.$request->va;
+        $fixva = $setting->prefix_va.$setting->kode_instituse.$setting->kode_payment.$request->va2;
         $nextId = Va::max('id') + 1;
         $idva = "UNTANWS";
         $keyva = "plqQlf6fSoKKBWx4Lxmb0OOMwRKQ3TcN";
