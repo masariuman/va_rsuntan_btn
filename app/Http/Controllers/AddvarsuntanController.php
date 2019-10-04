@@ -141,7 +141,7 @@ class AddvarsuntanController extends Controller
             echo "signature salah, silahkan kontak IT support";
         }
         else {
-            echo "error biasa, timeout, refresh";
+            echo "GENERAL ERROR, LAKUKAN REFRESH atau TEKAN TOMBOL F5. Hubungi STAFF IT BILA TERJADI ERROR YANG SAMA";
         }
 
 
