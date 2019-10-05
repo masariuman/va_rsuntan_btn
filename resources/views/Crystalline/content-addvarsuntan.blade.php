@@ -142,9 +142,23 @@
                                     <div class="card-body"><h5 class="card-title">Tambah Virtual Account</h5>
                                         <form class="" action="tambah_addvarsuntan" method="post">
                                         @csrf
-                                            <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Virtual Account :</label>
-                                                <div class="col-sm-10 form-row"><input name="va1" id="exampleText" value="{{$firstva}}" type="text" class="form-control col-md-1" disabled style="margin-left:5px;"><input name="va2" id="exampleText" placeholder="Virtual Account" type="text" class="form-control col-md-10" style="float:right;margin-left:10px;" required></div>
+                                      <div class="form-row">
+                                         <div class="col-sm-2">
+                                             <div class="position-relative form-group">
+                                                 <label for="exampleText" class="col-form-label">Virtual Account :</label>
+                                             </div>
+                                         </div>
+                                            <div class="col-sm-2">
+                                               <div class="position-relative form-group">
+                                                    <input name="va1" id="exampleText" value="{{$firstva}}" type="text" class="form-control" disabled>
+                                               </div>
+                                             </div>                               
+                                            <div class="col-sm-8">  
+                                                <div class="position-relative form-group">
+                                                    <input name="va2" id="exampleText" placeholder="Virtual Account" type="text" class="form-control" required>
+                                                </div>
                                             </div>
+                                      </div>
                                             <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Nama :</label>
                                                 <div class="col-sm-10"><input name="nama" id="exampleText" placeholder="Nama" type="text" class="form-control" required></div>
                                             </div>
@@ -160,7 +174,7 @@
                                             <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Kode Jenis Bayar :</label>
                                                 <div class="col-sm-10"><input name="kodejenisbyr" id="exampleText" placeholder="Kode Jenis Bayar" type="text" class="form-control" required></div>
                                             </div>
-                                            <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Nomor ID Pemesanan :</label>
+                                            <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">No. ID Pemesanan :</label>
                                                 <div class="col-sm-10"><input name="noid" id="exampleText" placeholder="Nomor ID Pemesanan" type="text" class="form-control" required></div>
                                             </div>
                                             <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Tagihan :</label>

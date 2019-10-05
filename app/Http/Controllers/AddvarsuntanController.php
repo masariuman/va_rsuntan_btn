@@ -28,6 +28,7 @@ class AddvarsuntanController extends Controller
 
     public function tambahAddvarsuntan(Request $request)
     {
+    
         $setting = Setting::findOrFail(1);
         $date = \Carbon\Carbon::now();
         $parse = \Carbon\Carbon::parse($date);
@@ -47,12 +48,13 @@ class AddvarsuntanController extends Controller
 
 
         $fixva = $setting->prefix_va.$setting->kode_instituse.$setting->kode_payment.$request->va2;
+      
         $nextId = Va::max('id') + 1;
         $idva = "UNTANWS";
         $keyva = "plqQlf6fSoKKBWx4Lxmb0OOMwRKQ3TcN";
         $secretva = "C4UMXATbTT";
         $body = [
-            'ref' => $request->input('id', $nextId),
+            'ref' => $nextId,
             'va' => $fixva,
             'nama' => $request->nama,
             'layanan' => $request->layanan,
@@ -69,7 +71,7 @@ class AddvarsuntanController extends Controller
         $sign = $idva.':'.json_encode($body).':'.$keyva;
         $signature = hash_hmac('sha256', $sign, $secretva);
         $url_create = "https://vabtn-dev.btn.co.id:9021/v1/untan/createVA";
-        // echo $sign;
+        // return $sign;
 
         $client = new Client([
             'verify' => false,'headers' => ['Content-Type' => 'application/json','id' => $idva, 'key' => $keyva, 'signature' => $signature]
@@ -89,13 +91,14 @@ class AddvarsuntanController extends Controller
  $y = json_decode($x);
 //  dd($y->nama);
 
-        $nextId = Va::max('id') + 1;
+   
+
+
         if($response_decode->rsp === "000"){
             $addvarsuntan = Va::create([
                 'user_id' => Auth::user()->id,
-
                 'ref' => $nextId,
-                'va' =>$y->va,
+                'va' => $fixva,
                 'nama' => $y->nama,
                 'layanan' => $y->layanan,
                 'kodelayanan' => $y->kodelayanan,
@@ -106,7 +109,7 @@ class AddvarsuntanController extends Controller
                 'flag' => $y->flag,
                 'expired' => $expired,
                 'reserve' => $y->reserve,
-                'description' => $y->reserve,
+                'description' => $y->description,
 
                 'status_inquiry' => '0',
                 'created_at' => \Carbon\Carbon::now(),

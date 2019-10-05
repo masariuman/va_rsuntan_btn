@@ -44,7 +44,15 @@
                     <div class="col-sm-8 col-form-label col-form-text"><h5>{{ $vas->tagihan }}</h5></div>
                 </div>
                 <div class="position-relative row form-group"><label for="exampleText" class="col-sm-4 col-form-label">Flag Full / Partial :</label>
-                    <div class="col-sm-8 col-form-label col-form-text"><h5>{{ $vas->flag }}</h5></div>
+                    <div class="col-sm-8 col-form-label col-form-text">
+                    <h5>
+                    @if($vas->flag == "F")              
+                       Flag Full
+                    @elseif($vas->flag == "P") 
+                       Flag Partial
+                    @endif                    
+                    </h5>
+                    </div>
                 </div>
                 <div class="position-relative row form-group"><label for="exampleText" class="col-sm-4 col-form-label">Expired Date :</label>
                     <div class="col-sm-8 col-form-label col-form-text"><h5>{{ $vas->expired }}</h5></div>
@@ -108,15 +116,22 @@
                 </div>
                 <div class="position-relative row form-group"><label for="exampleSelect" class="col-sm-4 col-form-label">Flag Full / Partial :</label>
                     <div class="col-sm-8">
-                        <select name="flag" id="exampleSelect" class="form-control" required>                
-                            <option value="{{ $vas->flag }}" disabled selected>
+                        <select name="flag" id="exampleSelect" class="form-control" required>                        
                              @if($vas->flag == "F")
+                             <option value="F" selected>
                              Flag Full
-                             @elseif($vas->flag == "P") 
+                             </option>
+                             <option value="P">
                              Flag Partial
-                             @endif</option>
-                            <option value="F">Flag Full</option>
-                            <option value="P">Flag Partial</option>          
+                             </option>
+                             @elseif($vas->flag == "P") 
+                             <option value="P" selected>
+                             Flag Partial
+                             </option>
+                             <option value="F">
+                             Flag Full
+                             </option>
+                             @endif
                         </select>
                     </div>
                 </div>                
@@ -235,7 +250,15 @@
                     <div class="col-sm-8 col-form-label col-form-text"><h5>{{ $vas->tagihan }}</h5></div>
                 </div>
                 <div class="position-relative row form-group"><label for="exampleText" class="col-sm-4 col-form-label">Flag Full / Partial :</label>
-                    <div class="col-sm-8 col-form-label col-form-text"><h5>{{ $vas->flag }}</h5></div>
+                    <div class="col-sm-8 col-form-label col-form-text">
+                    <h5>
+                    @if($vas->flag == "F")              
+                       Flag Full
+                    @elseif($vas->flag == "P") 
+                       Flag Partial
+                    @endif                    
+                    </h5>
+                    </div>
                 </div>
                 <div class="position-relative row form-group"><label for="exampleText" class="col-sm-4 col-form-label">Expired Date :</label>
                     <div class="col-sm-8 col-form-label col-form-text"><h5>{{ $vas->expired }}</h5></div>
