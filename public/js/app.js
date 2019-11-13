@@ -66323,14 +66323,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
-
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
-
-function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
-
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
-
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -66362,7 +66354,8 @@ function (_Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Header).call(this, props));
     _this.state = {
-      shashin: ''
+      shashin: '',
+      photo: ''
     };
     return _this;
   }
@@ -66374,21 +66367,30 @@ function (_Component) {
 
       axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('/shashin').then(function (response) {
         return _this2.setState({
-          shashin: _toConsumableArray(response.data.shashin)
+          shashin: response.data.shashin
         });
       });
+    }
+  }, {
+    key: "ifPhotoNull",
+    value: function ifPhotoNull() {
+      if (this.state.shashin.photo === null) {
+        this.setState({
+          photo: 'nophoto.png'
+        });
+      }
     }
   }, {
     key: "testShashin",
     value: function testShashin() {
       axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('/shashin').then(function (response) {
-        return console.log(response);
+        return console.log(response.data.shashin);
       });
     }
   }, {
     key: "UNSAFE_componentWillMount",
     value: function UNSAFE_componentWillMount() {
-      this.testShashin();
+      this.getShashin();
     }
   }, {
     key: "render",
@@ -66449,13 +66451,13 @@ function (_Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         width: "42",
         className: "rounded-circle",
-        src: "/sjabloon/assets/images/avatars/1.jpg",
+        src: "/sjabloon/poto/".concat(!this.state.shashin.photo ? 'nophoto.png' : this.state.shashin.photo),
         alt: ""
       })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "widget-content-left  ml-3 header-user-info"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "widget-heading"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, !this.state.shashin.name ? 'Anonymous' : this.state.shashin.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "widget-subheading"
       }, "Teller"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "logout"
