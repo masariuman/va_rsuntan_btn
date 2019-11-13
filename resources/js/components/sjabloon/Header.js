@@ -19,8 +19,12 @@ class Header extends Component {
         );
     }
 
+    testShashin() {
+        axios.get('/shashin').then(response => console.log(response));
+    }
+
     UNSAFE_componentWillMount() {
-        this.getShashin();
+        this.testShashin();
     }
 
 
@@ -106,7 +110,7 @@ class Header extends Component {
                                             Teller
                             </div>
                             <a href="logout"> <div className="widget-heading">
-                                        Logout <i class="fa fa-fw" aria-hidden="true" title="Copy to use power-off"></i>
+                                        Logout <i className="fa fa-fw" aria-hidden="true" title="Copy to use power-off"></i>
                             </div></a>
                                     </div>
                                 </div>

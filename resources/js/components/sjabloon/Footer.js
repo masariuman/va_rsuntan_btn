@@ -8,12 +8,12 @@ class Footer extends Component {
                         <div className="app-footer-left">
                             <ul className="nav">
                                 <li className="nav-item">
-                                    <a href="javascript:void(0);" className="nav-link">
+                                    <a href="#" className="nav-link">
                                         Rumah Sakit Universitas Tanjungpura Pontianak
                                     </a>
                                 </li>
                                 <li className="nav-item">
-                                    <a href="javascript:void(0);" className="nav-link">
+                                    <a href="#" className="nav-link">
                                         Bank BTN
                                     </a>
                                 </li>
@@ -22,12 +22,12 @@ class Footer extends Component {
                         <div className="app-footer-right">
                             <ul className="nav">
                                 <li className="nav-item">
-                                    <a href="javascript:void(0);" className="nav-link">
+                                    <a href="#" className="nav-link">
                                         Copyright &copy; 2020
                                     </a>
                                 </li>
                                 <li className="nav-item">
-                                    <a href="javascript:void(0);" className="nav-link">
+                                    <a href="#" className="nav-link">
                                         <div className="badge badge-warning mr-1 ml-0">
                                             <small>IT</small>
                                         </div>

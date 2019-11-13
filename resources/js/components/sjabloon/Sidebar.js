@@ -23,7 +23,7 @@ class Sidebar extends Component {
                     <div className="logo-src"></div>
                     <div className="header__pane ml-auto">
                         <div>
-                            <button type="button" className="hamburger close-sidebar-btn hamburger--elastic" data-className="closed-sidebar">
+                            <button type="button" className="hamburger close-sidebar-btn hamburger--elastic" data-classname="closed-sidebar">
                                 <span className="hamburger-box">
                                     <span className="hamburger-inner"></span>
                                 </span>

@@ -66274,12 +66274,12 @@ function (_Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         className: "nav-item"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "javascript:void(0);",
+        href: "#",
         className: "nav-link"
       }, "Rumah Sakit Universitas Tanjungpura Pontianak")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         className: "nav-item"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "javascript:void(0);",
+        href: "#",
         className: "nav-link"
       }, "Bank BTN")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "app-footer-right"
@@ -66288,12 +66288,12 @@ function (_Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         className: "nav-item"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "javascript:void(0);",
+        href: "#",
         className: "nav-link"
       }, "Copyright \xA9 2020")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         className: "nav-item"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "javascript:void(0);",
+        href: "#",
         className: "nav-link"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "badge badge-warning mr-1 ml-0"
@@ -66379,9 +66379,16 @@ function (_Component) {
       });
     }
   }, {
+    key: "testShashin",
+    value: function testShashin() {
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('/shashin').then(function (response) {
+        return console.log(response);
+      });
+    }
+  }, {
     key: "UNSAFE_componentWillMount",
     value: function UNSAFE_componentWillMount() {
-      this.getShashin();
+      this.testShashin();
     }
   }, {
     key: "render",
@@ -66455,7 +66462,7 @@ function (_Component) {
       }, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "widget-heading"
       }, "Logout ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        "class": "fa fa-fw",
+        className: "fa fa-fw",
         "aria-hidden": "true",
         title: "Copy to use power-off"
       }, "\uF011"))))))))));
@@ -66537,7 +66544,7 @@ function (_Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         type: "button",
         className: "hamburger close-sidebar-btn hamburger--elastic",
-        "data-className": "closed-sidebar"
+        "data-classname": "closed-sidebar"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "hamburger-box"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
