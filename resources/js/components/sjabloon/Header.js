@@ -1,6 +1,29 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 class Header extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            shashin: ''
+        };
+    }
+
+    getShashin() {
+        axios.get('/shashin').then((
+            response
+        ) =>
+            this.setState({
+                shashin: [...response.data.shashin]
+            })
+        );
+    }
+
+    UNSAFE_componentWillMount() {
+        this.getShashin();
+    }
+
+
     render() {
         return (
             <div className="app-header header-shadow bg-sunny-morning header-text-dark">
@@ -77,7 +100,7 @@ class Header extends Component {
                                     </div>
                                     <div className="widget-content-left  ml-3 header-user-info">
                                         <div className="widget-heading">
-                                            Iwan Susanto
+                                            {/* {this.state.shashin.map(shashin => {shashin.name})} */}
                             </div>
                                         <div className="widget-subheading">
                                             Teller

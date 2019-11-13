@@ -16,20 +16,20 @@ class InfovarsuntanController extends Controller
     {
         $this->middleware('auth');
     }
-    
-    
+
+
     public function dataInfovarsuntan()
     {
-        $va = Va::get(); 
+        $va = Va::get();
 
         return view('infovarsuntan', compact('va'));
-      
+
     }
 
 
 
     public function ubahInfovarsuntan(Request $request, $id)
-    {   
+    {
         $setting = Setting::findOrFail(1);
         $date = \Carbon\Carbon::now();
         $parse = \Carbon\Carbon::parse($date);
@@ -49,10 +49,10 @@ class InfovarsuntanController extends Controller
 
 
         $fixva = $setting->prefix_va.$setting->kode_instituse.$setting->kode_payment.$request->va2;
-      
+
         $dataid = Va::findOrFail($id);
         $refid = $dataid['id'];
-  
+
         $idva = "UNTANWS";
         $keyva = "plqQlf6fSoKKBWx4Lxmb0OOMwRKQ3TcN";
         $secretva = "C4UMXATbTT";
@@ -64,7 +64,7 @@ class InfovarsuntanController extends Controller
             'kodelayanan' => $request->kodelayanan,
             'jenisbayar' => $request->jenisbayar,
             'kodejenisbyr' => $request->kodejenisbyr,
-            'noid' => $request->noid, 
+            'noid' => $request->noid,
             'tagihan' => (int)$request->tagihan,
             'flag' => $request->flag,
             'expired' => $expired,
@@ -94,7 +94,7 @@ class InfovarsuntanController extends Controller
  $y = json_decode($x);
 //  dd($y->nama);
 
-        
+
         if($response_decode->rsp === "000"){
             $editvarsuntan = Va::where('id', $id)->update([
                 'user_id' => Auth::user()->id,
@@ -169,7 +169,7 @@ class InfovarsuntanController extends Controller
         $datava = Va::findOrFail($id);
         $ref = $datava['ref'];
         $va = $datava['va'];
-        
+
         $idva = "UNTANWS";
         $keyva = "plqQlf6fSoKKBWx4Lxmb0OOMwRKQ3TcN";
         $secretva = "C4UMXATbTT";
@@ -200,7 +200,7 @@ class InfovarsuntanController extends Controller
 //  $y = json_decode($x);
 //  dd($y->nama);
 
-   
+
         if($response_decode->rsp === "000"){
             $deletevarsuntan = Va::where('id', $id)->delete();
 
@@ -252,10 +252,10 @@ class InfovarsuntanController extends Controller
 
     public function getTable()
     {
-       
+
 
         $va = Va::join('users', 'users.id', '=', 'va.user_id')->select('va.*', 'users.name')->get();
-     
+
         return DataTables::of($va)
 
             ->addColumn('option', function ($va) {
@@ -271,7 +271,7 @@ class InfovarsuntanController extends Controller
                 </button>';
             })
          ->addIndexColumn()
-         
+
          ->addColumn('status', function ($va) {
             return '<div class="mb-2 mr-2 badge badge-pill badge-info">Pending</div>';
         })
@@ -281,5 +281,16 @@ class InfovarsuntanController extends Controller
         ->make(true);
 
     }
+
+
+
+
+
+    public function header() {
+		$shashin = Auth::user();
+		return response()->json([
+			'shashin' => $shashin,
+		]);
+	}
 
 }
