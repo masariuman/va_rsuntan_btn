@@ -72,7 +72,7 @@ class Sidebar extends Component {
                                 </a>
                             </li>
                             <li>
-                                <a href="index.html" className="{this.state.activeIndex==0 ? 'mm-active': null}"  onClick={this.toggleClass.bind(this, 3)}>
+                                <a href="/logout" className="{this.state.activeIndex==0 ? 'mm-active': null}"  onClick={this.toggleClass.bind(this, 3)}>
                                     <i className="metismenu-icon pe-7s-power"></i>
                                     Logout
                                 </a>
