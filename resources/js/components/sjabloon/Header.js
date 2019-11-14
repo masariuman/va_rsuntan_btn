@@ -117,7 +117,7 @@ class Header extends Component {
                                             {!this.state.shashin.name ? 'Anonymous' : this.state.shashin.name}
                             </div>
                                         <div className="widget-subheading">
-                                            Teller
+                                            {/* Teller */}
                             </div>
                             <a href="logout"> <div className="widget-heading">
                                         Logout <i className="fa fa-fw" aria-hidden="true" title="Copy to use power-off"></i>
