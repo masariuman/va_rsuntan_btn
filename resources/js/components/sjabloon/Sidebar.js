@@ -23,7 +23,7 @@ class Sidebar extends Component {
                     <div className="logo-src"></div>
                     <div className="header__pane ml-auto">
                         <div>
-                            <button type="button" className="hamburger close-sidebar-btn hamburger--elastic" data-className="closed-sidebar">
+                            <button type="button" className="hamburger close-sidebar-btn hamburger--elastic" data-classname="closed-sidebar">
                                 <span className="hamburger-box">
                                     <span className="hamburger-inner"></span>
                                 </span>
@@ -72,7 +72,7 @@ class Sidebar extends Component {
                                 </a>
                             </li>
                             <li>
-                                <a href="index.html" className="{this.state.activeIndex==0 ? 'mm-active': null}"  onClick={this.toggleClass.bind(this, 3)}>
+                                <a href="/logout" className="{this.state.activeIndex==0 ? 'mm-active': null}"  onClick={this.toggleClass.bind(this, 3)}>
                                     <i className="metismenu-icon pe-7s-power"></i>
                                     Logout
                                 </a>

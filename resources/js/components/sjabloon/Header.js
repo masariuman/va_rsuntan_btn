@@ -1,6 +1,43 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 class Header extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            shashin: '',
+            photo: ''
+        };
+    }
+
+    getShashin() {
+        axios.get('/shashin').then(response =>
+            this.setState({
+                shashin : response.data.shashin
+            })
+
+        );
+
+    }
+
+    ifPhotoNull() {
+        if (this.state.shashin.photo === null) {
+            this.setState({
+                photo : 'nophoto.png'
+            })
+        }
+
+    }
+
+    testShashin() {
+        axios.get('/shashin').then(response => console.log(response.data.shashin));
+    }
+
+    componentDidMount() {
+        this.getShashin();
+    }
+
+
     render() {
         return (
             <div className="app-header header-shadow bg-sunny-morning header-text-dark">
@@ -71,19 +108,18 @@ class Header extends Component {
                                     <div className="widget-content-left">
                                         <div className="btn-group">
                                             <a data-togel="dropdown" aria-haspopup="true" aria-expanded="false" className="p-0 btn">
-                                                <img width="42" className="rounded-circle" src="/sjabloon/assets/images/avatars/1.jpg" alt="" />
+                                                <img width="42" className="rounded-circle" src={`/sjabloon/poto/${!this.state.shashin.photo ? 'nophoto.png' : this.state.shashin.photo}`} alt="" />
                                             </a>
                                         </div>
                                     </div>
                                     <div className="widget-content-left  ml-3 header-user-info">
                                         <div className="widget-heading">
-                                            Iwan Susanto
+                                            {!this.state.shashin.name ? 'Anonymous' : this.state.shashin.name}
                             </div>
                                         <div className="widget-subheading">
-                                            Teller
                             </div>
                             <a href="logout"> <div className="widget-heading">
-                                        Logout <i class="fa fa-fw" aria-hidden="true" title="Copy to use power-off"></i>
+                                        Logout <i className="fa fa-fw" aria-hidden="true" title="Copy to use power-off"></i>
                             </div></a>
                                     </div>
                                 </div>

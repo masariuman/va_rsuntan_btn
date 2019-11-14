@@ -66274,12 +66274,12 @@ function (_Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         className: "nav-item"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "javascript:void(0);",
+        href: "#",
         className: "nav-link"
       }, "Rumah Sakit Universitas Tanjungpura Pontianak")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         className: "nav-item"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "javascript:void(0);",
+        href: "#",
         className: "nav-link"
       }, "Bank BTN")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "app-footer-right"
@@ -66288,12 +66288,12 @@ function (_Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         className: "nav-item"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "javascript:void(0);",
+        href: "#",
         className: "nav-link"
       }, "Copyright \xA9 2020")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         className: "nav-item"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "javascript:void(0);",
+        href: "#",
         className: "nav-link"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "badge badge-warning mr-1 ml-0"
@@ -66319,6 +66319,8 @@ function (_Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -66339,18 +66341,58 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
 var Header =
 /*#__PURE__*/
 function (_Component) {
   _inherits(Header, _Component);
 
-  function Header() {
+  function Header(props) {
+    var _this;
+
     _classCallCheck(this, Header);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Header).apply(this, arguments));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Header).call(this, props));
+    _this.state = {
+      shashin: '',
+      photo: ''
+    };
+    return _this;
   }
 
   _createClass(Header, [{
+    key: "getShashin",
+    value: function getShashin() {
+      var _this2 = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('/shashin').then(function (response) {
+        return _this2.setState({
+          shashin: response.data.shashin
+        });
+      });
+    }
+  }, {
+    key: "ifPhotoNull",
+    value: function ifPhotoNull() {
+      if (this.state.shashin.photo === null) {
+        this.setState({
+          photo: 'nophoto.png'
+        });
+      }
+    }
+  }, {
+    key: "testShashin",
+    value: function testShashin() {
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('/shashin').then(function (response) {
+        return console.log(response.data.shashin);
+      });
+    }
+  }, {
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.getShashin();
+    }
+  }, {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -66409,20 +66451,20 @@ function (_Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         width: "42",
         className: "rounded-circle",
-        src: "/sjabloon/assets/images/avatars/1.jpg",
+        src: "/sjabloon/poto/".concat(!this.state.shashin.photo ? 'nophoto.png' : this.state.shashin.photo),
         alt: ""
       })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "widget-content-left  ml-3 header-user-info"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "widget-heading"
-      }, "Iwan Susanto"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, !this.state.shashin.name ? 'Anonymous' : this.state.shashin.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "widget-subheading"
-      }, "Teller"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "logout"
       }, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "widget-heading"
       }, "Logout ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        "class": "fa fa-fw",
+        className: "fa fa-fw",
         "aria-hidden": "true",
         title: "Copy to use power-off"
       }, "\uF011"))))))))));
@@ -66504,7 +66546,7 @@ function (_Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         type: "button",
         className: "hamburger close-sidebar-btn hamburger--elastic",
-        "data-className": "closed-sidebar"
+        "data-classname": "closed-sidebar"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "hamburger-box"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
@@ -66554,7 +66596,7 @@ function (_Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "metismenu-icon pe-7s-config"
       }), "Pengaturan Akun")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "index.html",
+        href: "/logout",
         className: "{this.state.activeIndex==0 ? 'mm-active': null}",
         onClick: this.toggleClass.bind(this, 3)
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {

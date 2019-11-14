@@ -43,4 +43,7 @@ Route::get('test-report', 'HomeController@test_report');
 Route::get('test-something', 'HomeController@test_something');
 
 
+Route::get('shashin', 'InfovarsuntanController@header');
+
+
 
