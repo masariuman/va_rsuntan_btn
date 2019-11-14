@@ -66459,7 +66459,7 @@ function (_Component) {
         className: "widget-heading"
       }, !this.state.shashin.name ? 'Anonymous' : this.state.shashin.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "widget-subheading"
-      }, "Teller"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "logout"
       }, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "widget-heading"
