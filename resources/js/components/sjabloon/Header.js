@@ -33,7 +33,7 @@ class Header extends Component {
         axios.get('/shashin').then(response => console.log(response.data.shashin));
     }
 
-    UNSAFE_componentWillMount() {
+    componentDidMount() {
         this.getShashin();
     }
 

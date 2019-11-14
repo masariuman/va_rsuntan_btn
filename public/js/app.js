@@ -66388,8 +66388,8 @@ function (_Component) {
       });
     }
   }, {
-    key: "UNSAFE_componentWillMount",
-    value: function UNSAFE_componentWillMount() {
+    key: "componentDidMount",
+    value: function componentDidMount() {
       this.getShashin();
     }
   }, {
