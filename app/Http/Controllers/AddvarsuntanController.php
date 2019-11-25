@@ -28,7 +28,7 @@ class AddvarsuntanController extends Controller
 
     public function tambahAddvarsuntan(Request $request)
     {
-    
+
         $setting = Setting::findOrFail(1);
         $date = \Carbon\Carbon::now();
         $parse = \Carbon\Carbon::parse($date);
@@ -48,7 +48,7 @@ class AddvarsuntanController extends Controller
 
 
         $fixva = $setting->prefix_va.$setting->kode_instituse.$setting->kode_payment.$request->va2;
-      
+
         $nextId = Va::max('id') + 1;
         $idva = "UNTANWS";
         $keyva = "plqQlf6fSoKKBWx4Lxmb0OOMwRKQ3TcN";
@@ -61,7 +61,7 @@ class AddvarsuntanController extends Controller
             'kodelayanan' => $request->kodelayanan,
             'jenisbayar' => $request->jenisbayar,
             'kodejenisbyr' => $request->kodejenisbyr,
-            'noid' => $request->noid, 
+            'noid' => $request->noid,
             'tagihan' => (int)$request->tagihan,
             'flag' => $request->flag,
             'expired' => $expired,
@@ -91,7 +91,7 @@ class AddvarsuntanController extends Controller
  $y = json_decode($x);
 //  dd($y->nama);
 
-   
+
 
 
         if($response_decode->rsp === "000"){
@@ -115,6 +115,27 @@ class AddvarsuntanController extends Controller
                 'created_at' => \Carbon\Carbon::now(),
                 'updated_at' => \Carbon\Carbon::now(),
             ]);
+
+            // $addvarsuntan = Va::create([
+            //     'user_id' => Auth::user()->id,
+            //     'ref' => $nextId,
+            //     'va' => $fixva,
+            //     'nama' => $y->nama,
+            //     'layanan' => $y->layanan,
+            //     'kodelayanan' => $y->kodelayanan,
+            //     'jenisbayar' => $y->jenisbayar,
+            //     'kodejenisbyr' => $y->kodejenisbyr,
+            //     'noid' => $y->noid,
+            //     'tagihan' => $y->tagihan,
+            //     'flag' => $y->flag,
+            //     'expired' => $expired,
+            //     'reserve' => $y->reserve,
+            //     'description' => $y->description,
+
+            //     'status_inquiry' => '0',
+            //     'created_at' => \Carbon\Carbon::now(),
+            //     'updated_at' => \Carbon\Carbon::now(),
+            // ]);
 
             \Session::flash('Berhasil', 'Data Virtual Account berhasil ditambahkan');
 

@@ -31,5 +31,8 @@ class Transaksi extends Model
 	}
 	public function va() {
 		return $this->belongsTo('App\Va', 'va_id');
-	}
+    }
+    public function transaksi_history() {
+		return $this->hasMany('App\TransaksiHistory', 'transaksi_id');
+    }
 }
