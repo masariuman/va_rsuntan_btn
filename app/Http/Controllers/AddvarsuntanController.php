@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Va;
 use App\Setting;
+use App\TransaksiHistory;
+use App\Transaksi;
 use Auth;
 use GuzzleHttp\Client;
 
@@ -111,31 +113,31 @@ class AddvarsuntanController extends Controller
                 'reserve' => $y->reserve,
                 'description' => $y->description,
 
-                'status_inquiry' => '0',
+                'status_inquiry' => '1',
                 'created_at' => \Carbon\Carbon::now(),
                 'updated_at' => \Carbon\Carbon::now(),
             ]);
 
-            // $addvarsuntan = Va::create([
-            //     'user_id' => Auth::user()->id,
-            //     'ref' => $nextId,
-            //     'va' => $fixva,
-            //     'nama' => $y->nama,
-            //     'layanan' => $y->layanan,
-            //     'kodelayanan' => $y->kodelayanan,
-            //     'jenisbayar' => $y->jenisbayar,
-            //     'kodejenisbyr' => $y->kodejenisbyr,
-            //     'noid' => $y->noid,
-            //     'tagihan' => $y->tagihan,
-            //     'flag' => $y->flag,
-            //     'expired' => $expired,
-            //     'reserve' => $y->reserve,
-            //     'description' => $y->description,
-
-            //     'status_inquiry' => '0',
-            //     'created_at' => \Carbon\Carbon::now(),
-            //     'updated_at' => \Carbon\Carbon::now(),
-            // ]);
+            $addvarsuntan = Transaksi::create([
+                'user_id' => Auth::user()->id,
+                'ref' => $nextId,
+                'va' => $fixva,
+                'nama' => $y->nama,
+                'layanan' => $y->layanan,
+                'kodelayanan' => $y->kodelayanan,
+                'jenisbayar' => $y->jenisbayar,
+                'kodejenisbyr' => $y->kodejenisbyr,
+                'noid' => $y->noid,
+                'tagihan' => $y->tagihan,
+                'flag' => $y->flag,
+                'expired' => $expired,
+                'reserve' => $y->reserve,
+                'description' => $y->description,
+                'terbayar' => "0",
+                'status_transaksi' => 'pending',
+                'created_at' => \Carbon\Carbon::now(),
+                'updated_at' => \Carbon\Carbon::now(),
+            ]);
 
             \Session::flash('Berhasil', 'Data Virtual Account berhasil ditambahkan');
 
