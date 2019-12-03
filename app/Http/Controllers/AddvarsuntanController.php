@@ -118,10 +118,12 @@ class AddvarsuntanController extends Controller
                 'updated_at' => \Carbon\Carbon::now(),
             ]);
 
+            $vaaidi = Va::all()->last();
+
             $addvarsuntan = Transaksi::create([
                 'user_id' => Auth::user()->id,
                 'ref' => $nextId,
-                'va' => $fixva,
+                'va_id' => $vaaidi->id,
                 'nama' => $y->nama,
                 'layanan' => $y->layanan,
                 'kodelayanan' => $y->kodelayanan,
