@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use GuzzleHttp\Client;
 use App\Setting;
+use App\Va;
 
 use function GuzzleHttp\json_decode;
 
@@ -254,5 +255,8 @@ class HomeController extends Controller
         $fixva = $setting->prefix_va.$setting->kode_instituse.$setting->kode_payment.$va;
         echo " | ";
         // echo $fixva;
+
+        $vaaidi = Va::all()->last();
+        echo $vaaidi;
     }
 }
