@@ -4,14 +4,15 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Va extends Model
+class TransaksiHistory extends Model
 {
     //
-    protected $table = 'va';
+    protected $table = 'transaksi_history';
     protected $fillable = [
-    	'user_id',
+        'transaksi_id',
+        'user_id',
+        'va_id',
     	'ref',
-    	'va',
     	'nama',
     	'layanan',
         'kodelayanan',
@@ -23,18 +24,16 @@ class Va extends Model
         'expired',
         'reserve',
         'description',
-        'status_inquiry',
+        'terbayar',
+        'status_transaksi',
     ];
     public function user() {
 		return $this->belongsTo('App\User', 'user_id');
 	}
-	public function transaksi() {
-		return $this->hasMany('App\Transaksi', 'va_id');
+	public function va() {
+		return $this->belongsTo('App\Va', 'va_id');
     }
-    public function report() {
-		return $this->hasMany('App\Report', 'va_id');
-    }
-    public function transaksi_history() {
-		return $this->hasMany('App\TransaksiHistory', 'transaksi_id');
+    public function transaksi() {
+        return $this->belongsTo('App\Transaksi', 'transaksi_id');
     }
 }

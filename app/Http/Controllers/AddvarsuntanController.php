@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Va;
 use App\Setting;
+use App\TransaksiHistory;
+use App\Transaksi;
 use Auth;
 use GuzzleHttp\Client;
 
@@ -28,7 +30,7 @@ class AddvarsuntanController extends Controller
 
     public function tambahAddvarsuntan(Request $request)
     {
-    
+
         $setting = Setting::findOrFail(1);
         $date = \Carbon\Carbon::now();
         $parse = \Carbon\Carbon::parse($date);
@@ -48,7 +50,7 @@ class AddvarsuntanController extends Controller
 
 
         $fixva = $setting->prefix_va.$setting->kode_instituse.$setting->kode_payment.$request->va2;
-      
+
         $nextId = Va::max('id') + 1;
         $idva = "UNTANWS";
         $keyva = "plqQlf6fSoKKBWx4Lxmb0OOMwRKQ3TcN";
@@ -61,7 +63,7 @@ class AddvarsuntanController extends Controller
             'kodelayanan' => $request->kodelayanan,
             'jenisbayar' => $request->jenisbayar,
             'kodejenisbyr' => $request->kodejenisbyr,
-            'noid' => $request->noid, 
+            'noid' => $request->noid,
             'tagihan' => (int)$request->tagihan,
             'flag' => $request->flag,
             'expired' => $expired,
@@ -91,7 +93,7 @@ class AddvarsuntanController extends Controller
  $y = json_decode($x);
 //  dd($y->nama);
 
-   
+
 
 
         if($response_decode->rsp === "000"){
@@ -111,7 +113,28 @@ class AddvarsuntanController extends Controller
                 'reserve' => $y->reserve,
                 'description' => $y->description,
 
-                'status_inquiry' => '0',
+                'status_inquiry' => '1',
+                'created_at' => \Carbon\Carbon::now(),
+                'updated_at' => \Carbon\Carbon::now(),
+            ]);
+
+            $addvarsuntan = Transaksi::create([
+                'user_id' => Auth::user()->id,
+                'ref' => $nextId,
+                'va' => $fixva,
+                'nama' => $y->nama,
+                'layanan' => $y->layanan,
+                'kodelayanan' => $y->kodelayanan,
+                'jenisbayar' => $y->jenisbayar,
+                'kodejenisbyr' => $y->kodejenisbyr,
+                'noid' => $y->noid,
+                'tagihan' => $y->tagihan,
+                'flag' => $y->flag,
+                'expired' => $expired,
+                'reserve' => $y->reserve,
+                'description' => $y->description,
+                'terbayar' => "0",
+                'status_transaksi' => 'pending',
                 'created_at' => \Carbon\Carbon::now(),
                 'updated_at' => \Carbon\Carbon::now(),
             ]);
