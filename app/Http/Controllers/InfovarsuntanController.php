@@ -23,7 +23,7 @@ class InfovarsuntanController extends Controller
         $va = Va::where('status_inquiry',1)->get();
 
 
-      
+    
         return view('infovarsuntan', compact('va'));
 
     }
@@ -124,43 +124,56 @@ class InfovarsuntanController extends Controller
             return back();
         }
         else if($response_decode->rsp === "001"){
-            echo "VA not found";
+            \Session::flash('Gagal', 'VA not found');
+            // echo "VA not found";
         }
         else if($response_decode->rsp === "002"){
-            echo "Kesalahan pada kode institusi";
+            \Session::flash('Gagal', 'Kesalahan pada kode institusi');
+            // echo "Kesalahan pada kode institusi";
         }
         else if($response_decode->rsp === "003"){
-            echo "Kesalahan tipe pembayaran";
+            \Session::flash('Gagal', 'Kesalahan tipe pembayaran');
+            // echo "Kesalahan tipe pembayaran"; 
         }
         else if($response_decode->rsp === "004"){
-            echo "Paramete Akun institusi tidak ditemukan";
+            \Session::flash('Gagal', 'Paramete Akun institusi tidak ditemukan');
+            // echo "Paramete Akun institusi tidak ditemukan";
         }
         else if($response_decode->rsp === "005"){
-            echo "nomor akun institusi salah";
+            \Session::flash('Gagal', 'nomor akun institusi salah');
+            // echo "nomor akun institusi salah";
         }
         else if($response_decode->rsp === "006"){
-            echo "nomor VA telah ada";
+            \Session::flash('Gagal', 'nomor akun institusi salah');
+            // echo "nomor akun institusi salah";
         }
         else if($response_decode->rsp === "007"){
-            echo "kesalahan pada nomor va";
+            \Session::flash('Gagal', 'kesalahan pada nomor va');
+            // echo "kesalahan pada nomor va";
         }
         else if($response_decode->rsp === "008"){
-            echo "kadaluarsa lebih rendah dari hari ini";
+            \Session::flash('Gagal', 'kadaluarsa lebih rendah dari hari ini');
+            // echo "kadaluarsa lebih rendah dari hari ini";
         }
         else if($response_decode->rsp === "009"){
-            echo "kesalahan tanggal kadaluarsa";
+            \Session::flash('Gagal', 'kesalahan tanggal kadaluarsa');
+            // echo "kesalahan tanggal kadaluarsa";
         }
         else if($response_decode->rsp === "098"){
-            echo "penggantian night mode atau day mode";
+            \Session::flash('Gagal', 'penggantian night mode atau day mode');
+            // echo "penggantian night mode atau day mode";
         }
         else if($response_decode->rsp === "099"){
-            echo "tidak memiliki hak akses";
+            \Session::flash('Gagal', 'tidak memiliki hak akses');
+            // echo "tidak memiliki hak akses";
         }
         else if($response_decode->rsp === "998"){
-            echo "signature salah, silahkan kontak IT support";
+            \Session::flash('Gagal', 'signature salah, silahkan kontak IT support');
+            // echo "signature salah, silahkan kontak IT support";
         }
         else {
-            echo "GENERAL ERROR, LAKUKAN REFRESH atau TEKAN TOMBOL F5. Hubungi STAFF IT BILA TERJADI ERROR YANG SAMA";
+            \Session::flash('Gagal', 'GENERAL ERROR, LAKUKAN REFRESH atau TEKAN TOMBOL F5. Hubungi STAFF IT BILA TERJADI ERROR YANG SAMA');
+            // echo "GENERAL ERROR, LAKUKAN REFRESH atau TEKAN TOMBOL F5. Hubungi STAFF IT BILA TERJADI ERROR YANG SAMA";
         }
     }
 
@@ -211,43 +224,56 @@ class InfovarsuntanController extends Controller
             return back();
         }
         else if($response_decode->rsp === "001"){
-            echo "VA not found";
+            \Session::flash('Gagal', 'VA not found');
+            // echo "VA not found";
         }
         else if($response_decode->rsp === "002"){
-            echo "Kesalahan pada kode institusi";
+            \Session::flash('Gagal', 'Kesalahan pada kode institusi');
+            // echo "Kesalahan pada kode institusi";
         }
         else if($response_decode->rsp === "003"){
-            echo "Kesalahan tipe pembayaran";
+            \Session::flash('Gagal', 'Kesalahan tipe pembayaran');
+            // echo "Kesalahan tipe pembayaran"; 
         }
         else if($response_decode->rsp === "004"){
-            echo "Paramete Akun institusi tidak ditemukan";
+            \Session::flash('Gagal', 'Paramete Akun institusi tidak ditemukan');
+            // echo "Paramete Akun institusi tidak ditemukan";
         }
         else if($response_decode->rsp === "005"){
-            echo "nomor akun institusi salah";
+            \Session::flash('Gagal', 'nomor akun institusi salah');
+            // echo "nomor akun institusi salah";
         }
         else if($response_decode->rsp === "006"){
-            echo "nomor VA telah ada";
+            \Session::flash('Gagal', 'nomor akun institusi salah');
+            // echo "nomor akun institusi salah";
         }
         else if($response_decode->rsp === "007"){
-            echo "kesalahan pada nomor va";
+            \Session::flash('Gagal', 'kesalahan pada nomor va');
+            // echo "kesalahan pada nomor va";
         }
         else if($response_decode->rsp === "008"){
-            echo "kadaluarsa lebih rendah dari hari ini";
+            \Session::flash('Gagal', 'kadaluarsa lebih rendah dari hari ini');
+            // echo "kadaluarsa lebih rendah dari hari ini";
         }
         else if($response_decode->rsp === "009"){
-            echo "kesalahan tanggal kadaluarsa";
+            \Session::flash('Gagal', 'kesalahan tanggal kadaluarsa');
+            // echo "kesalahan tanggal kadaluarsa";
         }
         else if($response_decode->rsp === "098"){
-            echo "penggantian night mode atau day mode";
+            \Session::flash('Gagal', 'penggantian night mode atau day mode');
+            // echo "penggantian night mode atau day mode";
         }
         else if($response_decode->rsp === "099"){
-            echo "tidak memiliki hak akses";
+            \Session::flash('Gagal', 'tidak memiliki hak akses');
+            // echo "tidak memiliki hak akses";
         }
         else if($response_decode->rsp === "998"){
-            echo "signature salah, silahkan kontak IT support";
+            \Session::flash('Gagal', 'signature salah, silahkan kontak IT support');
+            // echo "signature salah, silahkan kontak IT support";
         }
         else {
-            echo "GENERAL ERROR, LAKUKAN REFRESH atau TEKAN TOMBOL F5. Hubungi STAFF IT BILA TERJADI ERROR YANG SAMA";
+            \Session::flash('Gagal', 'GENERAL ERROR, LAKUKAN REFRESH atau TEKAN TOMBOL F5. Hubungi STAFF IT BILA TERJADI ERROR YANG SAMA');
+            // echo "GENERAL ERROR, LAKUKAN REFRESH atau TEKAN TOMBOL F5. Hubungi STAFF IT BILA TERJADI ERROR YANG SAMA";
         }
     }
 
@@ -261,7 +287,7 @@ class InfovarsuntanController extends Controller
         return DataTables::of($va)
 
             ->addColumn('option', function ($va) {
-                return '<button class="mb-2 mr-2 btn btn-success" data-toggle="modal" data-target=".bd-example-modal-sm-iquiry-'. $va->id .'"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use plus-square"></i> Cek Status
+                return '<button class="mb-2 mr-2 btn btn-success" data-toggle="modal" data-target=".bd-example-modal-sm-iquiry-'. $va->id .'"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use bullhorn"></i> Cek Status
                 </button>||&nbsp;
                 <button class="mb-2 mr-2 btn btn-info" data-toggle="modal" data-target="#exampleModalLongDetail-'. $va->id .'"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use address-card"></i> Detail
                 </button>||&nbsp;
