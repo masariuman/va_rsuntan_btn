@@ -22,6 +22,9 @@ class CreateSettingTable extends Migration
             $table->string('kode_payment');
             $table->timestamps();
         });
+        DB::table('setting')->insert([
+            ['nama'=>'Rumah Sakit Universitas Tanjungpura','expired'=>24,'prefix_va'=>'9','kode_instituse'=>'4578','kode_payment'=>'000']
+        ]);
     }
 
     /**
