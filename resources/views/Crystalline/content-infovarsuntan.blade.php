@@ -89,7 +89,7 @@
                                                 <td>{{$vas->nama}}</td>
                                                 <td><div class="mb-2 mr-2 badge badge-pill badge-info">Pending</div></td>
                                                 <td>{{$vas->user->name}}</td>
-                                                <td><button class="mb-2 mr-2 btn btn-success" data-toggle="modal" data-target=".bd-example-modal-sm-iquiry-{{ $vas->id }}"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use plus-square"></i> Iquiry
+                                                <td><button class="mb-2 mr-2 btn btn-success" data-toggle="modal" data-target=".bd-example-modal-sm-inquiry-{{ $vas->id }}"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use plus-square"></i> Inquiry
                                                     </button>||&nbsp;
                                                     <button class="mb-2 mr-2 btn btn-info" data-toggle="modal" data-target="#exampleModalLongDetail-{{ $vas->id }}"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use address-card"></i> Detail
                                                     </button>||&nbsp;
