@@ -21,7 +21,7 @@ class InfovarsuntanController extends Controller
 
     public function dataInfovarsuntan()
     {
-        $va = Va::where('status_inquiry',1)->get();
+        $va = Va::where('status_inquiry', '1')->get();
 
 
 
@@ -248,7 +248,7 @@ class InfovarsuntanController extends Controller
                 'noid' => $vaaidi->noid,
                 'tagihan' => $vaaidi->tagihan,
                 'flag' => $vaaidi->flag,
-                'expired' => $expired,
+                'expired' => $vaaidi->expired,
                 'reserve' => $vaaidi->reserve,
                 'description' => $vaaidi->description,
                 'terbayar' => "0",
