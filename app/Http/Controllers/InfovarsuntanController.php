@@ -20,7 +20,7 @@ class InfovarsuntanController extends Controller
 
     public function dataInfovarsuntan()
     {
-        $va = Va::get();
+        $va = Va::where('status_inquiry',1);
 
         return view('infovarsuntan', compact('va'));
 
