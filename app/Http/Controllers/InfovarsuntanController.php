@@ -225,8 +225,6 @@ class InfovarsuntanController extends Controller
 //  $x = json_encode($body);
 //  $y = json_decode($x);
 //  dd($y->nama);
-$x = json_encode($body);
-$y = json_decode($x);
 
 
         if($response_decode->rsp === "000"){
@@ -237,23 +235,22 @@ $y = json_decode($x);
             ]);;
 
             $vaaidi = Va::where('id', $id)->first();
-            $nextId = Va::max('id') + 1;
 
             $addvarsuntan = Transaksi::create([
                 'user_id' => Auth::user()->id,
-                'ref' => $nextId,
+                'ref' => $vaaidi->ref,
                 'va_id' => $vaaidi->id,
-                'nama' => $y->nama,
-                'layanan' => $y->layanan,
-                'kodelayanan' => $y->kodelayanan,
-                'jenisbayar' => $y->jenisbayar,
-                'kodejenisbyr' => $y->kodejenisbyr,
-                'noid' => $y->noid,
-                'tagihan' => $y->tagihan,
-                'flag' => $y->flag,
+                'nama' => $vaaidi->nama,
+                'layanan' => $vaaidi->layanan,
+                'kodelayanan' => $vaaidi->kodelayanan,
+                'jenisbayar' => $vaaidi->jenisbayar,
+                'kodejenisbyr' => $vaaidi->kodejenisbyr,
+                'noid' => $vaaidi->noid,
+                'tagihan' => $vaaidi->tagihan,
+                'flag' => $vaaidi->flag,
                 'expired' => $expired,
-                'reserve' => $y->reserve,
-                'description' => $y->description,
+                'reserve' => $vaaidi->reserve,
+                'description' => $vaaidi->description,
                 'terbayar' => "0",
                 'status_transaksi' => 'cancel',
                 'created_at' => \Carbon\Carbon::now(),
