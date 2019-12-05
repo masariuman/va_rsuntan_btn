@@ -225,6 +225,8 @@ class InfovarsuntanController extends Controller
 //  $x = json_encode($body);
 //  $y = json_decode($x);
 //  dd($y->nama);
+$x = json_encode($body);
+$y = json_decode($x);
 
 
         if($response_decode->rsp === "000"){
@@ -235,6 +237,7 @@ class InfovarsuntanController extends Controller
             ]);;
 
             $vaaidi = Va::where('id', $id)->first();
+            $nextId = Va::max('id') + 1;
 
             $addvarsuntan = Transaksi::create([
                 'user_id' => Auth::user()->id,
