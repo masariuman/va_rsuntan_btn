@@ -30,7 +30,7 @@ class CreateVaTable extends Migration
             $table->dateTime('expired');
             $table->string('reserve',10);
             $table->string('description',60);
-            $table->enum('status_inquiry',[1,0]);
+            $table->enum('status_inquiry',[1,0])->default(1);
             $table->timestamps();
         });
     }

@@ -68,7 +68,7 @@
                             <div class="col-lg-12">
                             @include('pesan')
                                 <div class="main-card mb-3 card">
-                                    <div class="card-body"><h5 class="card-title">Info Virtual Account</h5>
+                                    <div class="card-body"><h5 class="card-title">Info Virtual Account Yang Aktif</h5>
                                         <table class="mb-0 table" id="table">
                                             <thead>
                                             <tr>
@@ -81,7 +81,7 @@
                                             </tr>
                                             </thead>
                                             <tbody>
-<!-- 
+<!--
                                             @foreach($va as $key => $vas)
                                             <tr>
                                                 <th scope="row">{{ ++$key }}</th>
@@ -101,7 +101,7 @@
                                                     </button></td>
                                             </tr>
                                             @endforeach -->
-                                     
+
                                             </tbody>
                                         </table>
                                     </div>
@@ -120,4 +120,4 @@
 
 
 
-                  
+
