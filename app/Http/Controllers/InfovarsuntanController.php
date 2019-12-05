@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Va;
+use App\Transaksi;
 use App\Setting;
 use Auth;
 use GuzzleHttp\Client;
@@ -20,10 +21,10 @@ class InfovarsuntanController extends Controller
 
     public function dataInfovarsuntan()
     {
-        $va = Va::where('status_inquiry',1)->get();
+        $va = Va::where('status_inquiry', '1')->get();
 
 
-      
+
         return view('infovarsuntan', compact('va'));
 
     }
@@ -114,7 +115,30 @@ class InfovarsuntanController extends Controller
                 'reserve' => $y->reserve,
                 'description' => $y->description,
 
-                'status_inquiry' => '0',
+                'status_inquiry' => '1',
+                'created_at' => \Carbon\Carbon::now(),
+                'updated_at' => \Carbon\Carbon::now(),
+            ]);
+
+            $vaaidi = Va::where('id', $id)->first();
+
+            $addvarsuntan = Transaksi::create([
+                'user_id' => Auth::user()->id,
+                'ref' => $nextId,
+                'va_id' => $vaaidi->id,
+                'nama' => $y->nama,
+                'layanan' => $y->layanan,
+                'kodelayanan' => $y->kodelayanan,
+                'jenisbayar' => $y->jenisbayar,
+                'kodejenisbyr' => $y->kodejenisbyr,
+                'noid' => $y->noid,
+                'tagihan' => $y->tagihan,
+                'flag' => $y->flag,
+                'expired' => $expired,
+                'reserve' => $y->reserve,
+                'description' => $y->description,
+                'terbayar' => "0",
+                'status_transaksi' => 'pending',
                 'created_at' => \Carbon\Carbon::now(),
                 'updated_at' => \Carbon\Carbon::now(),
             ]);
@@ -204,7 +228,34 @@ class InfovarsuntanController extends Controller
 
 
         if($response_decode->rsp === "000"){
-            $deletevarsuntan = Va::where('id', $id)->delete();
+            $deletevarsuntan = Va::where('id', $id)->update([
+                'status_inquiry' => '0',
+                'created_at' => \Carbon\Carbon::now(),
+                'updated_at' => \Carbon\Carbon::now(),
+            ]);;
+
+            $vaaidi = Va::where('id', $id)->first();
+
+            $addvarsuntan = Transaksi::create([
+                'user_id' => Auth::user()->id,
+                'ref' => $vaaidi->ref,
+                'va_id' => $vaaidi->id,
+                'nama' => $vaaidi->nama,
+                'layanan' => $vaaidi->layanan,
+                'kodelayanan' => $vaaidi->kodelayanan,
+                'jenisbayar' => $vaaidi->jenisbayar,
+                'kodejenisbyr' => $vaaidi->kodejenisbyr,
+                'noid' => $vaaidi->noid,
+                'tagihan' => $vaaidi->tagihan,
+                'flag' => $vaaidi->flag,
+                'expired' => $vaaidi->expired,
+                'reserve' => $vaaidi->reserve,
+                'description' => $vaaidi->description,
+                'terbayar' => "0",
+                'status_transaksi' => 'cancel',
+                'created_at' => \Carbon\Carbon::now(),
+                'updated_at' => \Carbon\Carbon::now(),
+            ]);
 
             \Session::flash('Berhasil', 'Data Virtual Account berhasil dihapus');
 
