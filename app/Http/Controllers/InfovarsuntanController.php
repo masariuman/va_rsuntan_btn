@@ -24,11 +24,6 @@ class InfovarsuntanController extends Controller
         $va = Va::where('status_inquiry', '1')->get();
 
 
-
-<<<<<<< HEAD
-    
-=======
->>>>>>> d5dff918307ce78f99f32d55784c6e3a2b4b72ee
         return view('infovarsuntan', compact('va'));
 
     }

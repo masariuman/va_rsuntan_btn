@@ -7,10 +7,10 @@
                                         <i class="pe-7s-info icon-gradient bg-sunny-morning">
                                         </i>
                                     </div>
-                                    <div>Halaman Info Virtual Account
+                                    <div>Halaman History Virtual Account
                                         <div class="page-title-subheading">Halaman ini berisikan informasi virtual account yang telah terdaftar.
                                         </div>
-                                    </div>
+                                    </div>.
                                 </div>
                                 <!-- <div class="page-title-actions">
                                     <button type="button" data-toggle="tooltip" title="Example Tooltip" data-placement="bottom" class="btn-shadow mr-3 btn btn-dark">
@@ -68,7 +68,7 @@
                             <div class="col-lg-12">
                             @include('pesan')
                                 <div class="main-card mb-3 card">
-                                    <div class="card-body"><h5 class="card-title">Info Virtual Account Yang Aktif</h5>
+                                    <div class="card-body"><h5 class="card-title">History Virtual Account Yang Aktif</h5>
                                         <table class="mb-0 table" id="table">
                                             <thead>
                                             <tr>
