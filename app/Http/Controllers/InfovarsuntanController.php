@@ -332,7 +332,7 @@ class InfovarsuntanController extends Controller
     {
 
 
-        $va = Va::join('users', 'users.id', '=', 'va.user_id')->select('va.*', 'users.name')->get();
+        $va = Va::where('status_inquiry',1)->join('users', 'users.id', '=', 'va.user_id')->select('va.*', 'users.name')->get();
 
         return DataTables::of($va)
 
