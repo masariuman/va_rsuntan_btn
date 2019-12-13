@@ -46,5 +46,5 @@ Route::get('shashin', 'InfovarsuntanController@header');
 
 Route::get('account', 'HomeController@account');
 Route::get('history', 'InfovarsuntanController@history');
-Route::post('/search', 'InfovarsuntanController@cari');
+Route::post('/search', 'InfovarsuntanController@cari')->name('search');
 // route::get('/search_history','InfovarsuntanController@search_history');

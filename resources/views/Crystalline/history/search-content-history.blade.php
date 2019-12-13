@@ -40,6 +40,47 @@
                                                 </div>
                                             </div>
                                         </form>
+
+                                        <table class="mb-0 table" id="table">
+                                            <thead>
+                                            <tr>
+                                                <th>No</th>
+                                                <th>Virutal Account</th>
+                                                <th>Nama</th>
+                                                <th>Status</th>
+                                                <th>Teller</th>
+                                                <th>Option</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                  
+                                            
+                                            @foreach($search as $search)
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>{{ $search->va}}</td>
+                                                <td>{{ $search->nama}}</td>
+                                                <td><div class="mb-2 mr-2 badge badge-pill badge-info">Pending</div></td>
+                                                <td>{{$search->user->name}}</td>
+                                                <td>
+                                                    <!-- <button class="mb-2 mr-2 btn btn-success" data-toggle="modal" data-target=".bd-example-modal-sm-inquiry-{{ $search->id }}"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use plus-square"></i> Inquiry
+                                                    </button>||&nbsp; -->
+                                                    <button class="mb-2 mr-2 btn btn-info" data-toggle="modal" data-target="#exampleModalLongDetail-{{ $search->id }}"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use address-card"></i> Detail
+                                                    </button>&nbsp;
+                                                    <!-- <button class="mb-2 mr-2 btn btn-alternate" data-toggle="modal" data-target="#exampleModalLongEdit-{{ $search->id }}"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use edit"></i> Edit
+                                                    </button>||&nbsp;
+                                                    <button class="mb-2 mr-2 btn btn-danger" data-toggle="modal" data-target=".bd-example-modal-sm-delete-{{ $search->id }}"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use trash"></i> Delete
+                                                    </button>||&nbsp;
+                                                    <button class="mb-2 mr-2 btn btn-focus" data-toggle="modal" data-target="#exampleModalLongHistory-{{ $search->id }}"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use history"></i> History
+                                                    </button> -->
+                                                    </td>
+                                            </tr>
+                                            @endforeach
+
+                                         
+
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
                             </div>
