@@ -8,6 +8,7 @@ use App\Setting;
 use App\Va;
 use App\User;
 use Auth;
+use Hash;
 
 use function GuzzleHttp\json_decode;
 
@@ -265,5 +266,31 @@ class HomeController extends Controller
     public function account() {
         $data['account'] = User::findOrFail(Auth::user()->id);
         return view('account', $data);
+    }
+
+    public function account_edit(Request $request) {
+        $account = User::findOrFail(Auth::user()->id);
+        $oldcheck = Hash::check($request->oldpassword,$account->password);
+        if($request->newpassword === $request->newpasswordconfirm){
+            if($oldcheck) {
+                $pass = Hash::make($request->newpassword);
+                $update = $account->update([
+                    'password' => $pass,
+                    'updated_at' => \Carbon\Carbon::now(),
+                ]);
+                \Session::flash('Berhasil', 'Password Berhasil Diubah');
+                return back();
+            }
+            else {
+                \Session::flash('Gagal', 'Password lama yang dimasukkan tidak sesuai dengan data yang ada');
+                return back();
+            }
+
+        }
+        else {
+            \Session::flash('Gagal', 'Masukan Password Baru tidak Sesuai Dengan Konfirmasi Masukan Password Baru');
+            return back();
+        }
+        // return view('account', $data);
     }
 }
