@@ -344,6 +344,11 @@ class InfovarsuntanController extends Controller
 		return response()->json([
 			'shashin' => $shashin,
 		]);
-	}
+    }
+
+    public function history()
+    {
+        return view('History');
+    }
 
 }
