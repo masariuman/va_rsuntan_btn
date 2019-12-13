@@ -29,7 +29,7 @@
                                          </div>
                                             <div class="col-sm-8">
                                                 <div class="position-relative form-group">
-                                                    <input name="cari" id="exampleText" placeholder="Nomor VA / Nama" type="text" class="form-control" required>
+                                                    <input name="cari" id="exampleText" placeholder="Nomor VA / Nama" type="text" class="form-control" value="{{$cari}}" required>
                                                 </div>
                                             </div>
                                       </div>
