@@ -66602,6 +66602,14 @@ function (_Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "metismenu-icon pe-7s-config"
       }), "Pengaturan Akun")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#",
+        "data-toggle": "modal",
+        "data-target": ".bd-example-modal-lg",
+        className: "petunjuk {this.state.activeIndex==0 ? 'mm-active': null}",
+        onClick: this.toggleClass.bind(this, 2)
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "metismenu-icon pe-7s-light"
+      }), "Petunjuk")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "/logout",
         className: "{this.state.activeIndex==0 ? 'mm-active': null}",
         onClick: this.toggleClass.bind(this, 3)
@@ -66636,8 +66644,8 @@ function (_Component) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\user\3D Objects\New folder\va_rsuntan_btn\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\user\3D Objects\New folder\va_rsuntan_btn\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\xampp\htdocs\va_rsuntan_btn\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\va_rsuntan_btn\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

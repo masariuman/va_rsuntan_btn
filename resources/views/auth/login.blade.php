@@ -42,10 +42,13 @@
     </style>
 </head>
 <body style="background-color: #666666;">
-
+		
 	<div class="limiter">
+	
 		<div class="container-login100">
+		
 			<div class="wrap-login100">
+			
                 <form class="login100-form validate-form" action="{{ route('login') }}" method="POST" style="padding:50px 55px 55px 55px;">
                     @csrf
                     <img src="{{asset('Login_v18/images/untan.png')}}" class="imagecenter" alt="" />
@@ -53,8 +56,9 @@
 						MASUK | LOGIN
 					</span>
 
-
+					@include('pesan')	
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+					
 						<input class="input100" type="text" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 						<span class="focus-input100"></span>
 						<span class="label-input100">Email</span>
@@ -74,6 +78,7 @@
 						<button class="login100-form-btn">
 							Login
 						</button>
+						
 					</div>
 
 
