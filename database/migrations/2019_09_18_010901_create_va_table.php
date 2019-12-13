@@ -31,6 +31,7 @@ class CreateVaTable extends Migration
             $table->string('reserve',10);
             $table->string('description',60);
             $table->enum('status_inquiry',[1,0])->default(1);
+            $table->enum('status',['pending','sukses','batal']);
             $table->timestamps();
         });
     }

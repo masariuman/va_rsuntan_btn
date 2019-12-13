@@ -114,6 +114,7 @@ class AddvarsuntanController extends Controller
                 'description' => $y->description,
 
                 'status_inquiry' => '1',
+                'status' => 'pending',
                 'created_at' => \Carbon\Carbon::now(),
                 'updated_at' => \Carbon\Carbon::now(),
             ]);
@@ -155,7 +156,7 @@ class AddvarsuntanController extends Controller
         }
         else if($response_decode->rsp === "003"){
             \Session::flash('Gagal', 'Kesalahan tipe pembayaran');
-            // echo "Kesalahan tipe pembayaran"; 
+            // echo "Kesalahan tipe pembayaran";
         }
         else if($response_decode->rsp === "004"){
             \Session::flash('Gagal', 'Paramete Akun institusi tidak ditemukan');

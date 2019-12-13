@@ -115,6 +115,7 @@ class InfovarsuntanController extends Controller
                 'description' => $y->description,
 
                 'status_inquiry' => '1',
+                'status' => 'pending',
                 'created_at' => \Carbon\Carbon::now(),
                 'updated_at' => \Carbon\Carbon::now(),
             ]);
@@ -242,6 +243,7 @@ class InfovarsuntanController extends Controller
         if($response_decode->rsp === "000"){
             $deletevarsuntan = Va::where('id', $id)->update([
                 'status_inquiry' => '0',
+                'status' => 'batal',
                 'created_at' => \Carbon\Carbon::now(),
                 'updated_at' => \Carbon\Carbon::now(),
             ]);;
@@ -371,7 +373,7 @@ class InfovarsuntanController extends Controller
 		]);
     }
 
-    
+
     public function history()
     {
         return view('History');
