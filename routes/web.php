@@ -26,7 +26,6 @@ Route::patch('ubah_infovarsuntan/{id}', 'InfovarsuntanController@ubahInfovarsunt
 Route::delete('hapus_infovarsuntan/{id}', 'InfovarsuntanController@hapusInfovarsuntan')->name('hapusInfovarsuntan');
 
 
-
 Route::get('addvarsuntan', 'AddvarsuntanController@formAddvarsuntan')->name('formAddvarsuntan');
 Route::post('tambah_addvarsuntan', 'AddvarsuntanController@tambahAddvarsuntan')->name('tambahAddvarsuntan');
 
@@ -49,4 +48,4 @@ Route::get('account', 'HomeController@account');
 Route::get('history', 'InfovarsuntanController@history');
 
 
-
+Route::get('historyvarsuntan', 'HistoryvarsuntanController@dataHistoryvarsuntan')->name('dataHistoryvarsuntan');
