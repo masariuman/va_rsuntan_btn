@@ -371,6 +371,7 @@ class InfovarsuntanController extends Controller
 		]);
     }
 
+    
     public function history()
     {
         return view('History');
