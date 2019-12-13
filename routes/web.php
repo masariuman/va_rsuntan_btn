@@ -44,5 +44,7 @@ Route::get('test-something', 'HomeController@test_something');
 
 Route::get('shashin', 'InfovarsuntanController@header');
 
+Route::get('account', 'HomeController@account');
+Route::get('history', 'InfovarsuntanController@history');
 
 Route::get('historyvarsuntan', 'HistoryvarsuntanController@dataHistoryvarsuntan')->name('dataHistoryvarsuntan');

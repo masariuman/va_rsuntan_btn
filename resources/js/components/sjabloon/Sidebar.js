@@ -66,6 +66,13 @@ class Sidebar extends Component {
                                 </a>
                             </li>
                             <li>
+                                <a href="/history" className="history {this.state.activeIndex==0 ? 'mm-active': null}"  onClick={this.toggleClass.bind(this, 1)}>
+                                    <i className="metismenu-icon pe-7s-note2"></i>
+                                    Riwayat Data
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/account" className="account {this.state.activeIndex==0 ? 'mm-active': null}"  onClick={this.toggleClass.bind(this, 2)}>
                                 <a href="/historyvarsuntan" className="addva {this.state.activeIndex==0 ? 'mm-active': null}"  onClick={this.toggleClass.bind(this, 1)}>
                                     <i className="metismenu-icon pe-7s-note2"></i>
                                     History Virtual Account

@@ -49637,7 +49637,7 @@ var currentlyProcessingQueue = void 0;
 {
   didWarnUpdateInsideUpdate = false;
   currentlyProcessingQueue = null;
-  
+
 }
 
 function createUpdateQueue(baseState) {
@@ -53489,7 +53489,7 @@ function insertNonHydratedInstance(returnFiber, fiber) {
               didNotFindHydratableContainerTextInstance(parentContainer, text);
               break;
             case SuspenseComponent:
-              
+
               break;
           }
           break;

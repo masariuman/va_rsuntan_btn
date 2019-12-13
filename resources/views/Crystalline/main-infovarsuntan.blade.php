@@ -46,11 +46,11 @@
                 <div class="position-relative row form-group"><label for="exampleText" class="col-sm-4 col-form-label">Flag Full / Partial :</label>
                     <div class="col-sm-8 col-form-label col-form-text">
                     <h5>
-                    @if($vas->flag == "F")              
+                    @if($vas->flag == "F")
                        Flag Full
-                    @elseif($vas->flag == "P") 
+                    @elseif($vas->flag == "P")
                        Flag Partial
-                    @endif                    
+                    @endif
                     </h5>
                     </div>
                 </div>
@@ -65,8 +65,8 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use times"></i> Cancel</button>
-                <button type="button" class="btn btn-info"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use check"></i> Done</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use times"></i> Tutup</button>
+                {{-- <button type="button" class="btn btn-info"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use check"></i> Done</button> --}}
             </div>
         </div>
     </div>
@@ -116,7 +116,7 @@
                 </div>
                 <div class="position-relative row form-group"><label for="exampleSelect" class="col-sm-4 col-form-label">Flag Full / Partial :</label>
                     <div class="col-sm-8">
-                        <select name="flag" id="exampleSelect" class="form-control" required>                        
+                        <select name="flag" id="exampleSelect" class="form-control" required>
                              @if($vas->flag == "F")
                              <option value="F" selected>
                              Flag Full
@@ -124,7 +124,7 @@
                              <option value="P">
                              Flag Partial
                              </option>
-                             @elseif($vas->flag == "P") 
+                             @elseif($vas->flag == "P")
                              <option value="P" selected>
                              Flag Partial
                              </option>
@@ -134,7 +134,7 @@
                              @endif
                         </select>
                     </div>
-                </div>                
+                </div>
                 <div class="position-relative row form-group"><label for="exampleText" class="col-sm-4 col-form-label">Expired Date :</label>
                     <div class="col-sm-8"><input name="expired" id="datepicker" placeholder="Expired Date (yymmddHHMM)" type="text" class="form-control" value="{{ $vas->expired }}" disabled required></div>
                 </div>
@@ -147,7 +147,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use times"></i> Cancel</button>
-                <button type="submit" class="btn btn-alternate"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use edit"></i> Edit</button>
+                <button type="submit" class="btn btn-alternate"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use edit"></i> Ubah</button>
             </div>
             </form>
         </div>
@@ -252,11 +252,11 @@
                 <div class="position-relative row form-group"><label for="exampleText" class="col-sm-4 col-form-label">Flag Full / Partial :</label>
                     <div class="col-sm-8 col-form-label col-form-text">
                     <h5>
-                    @if($vas->flag == "F")              
+                    @if($vas->flag == "F")
                        Flag Full
-                    @elseif($vas->flag == "P") 
+                    @elseif($vas->flag == "P")
                        Flag Partial
-                    @endif                    
+                    @endif
                     </h5>
                     </div>
                 </div>
