@@ -156,7 +156,7 @@ class InfovarsuntanController extends Controller
         }
         else if($response_decode->rsp === "003"){
             \Session::flash('Gagal', 'Kesalahan tipe pembayaran');
-            // echo "Kesalahan tipe pembayaran"; 
+            // echo "Kesalahan tipe pembayaran";
         }
         else if($response_decode->rsp === "004"){
             \Session::flash('Gagal', 'Paramete Akun institusi tidak ditemukan');
@@ -283,7 +283,7 @@ class InfovarsuntanController extends Controller
         }
         else if($response_decode->rsp === "003"){
             \Session::flash('Gagal', 'Kesalahan tipe pembayaran');
-            // echo "Kesalahan tipe pembayaran"; 
+            // echo "Kesalahan tipe pembayaran";
         }
         else if($response_decode->rsp === "004"){
             \Session::flash('Gagal', 'Paramete Akun institusi tidak ditemukan');
@@ -374,6 +374,13 @@ class InfovarsuntanController extends Controller
     public function history()
     {
         return view('History');
+    }
+
+    public function cari(Request $request)
+    {
+        $data['cari'] = $request->cari;
+        $data['search'] = Va::where('va','like',$data['cari'])->orwhere('nama','like',$data['cari']);
+        return view('search_history', $data);
     }
 
 }
