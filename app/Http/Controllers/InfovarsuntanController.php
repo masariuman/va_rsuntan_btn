@@ -371,6 +371,7 @@ class InfovarsuntanController extends Controller
 		]);
     }
 
+    
     public function history()
     {
         return view('History');
@@ -379,8 +380,11 @@ class InfovarsuntanController extends Controller
     public function cari(Request $request)
     {
         $data['cari'] = $request->cari;
-        $data['search'] = Va::where('va','like',$data['cari'])->orwhere('nama','like',$data['cari']);
+        $data['search'] = Va::where('va','like',$data['cari'])->orwhere('nama','like',$data['cari'])->get();
+
         return view('search_history', $data);
     }
+
+
 
 }
