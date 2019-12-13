@@ -45,5 +45,7 @@ Route::get('test-something', 'HomeController@test_something');
 
 Route::get('shashin', 'InfovarsuntanController@header');
 
+Route::get('account', 'HomeController@account');
+
 
 
