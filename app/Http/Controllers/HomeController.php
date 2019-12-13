@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use GuzzleHttp\Client;
 use App\Setting;
 use App\Va;
+use App\User;
+use Auth;
 
 use function GuzzleHttp\json_decode;
 
@@ -258,5 +260,10 @@ class HomeController extends Controller
 
         $vaaidi = Va::all()->last();
         echo $vaaidi;
+    }
+
+    public function account() {
+        $data['account'] = User::findOrFail(Auth::user()->id);
+        return view('account', $data);
     }
 }
