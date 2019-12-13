@@ -8,7 +8,7 @@
     <body>
         <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
             @include('crystalline.header')
-            @include('crystalline.main-hostory')
+            @include('crystalline.main-history')
         </div>
         @include('crystalline/js')
         <!-- Datatables -->
