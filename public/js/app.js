@@ -66594,7 +66594,7 @@ function (_Component) {
         className: "history {this.state.activeIndex==0 ? 'mm-active': null}",
         onClick: this.toggleClass.bind(this, 1)
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "metismenu-icon pe-7s-add-user"
+        className: "metismenu-icon pe-7s-note2"
       }), "Riwayat Data")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "/account",
         className: "account {this.state.activeIndex==0 ? 'mm-active': null}",
