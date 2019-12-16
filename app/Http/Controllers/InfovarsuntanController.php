@@ -337,7 +337,7 @@ class InfovarsuntanController extends Controller
         return DataTables::of($va)
 
             ->addColumn('option', function ($va) {
-                return '<button class="mb-2 mr-2 btn btn-success" data-toggle="modal" data-target=".bd-example-modal-sm-iquiry-'. $va->id .'"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use bullhorn"></i> Cek Status
+                return '<button class="mb-2 mr-2 btn btn-success" data-toggle="modal" data-target=".bd-example-modal-sm-iquiry-'. $va->id .'"> <i class="fa fa-search" aria-hidden="true" title="Copy to use bullhorn"></i> Cek Status
                 </button>||&nbsp;
                 <button class="mb-2 mr-2 btn btn-info" data-toggle="modal" data-target="#exampleModalLongDetail-'. $va->id .'"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use address-card"></i> Detail
                 </button>||&nbsp;
