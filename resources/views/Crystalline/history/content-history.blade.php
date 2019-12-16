@@ -19,7 +19,7 @@
                                 @include('pesan')
                                 <div class="main-card mb-3 card">
                                     <div class="card-body"><h5 class="card-title">Riwayat Data</h5>
-                                        <form class="" action="/search" method="post">
+                                        <form class="" action="/history" method="post">
                                         @csrf
                                       <div class="form-row">
                                          <div class="col-sm-2">
@@ -40,9 +40,9 @@
                                                 </div>
                                             </div>
                                         </form>
-             
+
                                     </div>
-                                  
+
                                 </div>
                             </div>
                         </div>
