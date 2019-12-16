@@ -383,6 +383,48 @@ class InfovarsuntanController extends Controller
         return view('search_history', $data);
     }
 
+    public function ceku(Request $request)
+    {
+        // $data['cek'] = $request->cari;
+        $cek = Va::findOrFail($request->idcek);
+
+
+        $idva = "UNTANWS";
+        $keyva = "plqQlf6fSoKKBWx4Lxmb0OOMwRKQ3TcN";
+        $secretva = "C4UMXATbTT";
+        $body = [
+            'ref' => $cek->ref,
+            'va' => $cek->va
+        ];
+        $sign = $idva.':'.json_encode($body).':'.$keyva;
+        $signature = hash_hmac('sha256', $sign, $secretva);
+        $url_create = "https://vabtn-dev.btn.co.id:9021/v1/untan/inqVA";
+        // return $sign;
+
+        $client = new Client([
+            'verify' => false,'headers' => ['Content-Type' => 'application/json','id' => $idva, 'key' => $keyva, 'signature' => $signature]
+        ]);
+
+        $request = $client->post($url_create,
+            ['body' => json_encode($body)]
+        );
+
+        $response = $request->getBody()->getContents();
+        $response_decode = json_decode($response);
+
+
+        if($response_decode->rsp === "000"){
+
+            dd($response_decode);
+
+            // \Session::flash('Berhasil', 'Data Virtual Account berhasil dihapus');
+
+            return back();
+        }
+
+
+    }
+
 
 
 }

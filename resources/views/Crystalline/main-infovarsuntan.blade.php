@@ -170,7 +170,9 @@
                 </button>
             </div>
             <div class="modal-body">
-            <form action="/cek_status" method="post">
+            <form action="/ceku" method="post">
+                @csrf
+                <input type="hidden" name="idcek" value="{{$vas->id}}">
                 <p><center>Cek Status Virtual Account <b> {{ $vas->va}}</b> </p> Atas Nama : <b> {{ $vas->nama }} </b></center></p>
             </div>
             <div class="modal-footer">

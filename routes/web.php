@@ -49,4 +49,6 @@ Route::post('account', 'HomeController@account_edit');
 Route::get('history', 'InfovarsuntanController@history');
 Route::post('/history', 'InfovarsuntanController@cari')->name('search');
 
+Route::post('/ceku', 'InfovarsuntanController@ceku');
+
 
