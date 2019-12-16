@@ -164,18 +164,18 @@
     <div class="modal-dialog modal-sm">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Iquiry Virtual Account</h5>
+                <h5 class="modal-title" id="exampleModalLongTitle">Cek Status Virtual Account</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
             <form action="" method="">
-                <p><center>Apakah anda yakin <p>"Iquiry Virtual Account" <b>{{ $vas->va}}</b> </p></center></p>
+                <p><center>Cek Status Virtual Account <b> {{ $vas->va}}</b> </p> Atas Nama : <b> {{ $vas->nama }} </b></center></p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use times"></i> Cancel</button>
-                <button type="submit" class="btn btn-success"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use plus-square"></i> Iquiry</button>
+                <button type="submit" class="btn btn-success"> <i class="fa fa-search" aria-hidden="true" title="Copy to use plus-square"></i> Cek Status</button>
             </div>
             </form>
         </div>

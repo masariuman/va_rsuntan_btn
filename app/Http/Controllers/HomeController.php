@@ -40,7 +40,7 @@ class HomeController extends Controller
     {
 
         // return view('home');
-        $va = "9457800010100110011";
+        $va = "94578000f";
         $kode_institusi = 4578;
         $length_vs = 19;
         $kode_product = 000;
