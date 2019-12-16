@@ -344,8 +344,6 @@ class InfovarsuntanController extends Controller
                 <button class="mb-2 mr-2 btn btn-alternate" data-toggle="modal" data-target="#exampleModalLongEdit-'. $va->id .'"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use edit"></i> Edit
                 </button>||&nbsp;
                 <button class="mb-2 mr-2 btn btn-danger" data-toggle="modal" data-target=".bd-example-modal-sm-delete-'. $va->id .'"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use trash"></i> Delete
-                </button>||&nbsp;
-                <button class="mb-2 mr-2 btn btn-focus" data-toggle="modal" data-target="#exampleModalLongHistory-'. $va->id .'"> <i class="fa fa-fw" aria-hidden="true" title="Copy to use history"></i> History
                 </button>';
             })
          ->addIndexColumn()

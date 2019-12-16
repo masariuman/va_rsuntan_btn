@@ -6,6 +6,7 @@
     </div>
     <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
 </div>
+@include('petunjuk')
 
 @foreach($va as $vas)
 <!-- Modal Detail -->

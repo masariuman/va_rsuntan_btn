@@ -4,7 +4,7 @@
                             <div class="page-title-wrapper">
                                 <div class="page-title-heading">
                                     <div class="page-title-icon">
-                                        <i class="pe-7s-add-user icon-gradient bg-sunny-morning">
+                                        <i class="pe-7s-search icon-gradient bg-sunny-morning">
                                         </i>
                                     </div>
                                     <div>Riwayat Data
@@ -55,9 +55,9 @@
                                             <tbody>
                                   
                                             
-                                            @foreach($search as $search)
+                                            @foreach($search as $key => $search)
                                             <tr>
-                                                <th scope="row">1</th>
+                                                <th scope="row">{{ ++$key }}</th>
                                                 <td>{{ $search->va}}</td>
                                                 <td>{{ $search->nama}}</td>
                                                 <td><div class="mb-2 mr-2 badge badge-pill badge-info">Pending</div></td>

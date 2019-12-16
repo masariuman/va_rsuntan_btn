@@ -4,7 +4,7 @@
                             <div class="page-title-wrapper">
                                 <div class="page-title-heading">
                                     <div class="page-title-icon">
-                                        <i class="pe-7s-add-user icon-gradient bg-sunny-morning">
+                                        <i class="pe-7s-search icon-gradient bg-sunny-morning">
                                         </i>
                                     </div>
                                     <div>Riwayat Data
