@@ -170,7 +170,7 @@
                 </button>
             </div>
             <div class="modal-body">
-            <form action="" method="">
+            <form action="/cek_status" method="post">
                 <p><center>Cek Status Virtual Account <b> {{ $vas->va}}</b> </p> Atas Nama : <b> {{ $vas->nama }} </b></center></p>
             </div>
             <div class="modal-footer">
