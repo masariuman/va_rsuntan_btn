@@ -419,7 +419,7 @@ class InfovarsuntanController extends Controller
 
             // \Session::flash('Berhasil', 'Data Virtual Account berhasil dihapus');
 
-            return back();
+            // return back();
         }
 
 

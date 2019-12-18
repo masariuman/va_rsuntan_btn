@@ -26,6 +26,7 @@ class CreateVaTable extends Migration
             $table->string('kodejenisbyr',12);
             $table->string('noid',20);
             $table->string('tagihan',19);
+            $table->string('terbayar',19)->default('0');
             $table->enum('flag',['F','P']);
             $table->dateTime('expired');
             $table->string('reserve',10);
