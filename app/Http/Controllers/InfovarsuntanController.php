@@ -405,46 +405,52 @@ class InfovarsuntanController extends Controller
         $response_decode = json_decode($response);
 
         if($response_decode->rsp === "000"){
+            $historycekko = Transaksi::where('va_id',$cek->id)->orderBy('id', 'desc')->first();
+            if(strval($response_decode->terbayar) === $historycekko->terbayar) {
+                $msg='Virtual account dengan nomor '.$cek->va.' atas nama '.$cek->nama.' belum ada melakukan pembayaran terbaru. Tagihan sebesar '.$cek->tagihan.' dan pembayaran yang dilakukan sebesar '.$cek->terbayar.' .';
+                \Session::flash('Berhasil', $msg);
+            }
+            else {
+                $cekko = Va::where('id', $cek->id)->update([
+                    'terbayar' => $response_decode->terbayar,
+                    'updated_at' => \Carbon\Carbon::now(),
+                ]);;
+                if($cek->terbayar >= $cek->tagihan) {
+                    $cekko = Va::where('id', $cek->id)->update([
+                        'status_inquiry' => '0',
+                        'status' => 'sukses',
+                        'updated_at' => \Carbon\Carbon::now(),
+                    ]);
+                    $stats_transaksi = 'success';
+                }
+                else{
+                    $stats_transaksi = 'pending';
+                }
 
-            $cekko = Va::where('id', $id)->update([
-                'terbayar' => $response_decode->terbayar,
-                'updated_at' => \Carbon\Carbon::now(),
-            ]);;
-
-            // $vaaidi = Va::where('id', $id)->first();
-
-            // $addvarsuntan = Transaksi::create([
-            //     'user_id' => Auth::user()->id,
-            //     'ref' => $vaaidi->ref,
-            //     'va_id' => $vaaidi->id,
-            //     'nama' => $vaaidi->nama,
-            //     'layanan' => $vaaidi->layanan,
-            //     'kodelayanan' => $vaaidi->kodelayanan,
-            //     'jenisbayar' => $vaaidi->jenisbayar,
-            //     'kodejenisbyr' => $vaaidi->kodejenisbyr,
-            //     'noid' => $vaaidi->noid,
-            //     'tagihan' => $vaaidi->tagihan,
-            //     'flag' => $vaaidi->flag,
-            //     'expired' => $vaaidi->expired,
-            //     'reserve' => $vaaidi->reserve,
-            //     'description' => $vaaidi->description,
-            //     'terbayar' => "0",
-            //     'status_transaksi' => 'cancel',
-            //     'created_at' => \Carbon\Carbon::now(),
-            //     'updated_at' => \Carbon\Carbon::now(),
-            // ]);
-
-            \Session::flash('Berhasil', 'test inquiri');
-
-
-
-
+                $addvarsuntan = Transaksi::create([
+                    'user_id' => Auth::user()->id,
+                    'ref' => $cek->ref,
+                    'va_id' => $cek->id,
+                    'nama' => $cek->nama,
+                    'layanan' => $cek->layanan,
+                    'kodelayanan' => $cek->kodelayanan,
+                    'jenisbayar' => $cek->jenisbayar,
+                    'kodejenisbyr' => $cek->kodejenisbyr,
+                    'noid' => $cek->noid,
+                    'tagihan' => $cek->tagihan,
+                    'flag' => $cek->flag,
+                    'expired' => $cek->expired,
+                    'reserve' => $cek->reserve,
+                    'description' => $cek->description,
+                    'terbayar' => $cek->terbayar,
+                    'status_transaksi' => $stats_transaksi,
+                    'created_at' => \Carbon\Carbon::now(),
+                    'updated_at' => \Carbon\Carbon::now(),
+                ]);
+                    $msg='Virtual account dengan nomor '.$cek->va.' atas nama '.$cek->nama.' Telah melakukan pembayaran sebesar '.$cek->terbayar.' dari tagihan sebesar '.$cek->tagihan.' .';
+                \Session::flash('Berhasil', $msg);
+            }
             return back();
-            // dd($response_decode);
-
-            // \Session::flash('Berhasil', 'Data Virtual Account berhasil dihapus');
-
-            // return back();
         }
 
 
