@@ -230,14 +230,6 @@ class InfovarsuntanController extends Controller
 
         $response = $request->getBody()->getContents();
         $response_decode = json_decode($response);
-        // dd($response_decode->rsp);
-
-// dd($response_decode);
-// $ax = json_encode($body->va);
-//  $x = json_encode($body);
-//  $y = json_decode($x);
-//  dd($y->nama);
-
 
         if($response_decode->rsp === "000"){
             $deletevarsuntan = Va::where('id', $id)->update([
@@ -412,10 +404,43 @@ class InfovarsuntanController extends Controller
         $response = $request->getBody()->getContents();
         $response_decode = json_decode($response);
 
-
         if($response_decode->rsp === "000"){
 
-            dd($response_decode);
+            $cekko = Va::where('id', $id)->update([
+                'terbayar' => $response_decode->terbayar,
+                'updated_at' => \Carbon\Carbon::now(),
+            ]);;
+
+            // $vaaidi = Va::where('id', $id)->first();
+
+            // $addvarsuntan = Transaksi::create([
+            //     'user_id' => Auth::user()->id,
+            //     'ref' => $vaaidi->ref,
+            //     'va_id' => $vaaidi->id,
+            //     'nama' => $vaaidi->nama,
+            //     'layanan' => $vaaidi->layanan,
+            //     'kodelayanan' => $vaaidi->kodelayanan,
+            //     'jenisbayar' => $vaaidi->jenisbayar,
+            //     'kodejenisbyr' => $vaaidi->kodejenisbyr,
+            //     'noid' => $vaaidi->noid,
+            //     'tagihan' => $vaaidi->tagihan,
+            //     'flag' => $vaaidi->flag,
+            //     'expired' => $vaaidi->expired,
+            //     'reserve' => $vaaidi->reserve,
+            //     'description' => $vaaidi->description,
+            //     'terbayar' => "0",
+            //     'status_transaksi' => 'cancel',
+            //     'created_at' => \Carbon\Carbon::now(),
+            //     'updated_at' => \Carbon\Carbon::now(),
+            // ]);
+
+            \Session::flash('Berhasil', 'test inquiri');
+
+
+
+
+            return back();
+            // dd($response_decode);
 
             // \Session::flash('Berhasil', 'Data Virtual Account berhasil dihapus');
 
