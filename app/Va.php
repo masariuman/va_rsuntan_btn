@@ -19,6 +19,7 @@ class Va extends Model
         'kodejenisbyr',
         'noid',
         'tagihan',
+        'terbayar',
         'flag',
         'expired',
         'reserve',
