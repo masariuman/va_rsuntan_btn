@@ -66295,9 +66295,9 @@ function (_Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "badge badge-warning mr-1 ml-0"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", null, "IT")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "msariuman.xyz",
+        href: "http://masariuman.xyz",
         target: "blank"
-      }, "Arif Setiawan"), " | M. Arief Maulana\xA0", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "Arif Setiawan"), "\xA0 | M. Arief Maulana\xA0", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "badge badge-warning mr-1 ml-0"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", null, "TI")))))));
     }

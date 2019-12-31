@@ -30,7 +30,7 @@ class Footer extends Component {
                                         <div className="badge badge-warning mr-1 ml-0">
                                             <small>IT</small>
                                         </div>
-                                        <a href="msariuman.xyz" target="blank">Arif Setiawan</a> | M. Arief Maulana&nbsp;
+                                        <a href="http://masariuman.xyz" target="blank">Arif Setiawan</a>&nbsp; | M. Arief Maulana&nbsp;
                                         <div className="badge badge-warning mr-1 ml-0">
                                             <small>TI</small>
                                         </div>
