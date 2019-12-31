@@ -66274,7 +66274,7 @@ function (_Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         className: "nav-item"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#",
+        href: "http://rumahsakit.untan.ac.id",
         className: "nav-link"
       }, "Rumah Sakit Universitas Tanjungpura Pontianak")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         className: "nav-item"

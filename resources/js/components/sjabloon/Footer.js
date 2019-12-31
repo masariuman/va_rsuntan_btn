@@ -8,7 +8,7 @@ class Footer extends Component {
                         <div className="app-footer-left">
                             <ul className="nav">
                                 <li className="nav-item">
-                                    <a href="#" className="nav-link">
+                                    <a href="http://rumahsakit.untan.ac.id" className="nav-link">
                                         Rumah Sakit Universitas Tanjungpura Pontianak
                                     </a>
                                 </li>
