@@ -23,16 +23,17 @@ class Footer extends Component {
                             <ul className="nav">
                                 <li className="nav-item">
                                     <a href="#" className="nav-link">
-                                        Copyright &copy; 2020
+                                        Copyright &copy; 2019
                                     </a>
                                 </li>
-                                <li className="nav-item">
-                                    <a href="#" className="nav-link">
+                                <li className="nav-item nav-link">
                                         <div className="badge badge-warning mr-1 ml-0">
                                             <small>IT</small>
                                         </div>
-                                        RSUNTAN
-                                    </a>
+                                        <a href="msariuman.xyz" target="blank">Arif Setiawan</a> | M. Arief Maulana&nbsp;
+                                        <div className="badge badge-warning mr-1 ml-0">
+                                            <small>TI</small>
+                                        </div>
                                 </li>
                             </ul>
                         </div>

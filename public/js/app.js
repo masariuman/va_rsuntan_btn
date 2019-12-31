@@ -66290,14 +66290,16 @@ function (_Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "#",
         className: "nav-link"
-      }, "Copyright \xA9 2020")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-        className: "nav-item"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#",
-        className: "nav-link"
+      }, "Copyright \xA9 2019")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        className: "nav-item nav-link"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "badge badge-warning mr-1 ml-0"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", null, "IT")), "RSUNTAN"))))));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", null, "IT")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "msariuman.xyz",
+        target: "blank"
+      }, "Arif Setiawan"), " | M. Arief Maulana\xA0", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "badge badge-warning mr-1 ml-0"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", null, "TI")))))));
     }
   }]);
 
@@ -66644,8 +66646,8 @@ function (_Component) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\xampp\htdocs\va_rsuntan_btn\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\va_rsuntan_btn\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\user\3D Objects\New folder\va_rsuntan_btn\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\user\3D Objects\New folder\va_rsuntan_btn\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
