@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         @include('crystalline.meta')
-        <title>Virtual Account RSUNTAN - BTN.</title>
+        <title>Virtual Account RSUNTAN - BTN</title>
         @include('crystalline.css')
     </head>
     <body>

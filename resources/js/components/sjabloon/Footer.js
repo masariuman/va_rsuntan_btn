@@ -8,7 +8,7 @@ class Footer extends Component {
                         <div className="app-footer-left">
                             <ul className="nav">
                                 <li className="nav-item">
-                                    <a href="#" className="nav-link">
+                                    <a href="http://rumahsakit.untan.ac.id" className="nav-link" target="blank">
                                         Rumah Sakit Universitas Tanjungpura Pontianak
                                     </a>
                                 </li>
@@ -23,16 +23,17 @@ class Footer extends Component {
                             <ul className="nav">
                                 <li className="nav-item">
                                     <a href="#" className="nav-link">
-                                        Copyright &copy; 2020
+                                        Copyright &copy; 2019
                                     </a>
                                 </li>
-                                <li className="nav-item">
-                                    <a href="#" className="nav-link">
+                                <li className="nav-item nav-link">
                                         <div className="badge badge-warning mr-1 ml-0">
                                             <small>IT</small>
                                         </div>
-                                        RSUNTAN
-                                    </a>
+                                        <a href="http://masariuman.xyz" target="blank">Arif Setiawan</a>&nbsp; | M. Arief Maulana&nbsp;
+                                        <div className="badge badge-warning mr-1 ml-0">
+                                            <small>TI</small>
+                                        </div>
                                 </li>
                             </ul>
                         </div>

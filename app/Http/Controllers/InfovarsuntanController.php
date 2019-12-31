@@ -415,7 +415,18 @@ class InfovarsuntanController extends Controller
                     'terbayar' => $response_decode->terbayar,
                     'updated_at' => \Carbon\Carbon::now(),
                 ]);;
-
+                $cekh = Va::findOrFail($cek->id);
+                if($cekh->terbayar >= $cekh->tagihan) {
+                    $cekko = Va::where('id', $cekh->id)->update([
+                        'status_inquiry' => '0',
+                        'status' => 'sukses',
+                        'updated_at' => \Carbon\Carbon::now(),
+                    ]);
+                    $stats_transaksi = 'success';
+                }
+                else{
+                    $stats_transaksi = 'pending';
+                }
 
                 $addvarsuntan = Transaksi::create([
                     'user_id' => Auth::user()->id,
@@ -437,18 +448,7 @@ class InfovarsuntanController extends Controller
                     'created_at' => \Carbon\Carbon::now(),
                     'updated_at' => \Carbon\Carbon::now(),
                 ]);
-                $cekh = Va::findOrFail($cek->id);
-                if($cekh->terbayar >= $cekh->tagihan) {
-                    $cekko = Va::where('id', $cekh->id)->update([
-                        'status_inquiry' => '0',
-                        'status' => 'sukses',
-                        'updated_at' => \Carbon\Carbon::now(),
-                    ]);
-                    $stats_transaksi = 'success';
-                }
-                else{
-                    $stats_transaksi = 'pending';
-                }
+
                     $msg='Virtual account dengan nomor '.$cekh->va.' atas nama '.$cekh->nama.' Telah melakukan pembayaran sebesar '.$cekh->terbayar.' dari tagihan sebesar '.$cekh->tagihan.' .';
                 \Session::flash('Berhasil', $msg);
             }
